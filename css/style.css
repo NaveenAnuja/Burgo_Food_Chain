@@ -1,0 +1,26 @@
+/**
+ * Burgo Food Chain - Main Stylesheet
+ * Import all CSS modules in correct order
+ */
+
+/* 1. Design System */
+@import url('variables.css');
+@import url('reset.css');
+
+/* 2. Base Styles */
+@import url('base.css');
+
+/* 3. Layout */
+@import url('layout.css');
+
+/* 4. Components */
+@import url('components.css');
+
+/* 5. Sections */
+@import url('sections.css');
+
+/* 6. Animations */
+@import url('animations.css');
+
+/* 7. Responsive */
+@import url('responsive.css');

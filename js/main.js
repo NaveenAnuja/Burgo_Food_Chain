@@ -1,251 +1,136 @@
 /**
- * Burgo Food Chain - Main JavaScript
- * Handles dynamic content loading and interactions
+ * Burgo Food Chain — Site-wide behaviour
+ * Wires every [data-link] to the values in js/config.js, renders hours, the map,
+ * verified reviews and the footer year.
  */
 
-class BurgoMain {
-  constructor() {
-    this.init();
-  }
+(() => {
+  const H = BurgoHelpers;
 
-  init() {
-    // Setup all CTA buttons
-    this.setupCTAButtons();
-    
-    // Load dynamic content on home page
-    if (document.getElementById('featuredMenuItems')) {
-      this.loadFeaturedMenu();
+  const LINK_RESOLVERS = {
+    order: () => H.getOrderUrl(),
+    whatsapp: () => H.getWhatsAppLink(),
+    'whatsapp-order': () => H.getWhatsAppLink(BURGO_CONFIG.links.whatsappOrderMessage),
+    call: () => H.getCallLink(),
+    email: () => H.getEmailLink(),
+    directions: () => H.getDirectionsUrl(),
+    reviews: () => H.getReviewsUrl(),
+    'write-review': () => H.getWriteReviewUrl()
+  };
+
+  const isExternal = (url) => /^https?:\/\//i.test(url);
+
+  function applyLink(el, url) {
+    if (!url) {
+      el.hidden = true;
+      return;
     }
-    
-    if (document.getElementById('reviewsContainer')) {
-      this.loadReviews();
-    }
-
-    // Setup lazy loading for images
-    this.setupLazyLoading();
-  }
-
-  /**
-   * Setup all CTA buttons with proper links
-   */
-  setupCTAButtons() {
-    // Order Online buttons
-    const orderButtons = [
-      'orderOnlineBtn',
-      'orderOnlineMobileBtn',
-      'orderOnlineHeroBtn',
-      'orderNowBtn',
-      'orderMobileCTABtn',
-      'footerOrderBtn'
-    ];
-
-    orderButtons.forEach(id => {
-      const btn = document.getElementById(id);
-      if (btn) {
-        btn.href = BurgoHelpers.getOrderUrl();
-        btn.addEventListener('click', (e) => {
-          this.trackEvent('Order Online', 'Click', btn.id);
-        });
-      }
-    });
-
-    // WhatsApp buttons
-    const whatsappButtons = [
-      'whatsappBtn',
-      'footerWhatsappBtn'
-    ];
-
-    whatsappButtons.forEach(id => {
-      const btn = document.getElementById(id);
-      if (btn) {
-        btn.href = BurgoHelpers.getWhatsAppLink();
-        btn.target = '_blank';
-        btn.addEventListener('click', (e) => {
-          this.trackEvent('WhatsApp', 'Click', btn.id);
-        });
-      }
-    });
-
-    // Directions buttons
-    const directionsButtons = [
-      'getDirectionsBtn',
-      'footerDirectionsBtn'
-    ];
-
-    directionsButtons.forEach(id => {
-      const btn = document.getElementById(id);
-      if (btn) {
-        btn.href = BurgoHelpers.getDirectionsUrl();
-        btn.target = '_blank';
-        btn.addEventListener('click', (e) => {
-          this.trackEvent('Get Directions', 'Click', btn.id);
-        });
-      }
-    });
-
-    // Google Reviews button
-    const reviewsBtn = document.getElementById('viewGoogleReviewsBtn');
-    if (reviewsBtn) {
-      reviewsBtn.href = BurgoHelpers.getReviewsUrl();
-      reviewsBtn.target = '_blank';
-      reviewsBtn.addEventListener('click', (e) => {
-        this.trackEvent('View Reviews', 'Click', 'Google Reviews');
-      });
-    }
-
-    // Social media links
-    const socialLinks = {
-      facebookLink: BURGO_CONFIG.social.facebook,
-      instagramLink: BURGO_CONFIG.social.instagram,
-      youtubeLink: BURGO_CONFIG.social.youtube,
-      tiktokLink: BURGO_CONFIG.social.tiktok
-    };
-
-    Object.keys(socialLinks).forEach(id => {
-      const link = document.getElementById(id);
-      if (link) {
-        link.href = socialLinks[id];
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-      }
-    });
-  }
-
-  /**
-   * Load featured menu items on home page
-   */
-  loadFeaturedMenu() {
-    const container = document.getElementById('featuredMenuItems');
-    if (!container || !BURGO_MENU) return;
-
-    const featuredIds = BURGO_MENU.featured || [];
-    const featuredItems = [];
-
-    // Find featured items from all categories
-    BURGO_MENU.categories.forEach(category => {
-      category.items.forEach(item => {
-        if (featuredIds.includes(item.id)) {
-          featuredItems.push({ ...item, category: category.name });
-        }
-      });
-    });
-
-    // Render featured items
-    container.innerHTML = featuredItems.slice(0, 6).map(item => `
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="${item.image}" alt="${item.name}" loading="lazy">
-        </div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-title">${item.name}</h3>
-          <p class="menu-card-description">${item.description}</p>
-          <div class="menu-card-footer">
-            <span class="menu-card-price">${item.price}</span>
-            ${item.tags && item.tags.includes('popular') ? '<span class="badge badge-primary">Popular</span>' : ''}
-          </div>
-          ${item.tags ? `
-            <div class="menu-card-tags">
-              ${item.tags.filter(tag => tag !== 'popular').map(tag => 
-                `<span class="badge">${tag}</span>`
-              ).join('')}
-            </div>
-          ` : ''}
-        </div>
-      </div>
-    `).join('');
-  }
-
-  /**
-   * Load reviews on home page
-   */
-  loadReviews() {
-    const container = document.getElementById('reviewsContainer');
-    if (!container || !BURGO_REVIEWS) return;
-
-    const reviews = BURGO_REVIEWS.featured || [];
-
-    container.innerHTML = reviews.slice(0, 4).map(review => {
-      const initials = review.author.split(' ').map(n => n[0]).join('').substring(0, 2);
-      const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
-      
-      return `
-        <div class="review-card">
-          <div class="review-card-header">
-            <div class="review-card-avatar">${initials}</div>
-            <div class="review-card-author">
-              <div class="review-card-name">${review.author}</div>
-              <div class="review-card-stars">${stars}</div>
-            </div>
-          </div>
-          <p class="review-card-text">${review.text}</p>
-          <div class="review-card-date">${this.formatDate(review.date)}</div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  /**
-   * Format date for display
-   */
-  formatDate(dateString) {
-    const date = new Date(dateString);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
-  }
-
-  /**
-   * Setup lazy loading for images
-   */
-  setupLazyLoading() {
-    if ('loading' in HTMLImageElement.prototype) {
-      // Native lazy loading is supported
-      const images = document.querySelectorAll('img[loading="lazy"]');
-      images.forEach(img => {
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-        }
-      });
-    } else {
-      // Fallback for browsers that don't support lazy loading
-      const images = document.querySelectorAll('img[loading="lazy"]');
-      
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-            }
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
+    el.href = url;
+    if (isExternal(url)) {
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
     }
   }
 
-  /**
-   * Track events (Google Analytics)
-   */
-  trackEvent(category, action, label) {
-    if (BURGO_CONFIG.settings.analyticsEnabled && typeof gtag !== 'undefined') {
-      gtag('event', action, {
-        'event_category': category,
-        'event_label': label
-      });
-    }
-    
-    // Also log to console for debugging
-    console.log('Event:', category, action, label);
-  }
-}
+  function bindLinks() {
+    document.querySelectorAll('[data-link]').forEach((el) => {
+      const resolve = LINK_RESOLVERS[el.dataset.link];
+      if (resolve) applyLink(el, resolve());
+    });
 
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    new BurgoMain();
-  });
-} else {
-  new BurgoMain();
-}
+    document.querySelectorAll('[data-social]').forEach((el) => {
+      applyLink(el, BURGO_CONFIG.social[el.dataset.social] || '');
+    });
+
+    // Hide wrappers (e.g. social rows) when none of their links are configured.
+    document.querySelectorAll('[data-hide-if-empty]').forEach((wrap) => {
+      const links = wrap.querySelectorAll('[data-link], [data-social]');
+      const anyVisible = Array.from(links).some((a) => !a.hidden);
+      if (!anyVisible) wrap.hidden = true;
+    });
+  }
+
+  function setOrderState() {
+    const ready = H.isOrderConfigured();
+    document.querySelectorAll('[data-order-ready]').forEach((el) => { el.hidden = !ready; });
+    document.querySelectorAll('[data-order-pending]').forEach((el) => { el.hidden = ready; });
+  }
+
+  function trackClicks() {
+    document.addEventListener('click', (event) => {
+      const el = event.target.closest('[data-link], [data-social]');
+      if (!el || !window.BurgoAnalytics) return;
+      const action = el.dataset.link || `social_${el.dataset.social}`;
+      window.BurgoAnalytics.track(action, { link_url: el.href, link_text: el.textContent.trim().slice(0, 60) });
+    });
+  }
+
+  function renderHours() {
+    const hours = BURGO_CONFIG.business.openingHours;
+    if (!hours || !hours.length) return;
+    document.querySelectorAll('[data-hours]').forEach((el) => {
+      el.innerHTML = `<div class="hours">${hours
+        .map((row) => `<div class="hours__row"><span>${H.escapeHTML(row.days)}</span><span>${H.escapeHTML(row.hours)}</span></div>`)
+        .join('')}</div>`;
+    });
+  }
+
+  function renderMaps() {
+    document.querySelectorAll('[data-map]').forEach((frame) => {
+      const iframe = document.createElement('iframe');
+      iframe.title = `Map showing Burgo Food Chain at ${H.fullAddress()}`;
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.allowFullscreen = true;
+      iframe.src = H.getMapEmbedUrl();
+      iframe.addEventListener('load', () => {
+        frame.querySelector('.map-frame__fallback')?.setAttribute('hidden', '');
+      });
+      frame.appendChild(iframe);
+    });
+  }
+
+  function renderReviews() {
+    const container = document.querySelector('[data-reviews]');
+    const reviews = (typeof BURGO_REVIEWS !== 'undefined' && BURGO_REVIEWS.reviews) || [];
+    if (!container || !reviews.length) return;
+
+    const star = '<svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg>';
+
+    container.innerHTML = reviews
+      .map((r) => {
+        const rating = Math.max(0, Math.min(5, Number(r.rating) || 0));
+        return `
+          <figure class="review-card">
+            ${rating ? `<div class="review-card__stars" role="img" aria-label="${rating} out of 5 stars">${star.repeat(rating)}</div>` : ''}
+            <blockquote class="review-card__text">“${H.escapeHTML(r.text)}”</blockquote>
+            <figcaption class="review-card__meta">${H.escapeHTML(r.author)}${r.date ? ` · ${H.escapeHTML(r.date)}` : ''} · Google</figcaption>
+          </figure>`;
+      })
+      .join('');
+    container.hidden = false;
+  }
+
+  function setYear() {
+    const year = String(new Date().getFullYear());
+    document.querySelectorAll('[data-year]').forEach((el) => {
+      el.textContent = year;
+    });
+  }
+
+  function init() {
+    bindLinks();
+    setOrderState();
+    trackClicks();
+    renderHours();
+    renderMaps();
+    renderReviews();
+    setYear();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

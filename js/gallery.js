@@ -1,178 +1,176 @@
 /**
- * Burgo Food Chain - Gallery JavaScript
- * Handles gallery filtering and lightbox
+ * Burgo Food Chain — Gallery grid, filters and lightbox
+ *
+ * - [data-gallery-grid] is rendered from data/gallery-data.js (gallery page).
+ * - Any [data-lightbox] button (rendered or static) opens the accessible lightbox.
+ *   Buttons are grouped by their closest [data-lightbox-group].
  */
 
-class BurgoGallery {
-  constructor() {
-    this.currentFilter = 'all';
-    this.lightbox = null;
-    this.currentImageIndex = 0;
-    this.images = [];
-    this.init();
+(() => {
+  const H = BurgoHelpers;
+  const expandIcon =
+    '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+
+  /* =========================================================
+     Gallery page grid + filters
+     ========================================================= */
+  function itemHTML(item) {
+    const layout = item.layout ? ` is-${item.layout}` : '';
+    return `
+      <button type="button" class="gallery-item${layout}" data-lightbox
+        data-src="${H.escapeHTML(item.src)}" data-caption="${H.escapeHTML(item.caption)}" data-alt="${H.escapeHTML(item.alt)}"
+        aria-label="View larger: ${H.escapeHTML(item.caption)}">
+        <img src="${H.escapeHTML(item.src)}" alt="${H.escapeHTML(item.alt)}" width="${item.width || 800}" height="${item.height || 800}" loading="lazy" decoding="async">
+        <span class="gallery-item__caption"><span>${H.escapeHTML(item.caption)}</span>${expandIcon}</span>
+      </button>`;
   }
 
-  init() {
-    this.setupFilters();
-    this.setupLightbox();
-    this.loadGalleryImages();
-  }
+  function setupGalleryPage() {
+    const grid = document.querySelector('[data-gallery-grid]');
+    if (!grid || typeof BURGO_GALLERY === 'undefined') return;
 
-  /**
-   * Setup filter buttons
-   */
-  setupFilters() {
-    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
-    
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-        
-        // Update active state
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        // Filter images
-        this.filterImages(filter);
-        this.currentFilter = filter;
-      });
-    });
-  }
+    const filters = document.querySelector('[data-gallery-filters]');
+    const status = document.querySelector('[data-gallery-status]');
+    const items = BURGO_GALLERY.items;
 
-  /**
-   * Filter gallery images
-   */
-  filterImages(filter) {
-    const items = document.querySelectorAll('.gallery-item');
-    
-    items.forEach(item => {
-      if (filter === 'all' || item.dataset.category === filter) {
-        item.style.display = 'block';
-        // Add fade-in animation
-        item.style.opacity = '0';
-        setTimeout(() => {
-          item.style.transition = 'opacity 0.3s ease';
-          item.style.opacity = '1';
-        }, 50);
-      } else {
-        item.style.display = 'none';
+    function render(category) {
+      const visible = category === 'all' ? items : items.filter((i) => i.category === category);
+      grid.innerHTML = visible.length
+        ? visible.map(itemHTML).join('')
+        : '<p class="gallery-empty">More photos coming soon.</p>';
+      if (status) {
+        status.textContent = `Showing ${visible.length} photo${visible.length === 1 ? '' : 's'}`;
       }
-    });
-  }
-
-  /**
-   * Load gallery images (placeholder data)
-   */
-  loadGalleryImages() {
-    const container = document.getElementById('galleryContainer');
-    if (!container) return;
-
-    // Placeholder gallery data
-    const galleryData = [
-      { id: 1, category: 'food', src: 'assets/images/placeholders/gallery-food-1.jpg', caption: 'Signature Dish' },
-      { id: 2, category: 'food', src: 'assets/images/placeholders/gallery-food-2.jpg', caption: 'Fresh Ingredients' },
-      { id: 3, category: 'interior', src: 'assets/images/placeholders/gallery-interior-1.jpg', caption: 'Dining Area' },
-      { id: 4, category: 'food', src: 'assets/images/placeholders/gallery-food-3.jpg', caption: 'Gourmet Selection' },
-      { id: 5, category: 'bakery', src: 'assets/images/placeholders/gallery-bakery-1.jpg', caption: 'Fresh Bakery' },
-      { id: 6, category: 'interior', src: 'assets/images/placeholders/gallery-interior-2.jpg', caption: 'Lounge Area' },
-      { id: 7, category: 'food', src: 'assets/images/placeholders/gallery-food-4.jpg', caption: 'Chef Special' },
-      { id: 8, category: 'bakery', src: 'assets/images/placeholders/gallery-bakery-2.jpg', caption: 'Artisan Breads' },
-      { id: 9, category: 'atmosphere', src: 'assets/images/placeholders/gallery-atmosphere-1.jpg', caption: 'Dining Experience' },
-      { id: 10, category: 'food', src: 'assets/images/placeholders/gallery-food-5.jpg', caption: 'Traditional Flavors' },
-      { id: 11, category: 'interior', src: 'assets/images/placeholders/gallery-interior-3.jpg', caption: 'Modern Design' },
-      { id: 12, category: 'atmosphere', src: 'assets/images/placeholders/gallery-atmosphere-2.jpg', caption: 'Evening Ambiance' }
-    ];
-
-    this.images = galleryData;
-
-    container.innerHTML = galleryData.map((img, index) => `
-      <div class="gallery-item" data-category="${img.category}" data-index="${index}">
-        <img src="${img.src}" alt="${img.caption}" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-caption">${img.caption}</span>
-        </div>
-      </div>
-    `).join('');
-
-    // Setup click handlers for lightbox
-    const items = container.querySelectorAll('.gallery-item');
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        const index = parseInt(item.dataset.index);
-        this.openLightbox(index);
-      });
-    });
-  }
-
-  /**
-   * Setup lightbox
-   */
-  setupLightbox() {
-    this.lightbox = document.getElementById('lightbox');
-    if (!this.lightbox) {
-      // Create lightbox if it doesn't exist
-      this.lightbox = document.createElement('div');
-      this.lightbox.id = 'lightbox';
-      this.lightbox.className = 'lightbox';
-      this.lightbox.innerHTML = `
-        <div class="lightbox-content">
-          <img class="lightbox-image" src="" alt="">
-          <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-        </div>
-      `;
-      document.body.appendChild(this.lightbox);
     }
 
-    // Close button
-    const closeBtn = this.lightbox.querySelector('.lightbox-close');
-    closeBtn.addEventListener('click', () => this.closeLightbox());
+    if (filters) {
+      const used = new Set(items.map((i) => i.category));
+      const cats = [{ id: 'all', label: 'All' }, ...BURGO_GALLERY.categories.filter((c) => used.has(c.id))];
 
-    // Close on backdrop click
-    this.lightbox.addEventListener('click', (e) => {
-      if (e.target === this.lightbox) {
-        this.closeLightbox();
-      }
+      filters.innerHTML = cats
+        .map(
+          (c, i) =>
+            `<button type="button" class="tab" data-filter="${c.id}" aria-pressed="${i === 0}">${H.escapeHTML(c.label)}</button>`
+        )
+        .join('');
+
+      filters.addEventListener('click', (event) => {
+        const btn = event.target.closest('[data-filter]');
+        if (!btn || btn.getAttribute('aria-pressed') === 'true') return;
+        filters.querySelectorAll('[data-filter]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+        grid.style.opacity = '0';
+        window.setTimeout(() => {
+          render(btn.dataset.filter);
+          grid.style.opacity = '';
+        }, 180);
+      });
+    }
+
+    grid.style.transition = 'opacity 180ms ease';
+    render('all');
+  }
+
+  /* =========================================================
+     Lightbox
+     ========================================================= */
+  let dialog = null;
+  let group = [];
+  let index = 0;
+  let opener = null;
+
+  function buildDialog() {
+    dialog = document.createElement('dialog');
+    dialog.className = 'lightbox theme-dark';
+    dialog.setAttribute('aria-label', 'Image viewer');
+    dialog.innerHTML = `
+      <div class="lightbox__bar">
+        <span class="lightbox__counter" aria-live="polite"></span>
+        <button type="button" class="icon-btn" data-lb-close aria-label="Close image viewer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="lightbox__stage">
+        <img class="lightbox__img" alt="">
+        <button type="button" class="icon-btn lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Previous image">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="button" class="icon-btn lightbox__nav lightbox__nav--next" data-lb-next aria-label="Next image">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <p class="lightbox__caption"></p>`;
+    document.body.appendChild(dialog);
+
+    dialog.querySelector('[data-lb-close]').addEventListener('click', () => dialog.close());
+    dialog.querySelector('[data-lb-prev]').addEventListener('click', () => show(index - 1));
+    dialog.querySelector('[data-lb-next]').addEventListener('click', () => show(index + 1));
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog || event.target.classList.contains('lightbox__stage')) dialog.close();
     });
 
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.lightbox.classList.contains('active')) {
-        this.closeLightbox();
+    dialog.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') show(index + 1);
+      if (event.key === 'ArrowLeft') show(index - 1);
+    });
+
+    let startX = null;
+    dialog.addEventListener('pointerdown', (e) => { startX = e.clientX; });
+    dialog.addEventListener('pointerup', (e) => {
+      if (startX === null) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('is-locked');
+      opener?.focus({ preventScroll: true });
+    });
+  }
+
+  function show(i) {
+    if (!group.length) return;
+    index = (i + group.length) % group.length;
+    const btn = group[index];
+    const img = dialog.querySelector('.lightbox__img');
+    img.style.animation = 'none';
+    void img.offsetWidth;
+    img.style.animation = '';
+    img.src = btn.dataset.src;
+    img.alt = btn.dataset.alt || btn.dataset.caption || '';
+    dialog.querySelector('.lightbox__caption').textContent = btn.dataset.caption || '';
+    dialog.querySelector('.lightbox__counter').textContent =
+      `${String(index + 1).padStart(2, '0')} / ${String(group.length).padStart(2, '0')}`;
+    const single = group.length < 2;
+    dialog.querySelectorAll('.lightbox__nav').forEach((n) => { n.hidden = single; });
+  }
+
+  function open(button) {
+    if (!dialog) buildDialog();
+    const scope = button.closest('[data-lightbox-group]') || document;
+    group = Array.from(scope.querySelectorAll('[data-lightbox]'));
+    opener = button;
+    show(group.indexOf(button));
+    document.body.classList.add('is-locked');
+    dialog.showModal();
+    dialog.querySelector('[data-lb-close]').focus();
+  }
+
+  function init() {
+    setupGalleryPage();
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-lightbox]');
+      if (button && typeof HTMLDialogElement === 'function') {
+        event.preventDefault();
+        open(button);
       }
     });
   }
 
-  /**
-   * Open lightbox with image
-   */
-  openLightbox(index) {
-    this.currentImageIndex = index;
-    const image = this.images[index];
-    
-    if (!image) return;
-
-    const lightboxImage = this.lightbox.querySelector('.lightbox-image');
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.caption;
-
-    this.lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
-
-  /**
-   * Close lightbox
-   */
-  closeLightbox() {
-    this.lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-// Initialize gallery when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    new BurgoGallery();
-  });
-} else {
-  new BurgoGallery();
-}
+})();

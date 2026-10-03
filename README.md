@@ -1,154 +1,99 @@
-# Burgo Food Chain - Restaurant Website
+# Burgo Food Chain — Website
 
-Premium modern restaurant website for Burgo Food Chain PVT LTD.
+Static website for **Burgo Food Chain PVT LTD** — 380/1 Galle Road, Hettimulla, Beruwala · +94 71 174 6051.
 
-## Business Information
+HTML5, CSS3 and vanilla JavaScript only. No build step, no backend, no database — it runs on any static host (GitHub Pages, FastHosts, Netlify…). Online ordering is handled by **MenuPilot**; the site only links to it.
 
-**Burgo Food Chain PVT LTD**  
-380/1 Galle Road, Hettimulla, Beruwala  
-Phone: +94 71 174 6051  
-Website: burgofc.com
+## Run locally
 
-## Technology Stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript (ES6+)
-- No frameworks, no backend
-
-## Project Structure
-
-```
-/burgo-website
-├── index.html              # Home page
-├── about.html              # Our Story
-├── experiences.html        # Dining Experiences
-├── menu.html              # Menu showcase
-├── gallery.html           # Photo gallery
-├── locations.html         # Locations & contact
-├── css/                   # All stylesheets
-├── js/                    # All JavaScript
-├── assets/                # Images, icons, videos
-├── data/                  # Menu & reviews data
-├── sitemap.xml
-├── robots.txt
-└── README.md
+```bash
+python -m http.server 8000
+# then open http://localhost:8000
 ```
 
-## Configuration
+## Project structure
 
-All site-wide settings are centralized in `js/config.js`:
+```
+index.html            Home
+about.html            Our Story
+experiences.html      Dining Experiences (Bakery, Iceburg Shisha Lounge, Saivar Restaurant)
+menu.html             Menu preview + ordering (#order)
+gallery.html          Photo gallery with lightbox
+locations.html        Location, map and contact (#contact)
 
-- MenuPilot URL
-- WhatsApp number
-- Google Maps URLs
-- Google Analytics ID
-- Social media links
+css/
+  variables.css       Design tokens — logo colours, type scale, spacing, section themes
+  reset.css           Modern reset
+  base.css            Typography, containers, section headings, focus styles
+  layout.css          Header, desktop nav, mobile menu, footer
+  components.css      Buttons, arch media frames, tabs, dish cards, info list, map, lightbox
+  sections.css        Hero, story, experiences, menu showcase, gallery, reviews, visit, CTA band, inner pages
+  animations.css      Entrance + scroll reveal, reduced-motion overrides
+  style.css           Imports the files above in order
 
-## Updating Content
+js/
+  config.js           ★ All editable links and business details
+  main.js             Wires [data-link] buttons to config, map, hours, reviews, footer year
+  navigation.js       Header scroll state, accessible mobile menu
+  menu.js             Menu category tabs (home + menu page)
+  gallery.js          Gallery grid, filters, lightbox
+  animations.js       Scroll reveal
+  analytics.js        GA4 (loads only when an ID is set)
 
-### Menu Items
-Edit `data/menu-data.js` to update menu categories and items.
+data/
+  menu-data.js        Menu preview dishes (currently SAMPLE data)
+  gallery-data.js     Gallery photos
+  reviews-data.js     Verified Google reviews (empty until genuine reviews are added)
 
-### Reviews
-Edit `data/reviews-data.js` when real Google Reviews data is available.
+assets/
+  images/brand/       Official logo (original + optimised WebP/PNG)
+  images/placeholders SVG placeholders — replace with real photos
+  images/og-image.jpg Social sharing image (1200×630)
+  icons/              Favicons and app icons
+```
 
-### Images
-Replace placeholder images in `assets/images/placeholders/` with real Burgo photos:
-- Maintain the same file names
-- Keep aspect ratios consistent
-- Optimize images before upload
+## Configuration — `js/config.js`
 
-### Contact Information
-Update business details in `js/config.js`
+Everything that changes per business lives here. Values left as `''` are treated as "not configured" and the site falls back gracefully:
 
-## External Integrations
+| Setting | When empty |
+| --- | --- |
+| `links.menuPilotUrl` | "Order Online" opens `menu.html#order`, which offers call / WhatsApp ordering |
+| `links.whatsappNumber` | WhatsApp buttons are hidden |
+| `links.googleMapsUrl` | Directions use the street address |
+| `links.googleMapsEmbedUrl` | The map searches the street address |
+| `links.googleReviewsUrl` | "Read reviews" opens a Google Maps search for Burgo |
+| `links.googleWriteReviewUrl` | "Write a review" is hidden |
+| `business.email` | Email link is hidden |
+| `business.openingHours` | "Please call for today's hours" is shown |
+| `analytics.measurementId` | Google Analytics does not load |
+| `social.*` | That social icon is hidden |
 
-### Order Online (MenuPilot)
-"Order Online" buttons redirect to MenuPilot URL configured in `js/config.js`
+Buttons get their link from a `data-link` attribute (`order`, `whatsapp`, `whatsapp-order`, `call`, `email`, `directions`, `reviews`, `write-review`) or `data-social="instagram"` etc. The `href` written in the HTML is only a no-JavaScript fallback.
 
-### WhatsApp
-Contact buttons use WhatsApp number from `js/config.js`
+## Updating content
 
-### Google Maps
-Location links use Google Maps URLs from `js/config.js`
+- **Menu preview** — edit `data/menu-data.js`. Set `isSample: false` once dishes are real. Only fill `price` and `dietary` with confirmed information; empty values are not shown.
+- **Reviews** — copy genuine reviews from Google into `data/reviews-data.js`. Never invent names, ratings or text.
+- **Gallery** — edit `data/gallery-data.js` (`layout: 'tall' | 'wide' | ''`).
+- **Photos** — see `assets/images/placeholders/README.md`.
+- **New dining area** — copy one `<article class="exp-card">` in `index.html` and one `<article class="feature">` in `experiences.html`; both grids adapt automatically. Add a footer link on each page.
+- **Placeholder copy** — search the HTML for `PLACEHOLDER` to find text and images awaiting verified content.
 
-### Google Reviews
-Reviews section links to Google Reviews URL from `js/config.js`
+## Design system
 
-### Google Analytics
-Analytics tracking ID configured in `js/config.js`
+- **Colours** are sampled from the official logo: bun red `#DC3224`, ring gold `#F2CC63`, sesame yellow `#F6E257`, warm black `#120F0D`, on a warm paper background `#F7F1E7`. Darker variants (`--brand-red-deep`, `--brand-gold-deep`) are used for text on light backgrounds to meet WCAG AA contrast.
+- **Type**: Fraunces (display, with italic emphasis) + Manrope (UI and body), sized fluidly with `clamp()`.
+- **Motifs**: arch / dome-shaped image frames and the red "bun dome" CTA band with a yellow rim echo the logo.
+- **Section themes**: add `theme-light`, `theme-alt`, `theme-dark` or `theme-red` to a section and every component inside adapts.
+- **Breakpoints** (mobile-first, `min-width`): 376, 600, 768, 1024, 1280px.
+- **Motion** respects `prefers-reduced-motion`; all content is visible without JavaScript.
 
-## Development Notes
+## Before going live
 
-### Placeholder Images
-All images use descriptive placeholder names:
-- `hero-main.jpg`
-- `experience-bakery.jpg`
-- `experience-iceburg.jpg`
-- `experience-saivar.jpg`
-- `menu-featured-1.jpg`
-- `gallery-food-1.jpg`
-
-Replace these files with real Burgo images when available.
-
-### Responsive Design
-Mobile-first design with breakpoints:
-- Mobile: 320px - 599px
-- Tablet: 600px - 1023px
-- Desktop: 1024px - 1439px
-- Large: 1440px+
-
-### Performance
-- Lazy loading enabled for images
-- Optimized CSS delivery
-- Minimal JavaScript
-- No external dependencies
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## SEO
-
-- Semantic HTML5
-- Meta tags and Open Graph
-- Schema.org structured data
-- Sitemap.xml
-- Robots.txt
-
-## Deployment
-
-This site is designed to work with FastHosts Website Builder / hosting.
-
-### Before Deployment:
-1. Replace all placeholder images with real Burgo images
-2. Update `js/config.js` with real URLs and IDs
-3. Replace sample menu data in `data/menu-data.js`
-4. Add real Google Reviews data to `data/reviews-data.js`
-5. Enable Google Analytics in `js/config.js`
-6. Test all links and CTAs
-7. Test responsive design on multiple devices
-8. Run performance audit
-9. Verify SEO metadata
-
-### DO NOT:
-- Deploy to live burgofc.com until final approval
-- Modify existing live website during development
-- Remove this README from version control
-
-## Support
-
-For questions about this project:
-- Developer: [Your contact information]
-- Client: Burgo Food Chain PVT LTD
-
----
-
-**Version:** 1.0.0  
-**Last Updated:** 2024  
-**Status:** In Development
+1. Fill in the `TODO` values in `js/config.js` (MenuPilot URL, Google Maps/Reviews links, GA4 ID, social profiles, opening hours).
+2. Confirm WhatsApp is active on +94 71 174 6051.
+3. Replace placeholder photos and `PLACEHOLDER` copy.
+4. Replace sample dishes in `data/menu-data.js` and set `isSample: false`.
+5. If the domain is not `burgofc.com`, update canonical/OG URLs in each page `<head>`, `sitemap.xml` and `robots.txt`.
+6. Once opening hours are verified, they can also be added to the JSON-LD in `index.html` and `locations.html`.

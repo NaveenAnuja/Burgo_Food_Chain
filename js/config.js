@@ -1,106 +1,125 @@
 /**
- * Burgo Food Chain - Centralized Configuration
- * Update these values to change site-wide settings
+ * Burgo Food Chain — Site configuration
+ *
+ * This is the ONE place to update links and business details.
+ * Leave a value as '' until the official value is confirmed; the site hides or
+ * gracefully falls back for anything that is not configured.
  */
 
 const BURGO_CONFIG = {
-  // Business Information
   business: {
     name: 'Burgo Food Chain PVT LTD',
-    tagline: 'More Than a Meal. It\'s a Burgo Experience.',
-    address: '380/1 Galle Road, Hettimulla, Beruwala',
-    phone: '+94 71 174 6051',
-    email: 'info@burgofc.com',
-    website: 'https://burgofc.com'
+    address: {
+      street: '380/1 Galle Road',
+      locality: 'Hettimulla',
+      city: 'Beruwala',
+      country: 'Sri Lanka',
+      countryCode: 'LK'
+    },
+    phone: {
+      display: '+94 71 174 6051',
+      dial: '+94711746051'
+    },
+    email: '', // TODO: official email address (hidden until set)
+
+    // Only add hours once verified, e.g. [{ days: 'Monday – Sunday', hours: '8:00 AM – 10:00 PM' }]
+    openingHours: []
   },
 
-  // External Services
-  services: {
-    // MenuPilot ordering URL - Update when real URL is available
-    menuPilotUrl: 'https://menu.burgofc.com/order',
-    
-    // WhatsApp configuration
-    whatsapp: {
-      number: '94711746051',
-      defaultMessage: 'Hi! I would like to inquire about Burgo Food Chain.'
-    },
-    
-    // Google Maps
-    googleMaps: {
-      locationUrl: 'https://maps.google.com/?q=Burgo+Food+Chain+Beruwala',
-      embedUrl: ''  // Add embed URL when available
-    },
-    
-    // Google Reviews
-    googleReviews: {
-      placeId: '',  // Add Google Place ID when available
-      reviewsUrl: 'https://www.google.com/maps/search/Burgo+Food+Chain',
-      averageRating: 4.8,
-      totalReviews: 127
-    },
-    
-    // Google Analytics
-    analytics: {
-      measurementId: 'G-XXXXXXXXXX'  // Replace with real GA4 ID
-    }
+  links: {
+    // TODO: official MenuPilot public menu URL. Until set, "Order Online" opens menu.html#order.
+    menuPilotUrl: '',
+
+    // TODO: confirm WhatsApp is active on this number (digits only, country code first).
+    whatsappNumber: '94711746051',
+    whatsappMessage: 'Hello Burgo! I have a question.',
+    whatsappOrderMessage: 'Hello Burgo! I would like to place an order.',
+
+    // TODO: official Google Maps place link (Share → Copy link). Until set, directions use the street address.
+    googleMapsUrl: '',
+    // TODO: official Google Maps embed URL (Share → Embed a map → src). Until set, the map searches the street address.
+    googleMapsEmbedUrl: '',
+
+    // TODO: official Google Business Profile reviews link. Until set, links to a Google Maps search for Burgo.
+    googleReviewsUrl: '',
+    // TODO: "Ask for reviews" link from Google Business Profile (https://g.page/r/.../review). Hidden until set.
+    googleWriteReviewUrl: ''
   },
 
-  // Social Media Links
+  analytics: {
+    // TODO: Google Analytics 4 measurement ID, e.g. 'G-ABC123XYZ'. Analytics stays off until set.
+    measurementId: ''
+  },
+
+  // TODO: verified social profile URLs. Icons only appear for profiles that are set.
   social: {
-    facebook: 'https://facebook.com/burgofc',
-    instagram: 'https://instagram.com/burgofc',
-    youtube: 'https://youtube.com/@burgofc',
-    tiktok: 'https://tiktok.com/@burgofc'
-  },
-
-  // Site Settings
-  settings: {
-    enableAnimations: true,
-    lazyLoadImages: true,
-    analyticsEnabled: false  // Set to true when Analytics ID is configured
+    instagram: '',
+    facebook: '',
+    tiktok: '',
+    youtube: ''
   }
 };
 
-// Helper functions
 const BurgoHelpers = {
-  /**
-   * Get WhatsApp link with optional custom message
-   */
-  getWhatsAppLink(message = null) {
-    const msg = message || BURGO_CONFIG.services.whatsapp.defaultMessage;
-    return `https://wa.me/${BURGO_CONFIG.services.whatsapp.number}?text=${encodeURIComponent(msg)}`;
+  fullAddress() {
+    const a = BURGO_CONFIG.business.address;
+    return `${a.street}, ${a.locality}, ${a.city}`;
   },
 
-  /**
-   * Get MenuPilot ordering URL
-   */
+  isOrderConfigured() {
+    return Boolean(BURGO_CONFIG.links.menuPilotUrl);
+  },
+
   getOrderUrl() {
-    return BURGO_CONFIG.services.menuPilotUrl;
+    return BURGO_CONFIG.links.menuPilotUrl || 'menu.html#order';
   },
 
-  /**
-   * Get Google Maps directions URL
-   */
+  getWhatsAppLink(message) {
+    const { whatsappNumber, whatsappMessage } = BURGO_CONFIG.links;
+    if (!whatsappNumber) return '';
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message || whatsappMessage)}`;
+  },
+
+  getCallLink() {
+    return `tel:${BURGO_CONFIG.business.phone.dial}`;
+  },
+
+  getEmailLink() {
+    return BURGO_CONFIG.business.email ? `mailto:${BURGO_CONFIG.business.email}` : '';
+  },
+
   getDirectionsUrl() {
-    return BURGO_CONFIG.services.googleMaps.locationUrl;
+    return (
+      BURGO_CONFIG.links.googleMapsUrl ||
+      `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(this.fullAddress() + ', Sri Lanka')}`
+    );
   },
 
-  /**
-   * Get Google Reviews URL
-   */
+  getMapEmbedUrl() {
+    return (
+      BURGO_CONFIG.links.googleMapsEmbedUrl ||
+      `https://maps.google.com/maps?q=${encodeURIComponent(this.fullAddress() + ', Sri Lanka')}&z=16&output=embed`
+    );
+  },
+
   getReviewsUrl() {
-    return BURGO_CONFIG.services.googleReviews.reviewsUrl;
+    return (
+      BURGO_CONFIG.links.googleReviewsUrl ||
+      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Burgo Food Chain, ' + this.fullAddress())}`
+    );
   },
 
-  /**
-   * Format phone number for display
-   */
-  formatPhone(phone) {
-    return phone || BURGO_CONFIG.business.phone;
+  getWriteReviewUrl() {
+    return BURGO_CONFIG.links.googleWriteReviewUrl;
+  },
+
+  escapeHTML(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (ch) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[ch]);
   }
 };
-
-// Export for use in other scripts
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { BURGO_CONFIG, BurgoHelpers };
-}

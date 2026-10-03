@@ -1,78 +1,26 @@
-# Burgo Food Chain - Image Placeholders
+# Placeholder images
 
-This directory contains placeholder images for development. Replace these with real Burgo restaurant images before deployment.
+Every `.svg` in this folder is a **temporary, brand-styled placeholder** (labelled "Photo placeholder"). None of them are real Burgo photos. Replace them with official photography before launch.
 
-## Required Images
+## How to replace an image
 
-### Hero Section
-- **hero-main.jpg** (1920x1080 or larger) - Main hero background image showcasing Burgo restaurant
+1. Export the photo as **WebP** (JPEG is fine as a fallback) at the size below, compressed (e.g. with [Squoosh](https://squoosh.app)).
+2. Save it to `assets/images/photos/` (create the folder), e.g. `assets/images/photos/hero-main.webp`.
+3. Update the path where it is used (listed below) and rewrite the `alt` text to describe the actual photo.
+4. Keep the `width`/`height` attributes matching the photo's aspect ratio so the page does not jump while loading.
 
-### Experiences
-- **experience-bakery.jpg** (1200x800) - Burgo Bakery section
-- **experience-iceburg.jpg** (800x600) - Iceburg Shisha Lounge
-- **experience-saivar.jpg** (800x600) - Saivar Restaurant
-- **experience-placeholder-1.jpg** (800x600) - Additional Burgo experience
-- **experience-placeholder-2.jpg** (800x600) - Additional Burgo experience
+## Files and where they are used
 
-### Menu Items
-- **menu-bakery-1.jpg** (600x600) - Bakery item photo
-- **menu-bakery-2.jpg** (600x600) - Bakery item photo
-- **menu-bakery-3.jpg** (600x600) - Bakery item photo
-- **menu-saivar-1.jpg** (600x600) - Saivar dish photo
-- **menu-saivar-2.jpg** (600x600) - Saivar dish photo
-- **menu-saivar-3.jpg** (600x600) - Saivar dish photo
-- **menu-beverage-1.jpg** (600x600) - Beverage photo
-- **menu-beverage-2.jpg** (600x600) - Beverage photo
-- **menu-beverage-3.jpg** (600x600) - Beverage photo
-- **menu-dessert-1.jpg** (600x600) - Dessert photo
-- **menu-dessert-2.jpg** (600x600) - Dessert photo
+| Placeholder | Ratio · suggested size | Used in |
+| --- | --- | --- |
+| `hero-main.svg` | 4:5 · 1200×1500 | `index.html` hero |
+| `story-dining-room.svg` | 4:5 · 1000×1250 | `index.html` Our Story, `about.html` |
+| `experience-bakery.svg` | 4:5 · 1000×1250 | `index.html`, `experiences.html` |
+| `experience-iceburg.svg` | 4:5 · 1000×1250 | `index.html`, `experiences.html` |
+| `experience-saivar.svg` | 4:5 · 1000×1250 | `index.html`, `experiences.html` |
+| `menu-*.svg` | 1:1 · 800×800 | `data/menu-data.js` (`image`) |
+| `gallery-01.svg` … `gallery-10.svg` | 4:5 or 1:1 · 1600px long edge | `data/gallery-data.js` and the home gallery in `index.html` (`src` and `data-src`) |
 
-### Gallery
-- **gallery-food-1.jpg** through **gallery-food-12.jpg** (800x800) - Food photography
-- **gallery-interior-1.jpg** through **gallery-interior-6.jpg** (800x800) - Restaurant interior
-- **gallery-exterior-1.jpg** through **gallery-exterior-3.jpg** (800x800) - Building exterior
-- **gallery-atmosphere-1.jpg** through **gallery-atmosphere-6.jpg** (800x800) - People dining, ambiance
+Images are cropped with `object-fit: cover`, so keep the main subject near the centre. The hero becomes a wide dome on tablets, so leave some room at the sides.
 
-### Social Media
-- **og-image.jpg** (1200x630) - Open Graph image for social sharing
-
-## Image Guidelines
-
-### Quality
-- Use high-resolution images (minimum 72 DPI for web, 300 DPI for print materials)
-- Ensure proper lighting and composition
-- Professional food photography is recommended
-
-### Format
-- Use JPEG for photographs
-- Use PNG for images requiring transparency
-- Optimize all images for web (use tools like TinyPNG, ImageOptim, or Squoosh)
-
-### Naming Convention
-Keep the exact file names as listed above for easy replacement. The website code references these specific filenames.
-
-### Aspect Ratios
-- Hero images: 16:9 landscape
-- Experience cards: 4:3 landscape  
-- Menu items: 1:1 square
-- Gallery items: 1:1 square (can vary for masonry layout)
-
-## Creating Temporary Placeholders
-
-For development purposes, you can use free stock images from:
-- [Unsplash](https://unsplash.com/) - Food & Restaurant category
-- [Pexels](https://pexels.com/) - Food Photography
-- [Pixabay](https://pixabay.com/) - Restaurant & Food
-
-**Important:** Replace all stock images with actual Burgo restaurant photos before going live.
-
-## Deployment Checklist
-
-Before deploying to production:
-- [ ] Replace all placeholder images with real Burgo photos
-- [ ] Optimize all images for web performance
-- [ ] Verify image alt text is accurate
-- [ ] Test images on mobile devices
-- [ ] Ensure consistent branding across all images
-- [ ] Verify no copyright issues with images
-- [ ] Test page load times with real images
+The social sharing image (`assets/images/og-image.jpg`) and favicons (`assets/icons/`) are generated from the official logo and can stay.

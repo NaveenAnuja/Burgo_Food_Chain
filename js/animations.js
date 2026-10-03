@@ -1,59 +1,64 @@
 /**
- * Burgo Food Chain - Animations
- * Scroll-triggered animations using Intersection Observer
+ * Burgo Food Chain — Scroll reveal
+ * Elements with [data-reveal] fade up once when they enter the viewport.
+ * Children of [data-reveal-stagger] are revealed one after another.
  */
 
-class BurgoAnimations {
-  constructor() {
-    this.animatedElements = document.querySelectorAll('[data-animate]');
-    this.staggerElements = document.querySelectorAll('[data-animate-stagger]');
-    this.init();
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function prepareStagger(root = document) {
+    root.querySelectorAll('[data-reveal-stagger]').forEach((group) => {
+      Array.from(group.children).forEach((child, index) => {
+        if (!child.hasAttribute('data-reveal')) child.setAttribute('data-reveal', '');
+        child.style.setProperty('--reveal-delay', String(Math.min(index, 6) * 90));
+      });
+    });
   }
 
-  init() {
-    // Check if user prefers reduced motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (prefersReducedMotion) {
-      // Skip animations for users who prefer reduced motion
-      this.animatedElements.forEach(el => el.classList.add('in-view'));
-      this.staggerElements.forEach(el => el.classList.add('in-view'));
+  let observer = null;
+
+  function observe(root = document) {
+    const targets = root.querySelectorAll('[data-reveal]:not(.is-visible)');
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      targets.forEach((el) => el.classList.add('is-visible'));
       return;
     }
 
-    // Setup Intersection Observer
-    this.setupObserver();
+    if (!observer) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -8% 0px', threshold: 0.12 }
+      );
+    }
+
+    targets.forEach((el) => observer.observe(el));
   }
 
-  setupObserver() {
-    const options = {
-      root: null,
-      rootMargin: '0px 0px -100px 0px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          
-          // Optionally unobserve after animation
-          // observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    // Observe all animated elements
-    this.animatedElements.forEach(el => observer.observe(el));
-    this.staggerElements.forEach(el => observer.observe(el));
+  function init() {
+    prepareStagger();
+    observe();
   }
-}
 
-// Initialize animations when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    new BurgoAnimations();
-  });
-} else {
-  new BurgoAnimations();
-}
+  // Lets scripts that render content later (menu, gallery) opt their new nodes into the reveal.
+  window.BurgoReveal = {
+    refresh(root) {
+      prepareStagger(root);
+      observe(root);
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

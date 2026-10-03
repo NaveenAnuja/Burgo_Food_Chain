@@ -1,52 +1,44 @@
 /**
- * Burgo Food Chain - CSS Reset
- * Modern CSS reset with best practices
+ * Burgo Food Chain — Modern reset
  */
 
-/* Box sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin and padding */
 * {
   margin: 0;
-  padding: 0;
 }
 
-/* HTML and Body */
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
+  min-height: 100svh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Remove list styles */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Images */
 img,
 picture,
 video,
 canvas,
-svg {
+svg,
+iframe {
   display: block;
   max-width: 100%;
+}
+
+img {
   height: auto;
 }
 
-/* Forms */
 input,
 button,
 textarea,
@@ -55,49 +47,34 @@ select {
   color: inherit;
 }
 
-/* Remove button styles */
 button {
   background: none;
-  border: none;
+  border: 0;
+  padding: 0;
   cursor: pointer;
 }
 
-/* Links */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-/* Headings */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
-  font-size: inherit;
+  overflow-wrap: break-word;
 }
 
-/* Remove default outline */
-:focus {
-  outline: none;
-}
-
-/* Better focus styles */
-:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+[hidden] {
+  display: none !important;
 }

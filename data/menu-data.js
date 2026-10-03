@@ -1,41 +1,51 @@
 /**
- * Burgo Menu Data
- * Replace this sample data with real menu items from MenuPilot
+ * Burgo Food Chain — Menu preview data
+ *
+ * The live menu, prices and ordering are on MenuPilot (see links.menuPilotUrl in js/config.js).
+ * This file only powers the visual preview on the website.
+ *
+ * SAMPLE DATA: the dishes below are illustrative placeholders, not the verified Burgo menu.
+ * When replacing them with real dishes:
+ *   - set `isSample` to false (this hides the "sample dishes" note)
+ *   - add `price` only when confirmed, e.g. 'LKR 1,250' (omit or use null to hide it)
+ *   - add `dietary` labels only when confirmed, e.g. ['Vegetarian']
+ *   - swap `image` for a real photo (square, ~800×800, WebP preferred)
+ *   - set `available: false` to hide an item without deleting it
  */
 
 const BURGO_MENU = {
+  isSample: true,
+
   categories: [
     {
       id: 'bakery',
       name: 'Bakery',
-      description: 'Freshly baked goods made daily',
-      icon: '🥐',
       items: [
         {
           id: 'croissant',
-          name: 'Classic Croissant',
-          description: 'Buttery, flaky French pastry',
-          price: 'LKR 350',
-          image: 'assets/images/placeholders/menu-bakery-1.jpg',
-          tags: ['vegetarian', 'popular'],
+          name: 'Butter Croissant',
+          description: 'Flaky, buttery, golden layers.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-bakery-1.svg',
           available: true
         },
         {
-          id: 'danish',
-          name: 'Fruit Danish',
-          description: 'Sweet pastry with seasonal fruit',
-          price: 'LKR 450',
-          image: 'assets/images/placeholders/menu-bakery-2.jpg',
-          tags: ['vegetarian'],
+          id: 'pastry',
+          name: 'Seasonal Pastry',
+          description: 'A rotating sweet bake from the counter.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-bakery-2.svg',
           available: true
         },
         {
           id: 'sandwich',
-          name: 'Club Sandwich',
-          description: 'Triple-decker with chicken, bacon, lettuce',
-          price: 'LKR 950',
-          image: 'assets/images/placeholders/menu-bakery-3.jpg',
-          tags: ['popular'],
+          name: 'Bakery Sandwich',
+          description: 'Freshly filled bread from the bakery.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-bakery-3.svg',
           available: true
         }
       ]
@@ -43,69 +53,65 @@ const BURGO_MENU = {
     {
       id: 'saivar',
       name: 'Saivar Restaurant',
-      description: 'Authentic Sri Lankan cuisine',
-      icon: '🍛',
       items: [
         {
           id: 'rice-curry',
-          name: 'Traditional Rice & Curry',
-          description: 'Rice with assorted curries and accompaniments',
-          price: 'LKR 1,250',
-          image: 'assets/images/placeholders/menu-saivar-1.jpg',
-          tags: ['popular', 'spicy'],
+          name: 'Rice & Curry',
+          description: 'Rice served with a selection of curries.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-saivar-1.svg',
           available: true
         },
         {
           id: 'kottu',
-          name: 'Chicken Kottu',
-          description: 'Chopped roti with chicken and vegetables',
-          price: 'LKR 1,100',
-          image: 'assets/images/placeholders/menu-saivar-2.jpg',
-          tags: ['popular', 'spicy'],
+          name: 'Kottu',
+          description: 'Chopped roti tossed on the griddle.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-saivar-2.svg',
           available: true
         },
         {
-          id: 'seafood-curry',
-          name: 'Seafood Curry',
-          description: 'Fresh catch of the day in rich coconut curry',
-          price: 'LKR 1,850',
-          image: 'assets/images/placeholders/menu-saivar-3.jpg',
-          tags: ['spicy'],
+          id: 'fish-curry',
+          name: 'Fish Curry',
+          description: 'A coastal favourite with rich spices.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-saivar-3.svg',
           available: true
         }
       ]
     },
     {
-      id: 'beverages',
-      name: 'Beverages',
-      description: 'Refreshing drinks and coffee',
-      icon: '☕',
+      id: 'drinks',
+      name: 'Drinks',
       items: [
         {
           id: 'coffee',
           name: 'Cappuccino',
-          description: 'Rich espresso with steamed milk',
-          price: 'LKR 450',
-          image: 'assets/images/placeholders/menu-beverage-1.jpg',
-          tags: ['popular'],
+          description: 'Espresso with steamed, velvety milk.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-beverage-1.svg',
           available: true
         },
         {
-          id: 'smoothie',
-          name: 'Tropical Smoothie',
-          description: 'Mango, pineapple, and coconut blend',
-          price: 'LKR 650',
-          image: 'assets/images/placeholders/menu-beverage-2.jpg',
-          tags: ['vegetarian', 'vegan'],
+          id: 'mocktail',
+          name: 'Chilled Mocktail',
+          description: 'Bright, fruity and served over ice.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-beverage-2.svg',
           available: true
         },
         {
-          id: 'fresh-juice',
-          name: 'Fresh Orange Juice',
-          description: 'Freshly squeezed',
-          price: 'LKR 550',
-          image: 'assets/images/placeholders/menu-beverage-3.jpg',
-          tags: ['vegetarian', 'vegan'],
+          id: 'juice',
+          name: 'Fresh Juice',
+          description: 'Pressed to order.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-beverage-3.svg',
           available: true
         }
       ]
@@ -113,42 +119,26 @@ const BURGO_MENU = {
     {
       id: 'desserts',
       name: 'Desserts',
-      description: 'Sweet endings',
-      icon: '🍰',
       items: [
         {
           id: 'cake',
-          name: 'Chocolate Lava Cake',
-          description: 'Warm chocolate cake with molten center',
-          price: 'LKR 750',
-          image: 'assets/images/placeholders/menu-dessert-1.jpg',
-          tags: ['popular', 'vegetarian'],
+          name: 'Chocolate Cake',
+          description: 'A rich slice to finish.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-dessert-1.svg',
           available: true
         },
         {
           id: 'ice-cream',
-          name: 'Artisan Ice Cream',
-          description: 'Three scoops of your choice',
-          price: 'LKR 650',
-          image: 'assets/images/placeholders/menu-dessert-2.jpg',
-          tags: ['vegetarian'],
+          name: 'Ice Cream',
+          description: 'Cool scoops for warm evenings.',
+          price: null,
+          dietary: [],
+          image: 'assets/images/placeholders/menu-dessert-2.svg',
           available: true
         }
       ]
     }
-  ],
-
-  // Featured/Popular items
-  featured: [
-    'croissant',
-    'rice-curry',
-    'kottu',
-    'coffee',
-    'cake'
   ]
 };
-
-// Export for use
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { BURGO_MENU };
-}

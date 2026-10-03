@@ -1,55 +1,27 @@
 /**
- * Burgo Food Chain - Analytics
- * Google Analytics integration (optional)
+ * Burgo Food Chain — Google Analytics 4 (optional)
+ * Loads only when BURGO_CONFIG.analytics.measurementId is set in js/config.js.
  */
 
-// Google Analytics Setup
-if (BURGO_CONFIG.settings.analyticsEnabled && BURGO_CONFIG.services.analytics.measurementId !== 'G-XXXXXXXXXX') {
-  // Load Google Analytics
-  (function() {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${BURGO_CONFIG.services.analytics.measurementId}`;
-    document.head.appendChild(script);
+(() => {
+  const id = BURGO_CONFIG.analytics.measurementId;
+  if (!/^G-[A-Z0-9]+$/i.test(id || '')) return;
 
-    script.onload = function() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', BURGO_CONFIG.services.analytics.measurementId);
-      
-      console.log('Google Analytics initialized');
-    };
-  })();
-} else {
-  console.log('Analytics disabled or not configured');
-}
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+  document.head.appendChild(script);
 
-/**
- * Track custom events
- * Usage: trackEvent('Button', 'Click', 'Order Online')
- */
-function trackEvent(category, action, label) {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', action, {
-      'event_category': category,
-      'event_label': label
-    });
-  }
-}
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag('js', new Date());
+  window.gtag('config', id);
 
-/**
- * Track page views (for SPA navigation if implemented)
- */
-function trackPageView(path) {
-  if (typeof gtag !== 'undefined') {
-    gtag('config', BURGO_CONFIG.services.analytics.measurementId, {
-      'page_path': path
-    });
-  }
-}
-
-// Export functions
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { trackEvent, trackPageView };
-}
+  window.BurgoAnalytics = {
+    track(action, params = {}) {
+      window.gtag('event', action.replace(/-/g, '_'), params);
+    }
+  };
+})();

@@ -1,26 +1,12 @@
 /**
- * Burgo Food Chain - Main Stylesheet
- * Import all CSS modules in correct order
+ * Burgo Food Chain — Main stylesheet
+ * Mobile-first: each module keeps its own min-width media queries next to the rules they modify.
  */
 
-/* 1. Design System */
 @import url('variables.css');
 @import url('reset.css');
-
-/* 2. Base Styles */
 @import url('base.css');
-
-/* 3. Layout */
 @import url('layout.css');
-
-/* 4. Components */
 @import url('components.css');
-
-/* 5. Sections */
 @import url('sections.css');
-
-/* 6. Animations */
 @import url('animations.css');
-
-/* 7. Responsive */
-@import url('responsive.css');

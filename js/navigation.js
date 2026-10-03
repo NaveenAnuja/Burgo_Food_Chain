@@ -1,133 +1,109 @@
 /**
- * Burgo Food Chain - Navigation
- * Handles navbar scroll behavior and mobile menu
+ * Burgo Food Chain — Header and mobile menu
  */
 
-class BurgoNavigation {
-  constructor() {
-    this.navbar = document.querySelector('.navbar');
-    this.navbarToggle = document.querySelector('.navbar-toggle');
-    this.mobileMenu = document.querySelector('.navbar-mobile-menu');
-    this.mobileLinks = document.querySelectorAll('.navbar-mobile-link');
-    this.navLinks = document.querySelectorAll('.navbar-link');
-    this.scrollThreshold = 100;
-    this.isMenuOpen = false;
+(() => {
+  const header = document.querySelector('[data-header]');
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  const desktopQuery = window.matchMedia('(min-width: 1024px)');
 
-    this.init();
-  }
+  /* ---------- Header scroll state ---------- */
+  let lastY = window.scrollY;
+  let ticking = false;
 
-  init() {
-    if (!this.navbar) return;
+  function updateHeader() {
+    const y = window.scrollY;
+    const menuOpen = menu?.classList.contains('is-open');
+    header.classList.toggle('is-scrolled', y > 24);
 
-    // Handle scroll behavior
-    this.handleScroll();
-    window.addEventListener('scroll', () => this.handleScroll());
+    const goingDown = y > lastY + 4;
+    const goingUp = y < lastY - 4;
+    const focusInside = header.contains(document.activeElement);
 
-    // Handle mobile menu toggle
-    if (this.navbarToggle && this.mobileMenu) {
-      this.navbarToggle.addEventListener('click', () => this.toggleMobileMenu());
+    if (goingDown && y > 480 && !menuOpen && !focusInside) {
+      header.classList.add('is-hidden');
+    } else if (goingUp || y <= 480) {
+      header.classList.remove('is-hidden');
     }
 
-    // Close mobile menu when clicking links
-    this.mobileLinks.forEach(link => {
-      link.addEventListener('click', () => this.closeMobileMenu());
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (this.isMenuOpen && 
-          !this.mobileMenu.contains(e.target) && 
-          !this.navbarToggle.contains(e.target)) {
-        this.closeMobileMenu();
-      }
-    });
-
-    // Highlight active page
-    this.highlightActivePage();
-
-    // Smooth scroll for anchor links
-    this.setupSmoothScroll();
+    lastY = y;
+    ticking = false;
   }
 
-  handleScroll() {
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition > this.scrollThreshold) {
-      this.navbar.classList.add('scrolled');
-    } else {
-      this.navbar.classList.remove('scrolled');
-    }
-  }
-
-  toggleMobileMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-
-    if (this.isMenuOpen) {
-      this.openMobileMenu();
-    } else {
-      this.closeMobileMenu();
-    }
-  }
-
-  openMobileMenu() {
-    this.mobileMenu.classList.add('active');
-    this.navbarToggle.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    this.isMenuOpen = true;
-  }
-
-  closeMobileMenu() {
-    this.mobileMenu.classList.remove('active');
-    this.navbarToggle.classList.remove('active');
-    document.body.style.overflow = '';
-    this.isMenuOpen = false;
-  }
-
-  highlightActivePage() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Desktop nav
-    this.navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === currentPage || (href === 'index.html' && currentPage === '')) {
-        link.classList.add('active');
-      }
-    });
-
-    // Mobile nav
-    this.mobileLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === currentPage || (href === 'index.html' && currentPage === '')) {
-        link.classList.add('active');
-      }
-    });
-  }
-
-  setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) {
-          const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-          const targetPosition = target.offsetTop - navbarHeight;
-
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
+  if (header) {
+    updateHeader();
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeader);
+          ticking = true;
         }
-      });
-    });
+      },
+      { passive: true }
+    );
+    header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
   }
-}
 
-// Initialize navigation when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    new BurgoNavigation();
+  /* ---------- Mobile menu ---------- */
+  if (!toggle || !menu) return;
+
+  const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  const label = toggle.querySelector('.visually-hidden');
+
+  function setOpen(open, { restoreFocus = true } = {}) {
+    menu.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    if (label) label.textContent = open ? 'Close menu' : 'Open menu';
+    document.body.classList.toggle('is-locked', open);
+
+    if (open) {
+      menu.removeAttribute('inert');
+      header.classList.remove('is-hidden');
+      const first = menu.querySelector(focusableSelector);
+      window.setTimeout(() => first?.focus({ preventScroll: true }), 60);
+    } else {
+      menu.setAttribute('inert', '');
+      if (restoreFocus) toggle.focus({ preventScroll: true });
+    }
+  }
+
+  const isOpen = () => menu.classList.contains('is-open');
+
+  toggle.addEventListener('click', () => setOpen(!isOpen()));
+
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('[data-menu-close]')) setOpen(false);
+    else if (event.target.closest('a')) setOpen(false, { restoreFocus: false });
   });
-} else {
-  new BurgoNavigation();
-}
+
+  document.addEventListener('keydown', (event) => {
+    if (!isOpen()) return;
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      setOpen(false);
+      return;
+    }
+
+    if (event.key === 'Tab') {
+      const items = [...menu.querySelectorAll(focusableSelector)].filter(
+        (el) => !el.hidden && el.offsetParent !== null
+      );
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  desktopQuery.addEventListener('change', (event) => {
+    if (event.matches && isOpen()) setOpen(false, { restoreFocus: false });
+  });
+})();

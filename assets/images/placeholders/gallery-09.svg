@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Lounge (placeholder image)">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0" stop-color="#1F4A55"/>
+      <stop offset=".55" stop-color="#101B1F"/>
+      <stop offset="1" stop-color="#090D0F"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".6" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".45"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#fade)"/>
+  <g fill="none" stroke="#F2CC63" stroke-opacity=".16" stroke-width="1.5">
+    <circle cx="400.0" cy="352.0" r="372.0"/>
+    <circle cx="400.0" cy="352.0" r="468.0"/>
+    <path d="M100.0 712.0 V148.0 A300.0 300.0 0 0 1 700.0 148.0 V712.0"/>
+  </g>
+  <g transform="translate(400.0 352.0) scale(0.900)" fill="none" stroke="#F2CC63" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".9">
+      <path d="M-66 -120 L-48 130 H48 L66 -120 Z"/>
+      <path d="M-60 -50 C-30 -40 30 -60 60 -50"/>
+      <path d="M26 -170 L-4 80"/>
+      <circle cx="-56" cy="-130" r="34"/>
+      <path d="M-56 -164 V-96 M-90 -130 H-22" opacity=".6"/>
+  </g>
+  <text x="400.0" y="640" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="38" fill="#F7EFE3" fill-opacity=".92">Lounge</text>
+  <text x="400.0" y="680" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="4.0" fill="#F2CC63" fill-opacity=".7">PHOTO PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Burgo Food Chain | Premium Restaurant Experience in Beruwala</title>
+  <meta name="description" content="Experience exceptional dining at Burgo Food Chain in Beruwala. Discover our bakery, Iceburg Shisha Lounge, Saivar Restaurant, and more. Order online or visit us today.">
+  <meta name="keywords" content="Burgo Food Chain, restaurant Beruwala, bakery, shisha lounge, Saivar restaurant, Sri Lankan food, order food online">
+  <meta name="author" content="Burgo Food Chain PVT LTD">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://burgofc.com/">
+  <meta property="og:title" content="Burgo Food Chain | Premium Restaurant Experience">
+  <meta property="og:description" content="Experience exceptional dining at Burgo Food Chain. Multiple dining experiences under one roof.">
+  <meta property="og:image" content="https://burgofc.com/assets/images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://burgofc.com/">
+  <meta property="twitter:title" content="Burgo Food Chain | Premium Restaurant Experience">
+  <meta property="twitter:description" content="Experience exceptional dining at Burgo Food Chain. Multiple dining experiences under one roof.">
+  <meta property="twitter:image" content="https://burgofc.com/assets/images/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Burgo Food Chain PVT LTD",
+    "image": "https://burgofc.com/assets/images/hero-main.jpg",
+    "description": "Premium restaurant chain in Beruwala offering bakery, shisha lounge, and authentic Sri Lankan cuisine.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "380/1 Galle Road, Hettimulla",
+      "addressLocality": "Beruwala",
+      "addressCountry": "LK"
+    },
+    "telephone": "+94711746051",
+    "url": "https://burgofc.com",
+    "servesCuisine": ["Sri Lankan", "International", "Bakery"],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span>BURGO</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <ul class="navbar-nav">
+          <li><a href="index.html" class="navbar-link active">Home</a></li>
+          <li><a href="about.html" class="navbar-link">Our Story</a></li>
+          <li><a href="experiences.html" class="navbar-link">Experiences</a></li>
+          <li><a href="menu.html" class="navbar-link">Menu</a></li>
+          <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+          <li><a href="locations.html" class="navbar-link">Locations</a></li>
+        </ul>
+        
+        <div class="navbar-cta">
+          <a href="#" class="btn btn-primary" id="orderOnlineBtn">Order Online</a>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggle" aria-label="Toggle navigation menu">
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="navbar-mobile-menu">
+      <ul class="navbar-mobile-nav">
+        <li><a href="index.html" class="navbar-mobile-link active">Home</a></li>
+        <li><a href="about.html" class="navbar-mobile-link">Our Story</a></li>
+        <li><a href="experiences.html" class="navbar-mobile-link">Experiences</a></li>
+        <li><a href="menu.html" class="navbar-mobile-link">Menu</a></li>
+        <li><a href="gallery.html" class="navbar-mobile-link">Gallery</a></li>
+        <li><a href="locations.html" class="navbar-mobile-link">Locations</a></li>
+        <li><a href="#" class="btn btn-primary btn-full" id="orderOnlineMobileBtn">Order Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <img src="assets/images/placeholders/hero-main.jpg" alt="Burgo Food Chain Restaurant" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content" data-animate="fade-in-up">
+      <h1 class="hero-title">More Than a Meal.<br>It's a Burgo Experience.</h1>
+      <p class="hero-subtitle">Discover exceptional dining across our bakery, shisha lounge, and authentic restaurants.</p>
+      
+      <div class="hero-cta">
+        <a href="menu.html" class="btn btn-light btn-lg">Explore Menu</a>
+        <a href="#" class="btn btn-outline btn-lg" id="orderOnlineHeroBtn">Order Online</a>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-indicator">
+      <span class="hero-scroll-text">Scroll</span>
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- Brand Statement -->
+  <section class="brand-statement">
+    <div class="container-sm" data-animate="fade-in-up">
+      <h2 class="brand-statement-title">Where Every Meal Tells a Story</h2>
+      <p class="brand-statement-text">
+        From freshly baked pastries to authentic Sri Lankan cuisine, from casual dining to relaxed shisha lounge vibes — 
+        Burgo Food Chain brings together multiple culinary experiences under one roof. 
+        We're not just a restaurant; we're a destination.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experiences Section -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header" data-animate="fade-in-up">
+        <span class="section-label">Discover</span>
+        <h2 class="section-title">Burgo Experiences</h2>
+        <p class="section-description">Multiple dining destinations, one unforgettable experience.</p>
+      </div>
+
+      <div class="experiences-grid" data-animate-stagger>
+        <!-- Featured Experience: Bakery -->
+        <div class="experience-card experience-featured">
+          <div class="experience-card-image">
+            <img src="assets/images/placeholders/experience-bakery.jpg" alt="Burgo Bakery" loading="lazy">
+          </div>
+          <div class="experience-card-overlay"></div>
+          <div class="experience-card-content">
+            <span class="experience-card-label">Bakery</span>
+            <h3 class="experience-card-title">Burgo Bakery</h3>
+            <p class="experience-card-description">
+              Start your day with freshly baked pastries, artisan breads, and gourmet sandwiches. 
+              Our bakery combines traditional techniques with modern flavors.
+            </p>
+            <a href="experiences.html#bakery" class="btn btn-light">Explore Bakery</a>
+          </div>
+        </div>
+
+        <!-- Iceburg Shisha Lounge -->
+        <div class="experience-card experience-regular">
+          <div class="experience-card-image">
+            <img src="assets/images/placeholders/experience-iceburg.jpg" alt="Iceburg Shisha Lounge" loading="lazy">
+          </div>
+          <div class="experience-card-overlay"></div>
+          <div class="experience-card-content">
+            <span class="experience-card-label">Lounge</span>
+            <h3 class="experience-card-title">Iceburg Shisha Lounge</h3>
+            <p class="experience-card-description">
+              Unwind in style with premium shisha and a relaxed atmosphere.
+            </p>
+            <a href="experiences.html#iceburg" class="btn btn-light btn-sm">Discover</a>
+          </div>
+        </div>
+
+        <!-- Saivar Restaurant -->
+        <div class="experience-card experience-regular">
+          <div class="experience-card-image">
+            <img src="assets/images/placeholders/experience-saivar.jpg" alt="Saivar Restaurant" loading="lazy">
+          </div>
+          <div class="experience-card-overlay"></div>
+          <div class="experience-card-content">
+            <span class="experience-card-label">Restaurant</span>
+            <h3 class="experience-card-title">Saivar Restaurant</h3>
+            <p class="experience-card-description">
+              Authentic Sri Lankan flavors with a modern twist.
+            </p>
+            <a href="experiences.html#saivar" class="btn btn-light btn-sm">View Menu</a>
+          </div>
+        </div>
+
+        <!-- Placeholder Experience 1 -->
+        <div class="experience-card experience-regular">
+          <div class="experience-card-image">
+            <img src="assets/images/placeholders/experience-placeholder-1.jpg" alt="Burgo Dining Experience" loading="lazy">
+          </div>
+          <div class="experience-card-overlay"></div>
+          <div class="experience-card-content">
+            <span class="experience-card-label">Coming Soon</span>
+            <h3 class="experience-card-title">More Experiences</h3>
+            <p class="experience-card-description">
+              Exciting new dining concepts coming to Burgo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Placeholder Experience 2 -->
+        <div class="experience-card experience-regular">
+          <div class="experience-card-image">
+            <img src="assets/images/placeholders/experience-placeholder-2.jpg" alt="Burgo Dining Experience" loading="lazy">
+          </div>
+          <div class="experience-card-overlay"></div>
+          <div class="experience-card-content">
+            <span class="experience-card-label">Coming Soon</span>
+            <h3 class="experience-card-title">Stay Tuned</h3>
+            <p class="experience-card-description">
+              More culinary adventures await.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Preview Section -->
+  <section class="section menu-preview">
+    <div class="container">
+      <div class="section-header" data-animate="fade-in-up">
+        <span class="section-label">Taste</span>
+        <h2 class="section-title">Our Signature Dishes</h2>
+        <p class="section-description">A glimpse into our diverse culinary offerings.</p>
+      </div>
+
+      <div class="menu-grid" data-animate-stagger id="featuredMenuItems">
+        <!-- Menu items will be loaded by JavaScript -->
+      </div>
+
+      <div class="text-center mt-12" data-animate="fade-in-up">
+        <a href="menu.html" class="btn btn-primary btn-lg">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Burgo Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header" data-animate="fade-in-up">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">The Burgo Difference</h2>
+      </div>
+
+      <div class="features-grid" data-animate-stagger>
+        <div class="feature-item">
+          <div class="feature-icon">🍽️</div>
+          <h3 class="feature-title">Multiple Experiences</h3>
+          <p class="feature-description">
+            From bakery to fine dining, discover diverse culinary journeys all in one place.
+          </p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">⭐</div>
+          <h3 class="feature-title">Premium Quality</h3>
+          <p class="feature-description">
+            We source the finest ingredients and craft every dish with care and expertise.
+          </p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🌿</div>
+          <h3 class="feature-title">Fresh & Local</h3>
+          <p class="feature-description">
+            Supporting local farmers and suppliers to bring you the freshest flavors of Sri Lanka.
+          </p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Perfect Location</h3>
+          <p class="feature-description">
+            Conveniently located on Galle Road, easily accessible for locals and travelers alike.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="section">
+    <div class="container">
+      <div class="reviews-header" data-animate="fade-in-up">
+        <h2 class="section-title">What Our Guests Say</h2>
+        
+        <div class="reviews-rating">
+          <div class="reviews-rating-number">4.8</div>
+          <div>
+            <div class="reviews-rating-stars">
+              ★★★★★
+            </div>
+            <p class="reviews-rating-text">Based on 127 reviews</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid" id="reviewsContainer" data-animate-stagger>
+        <!-- Reviews will be loaded by JavaScript -->
+      </div>
+
+      <div class="reviews-cta" data-animate="fade-in-up">
+        <a href="#" class="btn btn-secondary" id="viewGoogleReviewsBtn">View All Reviews on Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Preview Section -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header" data-animate="fade-in-up">
+        <span class="section-label">Visit Us</span>
+        <h2 class="section-title">Find Burgo</h2>
+        <p class="section-description">Located on Galle Road in the heart of Beruwala</p>
+      </div>
+
+      <div class="location-card" style="max-width: 600px; margin: 0 auto;" data-animate="fade-in-up">
+        <div class="location-card-icon">📍</div>
+        <h3 class="location-card-title">Burgo Food Chain</h3>
+        <div class="location-card-info">
+          <div class="location-card-info-item">
+            <span>📍</span>
+            <span>380/1 Galle Road, Hettimulla, Beruwala</span>
+          </div>
+          <div class="location-card-info-item">
+            <span>📞</span>
+            <span>+94 71 174 6051</span>
+          </div>
+          <div class="location-card-info-item">
+            <span>🕒</span>
+            <span>Open Daily | 7:00 AM - 11:00 PM</span>
+          </div>
+        </div>
+        <div class="location-card-actions">
+          <a href="#" class="btn btn-primary" id="getDirectionsBtn">Get Directions</a>
+          <a href="#" class="btn btn-secondary" id="whatsappBtn">WhatsApp Us</a>
+        </div>
+      </div>
+
+      <div class="text-center mt-8" data-animate="fade-in-up">
+        <a href="locations.html" class="btn btn-outline">More Locations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2 class="cta-title" data-animate="fade-in-up">Ready to Experience Burgo?</h2>
+      <p class="cta-description" data-animate="fade-in-up">Order online for delivery or pickup, or visit us for an unforgettable dining experience.</p>
+      <div class="cta-buttons" data-animate="fade-in-up">
+        <a href="#" class="btn btn-light btn-xl" id="orderNowBtn">Order Now</a>
+        <a href="menu.html" class="btn btn-outline btn-xl">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <h3 class="footer-logo">BURGO</h3>
+          <p class="footer-description">
+            More than a meal. It's a Burgo experience. Discover exceptional dining across our multiple restaurant concepts in Beruwala.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Facebook" id="facebookLink">
+              <span>f</span>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram" id="instagramLink">
+              <span>📷</span>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube" id="youtubeLink">
+              <span>▶</span>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="TikTok" id="tiktokLink">
+              <span>🎵</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">Our Story</a>
+            <a href="experiences.html" class="footer-link">Experiences</a>
+            <a href="menu.html" class="footer-link">Menu</a>
+            <a href="gallery.html" class="footer-link">Gallery</a>
+            <a href="locations.html" class="footer-link">Locations</a>
+          </nav>
+        </div>
+
+        <!-- Experiences -->
+        <div class="footer-column">
+          <h4>Experiences</h4>
+          <nav class="footer-links">
+            <a href="experiences.html#bakery" class="footer-link">Bakery</a>
+            <a href="experiences.html#iceburg" class="footer-link">Iceburg Shisha Lounge</a>
+            <a href="experiences.html#saivar" class="footer-link">Saivar Restaurant</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link" id="footerWhatsappBtn">WhatsApp</a>
+            <a href="#" class="footer-link" id="footerDirectionsBtn">Get Directions</a>
+            <a href="#" class="footer-link" id="footerOrderBtn">Order Online</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2024 Burgo Food Chain PVT LTD. All rights reserved.
+        </p>
+        <nav class="footer-legal">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-cta">
+    <div class="mobile-cta-buttons">
+      <a href="menu.html" class="btn btn-secondary">Menu</a>
+      <a href="#" class="btn btn-primary" id="orderMobileCTABtn">Order Online</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="data/menu-data.js"></script>
+  <script src="data/reviews-data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

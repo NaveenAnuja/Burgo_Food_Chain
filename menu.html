@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Menu | Burgo Food Chain - Bakery, Restaurant & Lounge Menu</title>
+  <meta name="description" content="Explore Burgo Food Chain's diverse menu featuring bakery items, authentic Sri Lankan cuisine, beverages, and more. Order online for delivery or pickup.">
+  <meta name="keywords" content="Burgo menu, food menu Beruwala, bakery menu, restaurant menu, Sri Lankan food">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Menu | Burgo Food Chain">
+  <meta property="og:description" content="Explore our diverse menu and order online.">
+  <meta property="og:url" content="https://burgofc.com/menu.html">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span>BURGO</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <ul class="navbar-nav">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="about.html" class="navbar-link">Our Story</a></li>
+          <li><a href="experiences.html" class="navbar-link">Experiences</a></li>
+          <li><a href="menu.html" class="navbar-link active">Menu</a></li>
+          <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+          <li><a href="locations.html" class="navbar-link">Locations</a></li>
+        </ul>
+        
+        <div class="navbar-cta">
+          <a href="#" class="btn btn-primary" id="orderOnlineBtn">Order Online</a>
+        </div>
+      </div>
+      
+      <button class="navbar-toggle" aria-label="Toggle navigation menu">
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+      </button>
+    </div>
+    
+    <div class="navbar-mobile-menu">
+      <ul class="navbar-mobile-nav">
+        <li><a href="index.html" class="navbar-mobile-link">Home</a></li>
+        <li><a href="about.html" class="navbar-mobile-link">Our Story</a></li>
+        <li><a href="experiences.html" class="navbar-mobile-link">Experiences</a></li>
+        <li><a href="menu.html" class="navbar-mobile-link active">Menu</a></li>
+        <li><a href="gallery.html" class="navbar-mobile-link">Gallery</a></li>
+        <li><a href="locations.html" class="navbar-mobile-link">Locations</a></li>
+        <li><a href="#" class="btn btn-primary btn-full" id="orderOnlineMobileBtn">Order Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-background">
+      <img src="assets/images/placeholders/hero-menu.jpg" alt="Burgo Menu" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="page-hero-content" data-animate="fade-in-up">
+      <h1 class="page-hero-title">Our Menu</h1>
+      <p class="page-hero-description">From bakery to restaurant, discover our diverse culinary offerings</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="section menu-preview">
+    <div class="container">
+      
+      <!-- Category Navigation -->
+      <div class="menu-category-nav" id="menuCategoryNav" data-animate="fade-in-up">
+        <!-- Categories will be loaded by JavaScript -->
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-grid" id="menuItemsContainer" data-animate-stagger>
+        <!-- Menu items will be loaded by JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Order Online CTA -->
+  <section class="section section-dark">
+    <div class="container text-center">
+      <div data-animate="fade-in-up">
+        <h2 class="section-title">Order Online</h2>
+        <p class="section-description" style="color: var(--color-grey-light);">
+          Enjoy Burgo's delicious food from the comfort of your home. Order online for delivery or pickup.
+        </p>
+        <div class="mt-8">
+          <a href="#" class="btn btn-primary btn-xl" id="orderNowBtn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Note -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="story-highlight" data-animate="fade-in-up">
+        <p class="story-highlight-text">
+          <strong>Note:</strong> This menu is for reference only. For the most up-to-date menu, pricing, and availability, 
+          please visit our online ordering platform or contact us directly. Menu items and prices are subject to change.
+        </p>
+      </div>
+
+      <div class="text-center mt-8" data-animate="fade-in-up">
+        <h3 class="mb-4">Have Questions About Our Menu?</h3>
+        <div class="flex gap-4 justify-center">
+          <a href="#" class="btn btn-secondary" id="whatsappMenuBtn">WhatsApp Us</a>
+          <a href="locations.html" class="btn btn-outline">Visit Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-logo">BURGO</h3>
+          <p class="footer-description">
+            More than a meal. It's a Burgo experience. Discover exceptional dining across our multiple restaurant concepts in Beruwala.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Facebook" id="facebookLink"><span>f</span></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram" id="instagramLink"><span>📷</span></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube" id="youtubeLink"><span>▶</span></a>
+            <a href="#" class="footer-social-link" aria-label="TikTok" id="tiktokLink"><span>🎵</span></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">Our Story</a>
+            <a href="experiences.html" class="footer-link">Experiences</a>
+            <a href="menu.html" class="footer-link">Menu</a>
+            <a href="gallery.html" class="footer-link">Gallery</a>
+            <a href="locations.html" class="footer-link">Locations</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Experiences</h4>
+          <nav class="footer-links">
+            <a href="experiences.html#bakery" class="footer-link">Bakery</a>
+            <a href="experiences.html#iceburg" class="footer-link">Iceburg Shisha Lounge</a>
+            <a href="experiences.html#saivar" class="footer-link">Saivar Restaurant</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link" id="footerWhatsappBtn">WhatsApp</a>
+            <a href="#" class="footer-link" id="footerDirectionsBtn">Get Directions</a>
+            <a href="#" class="footer-link" id="footerOrderBtn">Order Online</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2024 Burgo Food Chain PVT LTD. All rights reserved.</p>
+        <nav class="footer-legal">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-cta">
+    <div class="mobile-cta-buttons">
+      <a href="experiences.html" class="btn btn-secondary">Experiences</a>
+      <a href="#" class="btn btn-primary" id="orderMobileCTABtn">Order Online</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="data/menu-data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/animations.js"></script>
+  
+  <script>
+    // WhatsApp button for menu questions
+    document.addEventListener('DOMContentLoaded', () => {
+      const whatsappMenuBtn = document.getElementById('whatsappMenuBtn');
+      if (whatsappMenuBtn) {
+        whatsappMenuBtn.href = BurgoHelpers.getWhatsAppLink('Hi! I have a question about your menu.');
+        whatsappMenuBtn.target = '_blank';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -17,8 +17,8 @@ const BURGO_CONFIG = {
       countryCode: 'LK'
     },
     phone: {
-      display: '+94 71 174 6051',
-      dial: '+94711746051'
+      display: '+94 70 743 1098',
+      dial: '+94707431098'
     },
     email: '', // TODO: official email address (hidden until set)
 
@@ -27,11 +27,11 @@ const BURGO_CONFIG = {
   },
 
   links: {
-    // TODO: official MenuPilot public menu URL. Until set, "Order Online" opens menu.html#order.
-    menuPilotUrl: '',
+    // Public online-ordering URL. "Order Online" opens this link in a new tab.
+    orderUrl: 'https://menupilot.lk/shop/burgo-food-chain-pvt-ltd?entry=qr',
 
     // TODO: confirm WhatsApp is active on this number (digits only, country code first).
-    whatsappNumber: '94711746051',
+    whatsappNumber: '94707431098',
     whatsappMessage: 'Hello Burgo! I have a question.',
     whatsappOrderMessage: 'Hello Burgo! I would like to place an order.',
 
@@ -67,11 +67,11 @@ const BurgoHelpers = {
   },
 
   isOrderConfigured() {
-    return Boolean(BURGO_CONFIG.links.menuPilotUrl);
+    return Boolean(BURGO_CONFIG.links.orderUrl);
   },
 
   getOrderUrl() {
-    return BURGO_CONFIG.links.menuPilotUrl || 'menu.html#order';
+    return BURGO_CONFIG.links.orderUrl || 'menu.html#order';
   },
 
   getWhatsAppLink(message) {

@@ -1,0 +1,4081 @@
+{
+  "success": true,
+  "data": {
+    "menus": [
+      {
+        "id": "6acf5d8963b8f53a730bd544",
+        "name": "INDIAN",
+        "description": "A vibrant selection of authentic Indian dishes, prepared with aromatic spices, fresh ingredients, and traditional cooking techniques, offering a delightful blend of rich flavors, tempting aromas, and satisfying tastes.",
+        "isActive": true
+      },
+      {
+        "id": "6ae15b441f7222946d30302b",
+        "name": "SRI LANKAN",
+        "description": "Traditional food of Sri Lanka",
+        "isActive": true
+      },
+      {
+        "id": "6acf484163b8f53a730b4542",
+        "name": "CONTINENTAL",
+        "description": "Continental cuisine features a variety of Western-inspired dishes, including soups, salads, pasta, grilled meats, seafood, and delicious side dishes, prepared with fresh ingredients and presented with elegance.",
+        "isActive": true
+      },
+      {
+        "id": "6ad1c655d03fed9e7e32c640",
+        "name": "Tandoori",
+        "description": "Authentic, flavorful dishes marinated in aromatic spices and expertly cooked to perfection in a traditional tandoor oven, delivering a smoky aroma and delicious taste.",
+        "isActive": true
+      },
+      {
+        "id": "6ad1d0aed03fed9e7e32d71c",
+        "name": "Chinese",
+        "description": "A delightful selection of authentic Chinese dishes, expertly prepared with fresh ingredients, aromatic seasonings, and bold flavors for a satisfying culinary experience.",
+        "isActive": true
+      },
+      {
+        "id": "6ad1fb10d03fed9e7e35df16",
+        "name": "Bun & Crispy",
+        "description": "",
+        "isActive": true
+      },
+      {
+        "id": "6ad2055bd03fed9e7e35f119",
+        "name": "Drinks",
+        "description": "",
+        "isActive": true
+      },
+      {
+        "id": "6ad85bcbae1e5ae111641438",
+        "name": "Original Desserts",
+        "description": "",
+        "isActive": true
+      },
+      {
+        "id": "6ae1d3e69362eb6b6a618091",
+        "name": "SHISHA",
+        "description": "Shisha flavours available",
+        "isActive": true
+      }
+    ],
+    "categories": [
+      {
+        "id": "6acf5dcd63b8f53a730bd5d0",
+        "name": "Biriyani",
+        "description": "Aromatic basmati rice cooked with fragrant spices, herbs, and rich flavors, layered with tender meat or chicken for a delicious and satisfying traditional Indian dining experience.",
+        "menuId": "6acf5d8963b8f53a730bd544"
+      },
+      {
+        "id": "6ad1fb24d03fed9e7e35df98",
+        "name": "Chicken",
+        "description": "",
+        "menuId": "6ad1fb10d03fed9e7e35df16"
+      },
+      {
+        "id": "6ad85befae1e5ae1116414c6",
+        "name": "Desserts",
+        "description": "",
+        "menuId": "6ad85bcbae1e5ae111641438"
+      },
+      {
+        "id": "6ae1d49c9362eb6b6a618501",
+        "name": "Flavored Shisha",
+        "description": "Shisha flavours no tobacco fully halal",
+        "menuId": "6ae1d3e69362eb6b6a618091"
+      },
+      {
+        "id": "6ae15be11f7222946d3034a3",
+        "name": "Kandiri Kidu",
+        "description": "",
+        "menuId": "6ae15b441f7222946d30302b"
+      },
+      {
+        "id": "6ad20594d03fed9e7e35f1a6",
+        "name": "Milk Shake",
+        "description": "A creamy, chilled milkshake blended to perfection for a smooth, refreshing, and deliciously satisfying treat.",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      },
+      {
+        "id": "6ad1c6afd03fed9e7e32c6e2",
+        "name": "Roti's",
+        "description": "Freshly prepared, golden-brown flatbreads with a soft texture and delicious flavor, perfect to enjoy with curries, sambols, and a variety of savory dishes.",
+        "menuId": "6ad1c655d03fed9e7e32c640"
+      },
+      {
+        "id": "6acf489063b8f53a730b4586",
+        "name": "Salad",
+        "description": "Fresh and flavourful salads prepared with crisp vegetables, seasonal ingredients, and delicious dressings, offering a perfect balance of taste, freshness, and nutrition.",
+        "menuId": "6acf484163b8f53a730b4542"
+      },
+      {
+        "id": "6ad1d0ebd03fed9e7e32de64",
+        "name": "Soup",
+        "description": "A comforting blend of fresh ingredients, aromatic spices, and rich flavors, expertly prepared to deliver a warm, delicious, and satisfying dining experience.",
+        "menuId": "6ad1d0aed03fed9e7e32d71c"
+      },
+      {
+        "id": "6ad1fb49d03fed9e7e35dfc5",
+        "name": "Burgers",
+        "description": "Juicy, flavorful patties layered with fresh lettuce, ripe tomatoes, cheese, and signature sauces, served in a soft toasted bun for the perfect bite.",
+        "menuId": "6ad1fb10d03fed9e7e35df16"
+      },
+      {
+        "id": "6acf5e1163b8f53a730bd606",
+        "name": "Curries",
+        "description": "A flavourful selection of traditional Indian curries, prepared with aromatic spices, fresh ingredients, and rich sauces, offering a perfect balance of taste, warmth, and authentic Indian flavours.",
+        "menuId": "6acf5d8963b8f53a730bd544"
+      },
+      {
+        "id": "6ad205c2d03fed9e7e35f1d4",
+        "name": "Fresh & Juice",
+        "description": "Freshly prepared fruit juice made from ripe, juicy fruits, offering a naturally refreshing taste packed with fruity goodness.",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      },
+      {
+        "id": "6ad1c6e6d03fed9e7e32c717",
+        "name": "Kebabs",
+        "description": "Succulent, perfectly grilled meats seasoned with aromatic spices, delivering a rich, smoky flavor and an irresistible taste in every bite.",
+        "menuId": "6ad1c655d03fed9e7e32c640"
+      },
+      {
+        "id": "6ad1d128d03fed9e7e32de97",
+        "name": "Rice",
+        "description": "Fluffy, perfectly cooked rice prepared to complement a variety of curries, stir-fries, and savory dishes, offering a wholesome and satisfying dining experience.",
+        "menuId": "6ad1d0aed03fed9e7e32d71c"
+      },
+      {
+        "id": "6acf48e463b8f53a730b45b4",
+        "name": "Soup",
+        "description": "A selection of delicious continental soups, prepared with fresh ingredients, aromatic herbs, and rich flavours, served warm for a comforting and satisfying dining experience.",
+        "menuId": "6acf484163b8f53a730b4542"
+      },
+      {
+        "id": "6ae15bcc1f7222946d303493",
+        "name": "Kottu",
+        "description": "",
+        "menuId": "6ae15b441f7222946d30302b"
+      },
+      {
+        "id": "6ad1d14dd03fed9e7e32deb0",
+        "name": "Noodles",
+        "description": "Deliciously prepared noodles tossed with fresh vegetables, aromatic seasonings, and savory sauces, delivering a perfect balance of flavor and texture in every bite.",
+        "menuId": "6ad1d0aed03fed9e7e32d71c"
+      },
+      {
+        "id": "6acf491d63b8f53a730b45cf",
+        "name": "Pizza",
+        "description": "Delicious continental-style pizzas topped with rich tomato sauce, melted cheese, fresh ingredients, and a perfect blend of herbs and seasonings, baked to golden perfection for an irresistible taste.",
+        "menuId": "6acf484163b8f53a730b4542"
+      },
+      {
+        "id": "6ad1c714d03fed9e7e32c73b",
+        "name": "Roasted",
+        "description": "Expertly roasted to golden perfection, delivering rich flavors, a delicious aroma, and a tender, juicy texture in every bite.",
+        "menuId": "6ad1c655d03fed9e7e32c640"
+      },
+      {
+        "id": "6ad1fb75d03fed9e7e35dfd7",
+        "name": "Submarines",
+        "description": "Freshly baked submarine bread filled with tender meat, crisp vegetables, melted cheese, and signature sauces for a delicious and satisfying bite.",
+        "menuId": "6ad1fb10d03fed9e7e35df16"
+      },
+      {
+        "id": "6ad205d4d03fed9e7e35f1e7",
+        "name": "Water Bottle",
+        "description": "",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      },
+      {
+        "id": "6ad1d16ed03fed9e7e32dec7",
+        "name": "Devilled",
+        "description": "A bold and flavorful combination of fresh ingredients, fiery spices, and tangy sauces, stir-fried to perfection for a deliciously spicy and satisfying taste.",
+        "menuId": "6ad1d0aed03fed9e7e32d71c"
+      },
+      {
+        "id": "6ad20626d03fed9e7e35f200",
+        "name": "Mojito",
+        "description": "A refreshing blend of zesty lime, fresh mint, and sparkling soda, served chilled for a crisp, invigorating taste.",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      },
+      {
+        "id": "6acf495263b8f53a730b45ec",
+        "name": "Pasta",
+        "description": "A delightful selection of continental pasta dishes, prepared with perfectly cooked pasta, rich sauces, fresh ingredients, aromatic herbs, and a touch of cheese for a delicious and satisfying dining experience.",
+        "menuId": "6acf484163b8f53a730b4542"
+      },
+      {
+        "id": "6ad1fba8d03fed9e7e35dfef",
+        "name": "Shawarma Wrap",
+        "description": "Tender, seasoned meat wrapped in soft flatbread with fresh vegetables, creamy garlic sauce, and aromatic spices for an authentic, flavorful bite.",
+        "menuId": "6ad1fb10d03fed9e7e35df16"
+      },
+      {
+        "id": "6ae15c351f7222946d3034c1",
+        "name": "String Hoppers Kottu",
+        "description": "Made with white rice flour biryani masala recipe served with chicken, beef or egg",
+        "menuId": "6ae15b441f7222946d30302b"
+      },
+      {
+        "id": "6ad20725d03fed9e7e35f230",
+        "name": "Lassi",
+        "description": "A traditional creamy yogurt-based drink, blended to perfection for a smooth, refreshing taste with a deliciously rich texture.",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      },
+      {
+        "id": "6ad20736d03fed9e7e35f24a",
+        "name": "Soft Drinks",
+        "description": "",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      },
+      {
+        "id": "6ae1aa3e9362eb6b6a60e899",
+        "name": "Hot Drinks",
+        "description": "",
+        "menuId": "6ad2055bd03fed9e7e35f119"
+      }
+    ],
+    "items": [
+      {
+        "id": "6ae173e49362eb6b6a607604",
+        "name": "Beef Kidu rice full",
+        "description": "White rice, kaliya, mango curry dhal curry banana flower achchar and meat soup served with beef fried chil and papadam",
+        "price": 600,
+        "imageUrl": "/uploads/images/menu-item-1793168943672-386828741.jpg",
+        "category": {
+          "_id": "6ae15be11f7222946d3034a3",
+          "name": "Kandiri Kidu",
+          "id": "6ae15be11f7222946d3034a3"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1aae99362eb6b6a60f0b1",
+        "name": "Chai",
+        "description": "A comforting cup of freshly brewed tea infused with aromatic spices and milk, offering a rich flavour and a soothing finish.",
+        "price": 200,
+        "imageUrl": "/uploads/images/menu-item-1793174249361-559848665.jpg",
+        "category": {
+          "_id": "6ae1aa3e9362eb6b6a60e899",
+          "name": "Hot Drinks",
+          "id": "6ae1aa3e9362eb6b6a60e899"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1a2439362eb6b6a60d01c",
+        "name": "Chicken  String Hoppers Kottu",
+        "description": "Tender chicken, soft string hoppers, fresh vegetables, and aromatic Sri Lankan spices stir-fried together for a delicious and flavourful meal.",
+        "price": 1000,
+        "imageUrl": "/uploads/images/menu-item-1793183858354-287191206.jpg",
+        "category": {
+          "_id": "6ae15c351f7222946d3034c1",
+          "name": "String Hoppers Kottu",
+          "id": "6ae15c351f7222946d3034c1"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "name": "Medium",
+            "price": 1000,
+            "image": "",
+            "_id": "6ae1d0729362eb6b6a6173fd"
+          },
+          {
+            "name": "Large",
+            "price": 1400,
+            "image": "",
+            "_id": "6ae1d0729362eb6b6a6173fe"
+          }
+        ]
+      },
+      {
+        "id": "6ad1e6c4d03fed9e7e34a723",
+        "name": "Chicken Fried Rice",
+        "description": "Fragrant rice stir-fried with tender chicken, fresh vegetables, eggs, and savory seasonings for a delicious, flavorful meal.",
+        "price": 1050,
+        "imageUrl": "/uploads/images/menu-item-1792140995854-479270390.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1050,
+            "_id": "6ad1e6c4d03fed9e7e34a724"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1590,
+            "_id": "6ad1e6c4d03fed9e7e34a725"
+          }
+        ]
+      },
+      {
+        "id": "6ad1cbabd03fed9e7e32cd0c",
+        "name": "Chicken Kebab",
+        "description": "ender chicken marinated in aromatic spices and expertly grilled to perfection, delivering a smoky aroma, juicy texture, and rich, flavorful taste in every bite.",
+        "price": 1350,
+        "imageUrl": "/uploads/images/menu-item-1792134059540-39389642.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1d2a5d03fed9e7e32f334",
+        "name": "Chicken Manchow Soup",
+        "description": "A rich and flavorful Chinese-style soup prepared with tender chicken, fresh vegetables, aromatic spices, and savory seasonings, delivering a warm, spicy, and satisfying taste.",
+        "price": 800,
+        "imageUrl": "/uploads/images/menu-item-1792135845576-221739283.jpg",
+        "category": {
+          "_id": "6ad1d0ebd03fed9e7e32de64",
+          "name": "Soup",
+          "id": "6ad1d0ebd03fed9e7e32de64"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf633363b8f53a730bdb6d",
+        "name": "Chicken Masala",
+        "description": "Tender chicken cooked in a rich, aromatic masala gravy with a perfect blend of traditional spices.",
+        "price": 1190,
+        "imageUrl": "/uploads/images/menu-item-1791976243554-695572635.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ececd03fed9e7e351735",
+        "name": "Chicken Noodles",
+        "description": "Stir-fried noodles tossed with tender chicken, fresh vegetables, and savory seasonings for a delicious and satisfying meal.",
+        "price": 990,
+        "imageUrl": "/uploads/images/menu-item-1792142572038-388867087.jpg",
+        "category": {
+          "_id": "6ad1d14dd03fed9e7e32deb0",
+          "name": "Noodles",
+          "id": "6ad1d14dd03fed9e7e32deb0"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf5b2e63b8f53a730bccf3",
+        "name": "Chicken Pasta",
+        "description": "A delicious pasta dish featuring tender chicken, perfectly cooked pasta, and a rich, flavourful sauce, enhanced with aromatic herbs and a touch of cheese for a satisfying dining experience.",
+        "price": 990,
+        "imageUrl": "/uploads/images/menu-item-1791974190765-675563754.jpg",
+        "category": {
+          "_id": "6acf495263b8f53a730b45ec",
+          "name": "Pasta",
+          "id": "6acf495263b8f53a730b45ec"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Chicken",
+            "price": 200,
+            "icon": "🍗",
+            "_id": "6acf5b4b63b8f53a730bcd3e"
+          }
+        ],
+        "portions": []
+      },
+      {
+        "id": "6ad2040dd03fed9e7e35f05f",
+        "name": "Chicken Shawarma",
+        "description": "Tender, marinated chicken wrapped in soft flatbread with fresh vegetables, creamy garlic sauce, and aromatic spices for an authentic Middle Eastern flavor.",
+        "price": 990,
+        "imageUrl": "/uploads/images/menu-item-1792148493183-73908437.jpg",
+        "category": {
+          "_id": "6ad1fba8d03fed9e7e35dfef",
+          "name": "Shawarma Wrap",
+          "id": "6ad1fba8d03fed9e7e35dfef"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20241d03fed9e7e35eef4",
+        "name": "Chicken Sub",
+        "description": "Tender, seasoned chicken layered with fresh vegetables, melted cheese, and signature sauces in freshly baked submarine bread for a delicious and satisfying meal.",
+        "price": 1150,
+        "imageUrl": "/uploads/images/menu-item-1792148033208-866278331.jpg",
+        "category": {
+          "_id": "6ad1fb75d03fed9e7e35dfd7",
+          "name": "Submarines",
+          "id": "6ad1fb75d03fed9e7e35dfd7"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf521a63b8f53a730bc682",
+        "name": "Cream Of Chicken Soup",
+        "description": "A rich and creamy soup prepared with tender chicken, fresh ingredients, and delicate seasonings, offering a smooth texture and comforting flavour in every spoonful.",
+        "price": 700,
+        "imageUrl": "/uploads/images/menu-item-1791971866282-377767010.jpg",
+        "category": {
+          "_id": "6acf48e463b8f53a730b45b4",
+          "name": "Soup",
+          "id": "6acf48e463b8f53a730b45b4"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1fe02d03fed9e7e35ec90",
+        "name": "Crispy Chicken",
+        "description": "Golden, crispy chicken coated in a perfectly seasoned crunchy crust, with juicy, tender meat inside for a delicious and satisfying bite.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1792146946320-8604506.jpg",
+        "category": {
+          "_id": "6ad1fb24d03fed9e7e35df98",
+          "name": "Chicken",
+          "id": "6ad1fb24d03fed9e7e35df98"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "2 pieces",
+            "price": 750,
+            "_id": "6ad1fe02d03fed9e7e35ec91"
+          },
+          {
+            "image": "",
+            "name": "4 pieces",
+            "price": 1500,
+            "_id": "6ad1fe02d03fed9e7e35ec92"
+          }
+        ]
+      },
+      {
+        "id": "6ad200c2d03fed9e7e35ee1d",
+        "name": "Crispy Chicken Burger",
+        "description": "A golden, crispy chicken fillet layered with fresh lettuce, cheese, and signature sauces, served in a soft toasted bun for a delicious, satisfying bite.",
+        "price": 1050,
+        "imageUrl": "/uploads/images/menu-item-1792147650467-172668333.jpg",
+        "category": {
+          "_id": "6ad1fb49d03fed9e7e35dfc5",
+          "name": "Burgers",
+          "id": "6ad1fb49d03fed9e7e35dfc5"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf4abf63b8f53a730b4650",
+        "name": "Green Salad",
+        "description": "A refreshing mix of fresh, crisp green vegetables, including lettuce, cucumber, and other seasonal greens, served with a light dressing for a healthy, delicious, and refreshing taste.",
+        "price": 500,
+        "imageUrl": "/uploads/images/menu-item-1791969982835-232890084.jpg",
+        "category": {
+          "_id": "6acf489063b8f53a730b4586",
+          "name": "Salad",
+          "id": "6acf489063b8f53a730b4586"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Onion",
+            "price": 100,
+            "icon": "🧅",
+            "_id": "6acf4abf63b8f53a730b4651"
+          }
+        ],
+        "portions": []
+      },
+      {
+        "id": "6ad20907d03fed9e7e35f329",
+        "name": "Lime Juice",
+        "description": "Freshly squeezed lime juice with a perfect balance of citrus tanginess and sweetness, served chilled for a refreshing burst of flavor.",
+        "price": 390,
+        "imageUrl": "/uploads/images/menu-item-1792149767730-207509922.jpg",
+        "category": {
+          "_id": "6ad205c2d03fed9e7e35f1d4",
+          "name": "Fresh & Juice",
+          "id": "6ad205c2d03fed9e7e35f1d4"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1c7ced03fed9e7e32c79d",
+        "name": "Malabar Paratha",
+        "description": "A traditional layered flatbread, expertly prepared to achieve a crispy exterior and soft, flaky texture, perfect to pair with rich curries and savory dishes.",
+        "price": 190,
+        "imageUrl": "/uploads/images/menu-item-1792133070807-529170995.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf536e63b8f53a730bc75c",
+        "name": "Margherita Pizza",
+        "description": "A classic Italian pizza topped with rich tomato sauce, melted mozzarella cheese, and fresh basil, baked to perfection on a golden crust for a deliciously simple and authentic taste.",
+        "price": 990,
+        "imageUrl": "/uploads/images/menu-item-1791972206279-930452544.jpg",
+        "category": {
+          "_id": "6acf491d63b8f53a730b45cf",
+          "name": "Pizza",
+          "id": "6acf491d63b8f53a730b45cf"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf536e63b8f53a730bc75d"
+          }
+        ],
+        "portions": [
+          {
+            "image": "",
+            "name": "Small",
+            "price": 990,
+            "_id": "6acf536e63b8f53a730bc75e"
+          },
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1790,
+            "_id": "6acf536e63b8f53a730bc75f"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2990,
+            "_id": "6acf536e63b8f53a730bc760"
+          }
+        ]
+      },
+      {
+        "id": "6ad20c16d03fed9e7e35f777",
+        "name": "Passion mojito",
+        "description": "A refreshing passion fruit mojito blended with zesty lime, fresh mint, and sparkling soda, delivering a perfect balance of sweet and tangy flavors.",
+        "price": 500,
+        "imageUrl": "/uploads/images/menu-item-1792150550952-965337122.jpg",
+        "category": {
+          "_id": "6ad20626d03fed9e7e35f200",
+          "name": "Mojito",
+          "id": "6ad20626d03fed9e7e35f200"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20e14d03fed9e7e35fb1b",
+        "name": "Pepsi",
+        "price": 250,
+        "imageUrl": "/uploads/images/menu-item-1792151060315-908512893.jpg",
+        "category": {
+          "_id": "6ad20736d03fed9e7e35f24a",
+          "name": "Soft Drinks",
+          "id": "6ad20736d03fed9e7e35f24a"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cf6ed03fed9e7e32d63f",
+        "name": "Roast Chicken",
+        "description": "Succulent chicken seasoned with aromatic herbs and spices, slow-roasted to golden perfection for a crispy exterior, tender texture, and rich, savory flavor.",
+        "price": 900,
+        "imageUrl": "/uploads/images/menu-item-1792135022048-598762043.jpg",
+        "category": {
+          "_id": "6ad1c714d03fed9e7e32c73b",
+          "name": "Roasted",
+          "id": "6ad1c714d03fed9e7e32c73b"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Quarter",
+            "price": 900,
+            "_id": "6ad1cf6ed03fed9e7e32d640"
+          },
+          {
+            "image": "",
+            "name": "Half",
+            "price": 1750,
+            "_id": "6ad1cf6ed03fed9e7e32d641"
+          },
+          {
+            "image": "",
+            "name": "Full",
+            "price": 3200,
+            "_id": "6ad1cf6ed03fed9e7e32d642"
+          }
+        ]
+      },
+      {
+        "id": "6ae1d52d9362eb6b6a61856a",
+        "name": "Shisha",
+        "description": "Shisha flavours no tobacco",
+        "price": 4000,
+        "imageUrl": "/uploads/images/menu-item-1793185069447-884338101.jpg",
+        "category": {
+          "_id": "6ae1d49c9362eb6b6a618501",
+          "name": "Flavored Shisha",
+          "id": "6ae1d49c9362eb6b6a618501"
+        },
+        "menuId": "6ae1d3e69362eb6b6a618091",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20d98d03fed9e7e35fab1",
+        "name": "Sweet Lassi",
+        "description": "A creamy and refreshing sweet lassi made with smooth yogurt and a touch of sweetness, offering a deliciously rich and satisfying taste.",
+        "price": 490,
+        "imageUrl": "/uploads/images/menu-item-1792150936322-733517734.jpg",
+        "category": {
+          "_id": "6ad20725d03fed9e7e35f230",
+          "name": "Lassi",
+          "id": "6ad20725d03fed9e7e35f230"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad85caeae1e5ae111641507",
+        "name": "Tiramisu",
+        "description": "Classic Italian tiramisu made with layers of coffee-soaked ladyfingers, rich mascarpone cream, and a delicate dusting of cocoa powder.",
+        "price": 790,
+        "imageUrl": "/uploads/images/menu-item-1792564398039-210046752.jpg",
+        "category": {
+          "_id": "6ad85befae1e5ae1116414c6",
+          "name": "Desserts",
+          "id": "6ad85befae1e5ae1116414c6"
+        },
+        "menuId": "6ad85bcbae1e5ae111641438",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad207d9d03fed9e7e35f277",
+        "name": "Vanilla shake",
+        "description": "A smooth and creamy vanilla milkshake blended with rich vanilla ice cream and chilled milk for a classic, refreshing treat.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1792149465158-69171276.jpg",
+        "category": {
+          "_id": "6ad20594d03fed9e7e35f1a6",
+          "name": "Milk Shake",
+          "id": "6ad20594d03fed9e7e35f1a6"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20b8dd03fed9e7e35f696",
+        "name": "Water Bottle",
+        "description": "",
+        "price": 130,
+        "imageUrl": "/uploads/images/menu-item-1792150471253-732962129.jpg",
+        "category": {
+          "_id": "6ad205d4d03fed9e7e35f1e7",
+          "name": "Water Bottle",
+          "id": "6ad205d4d03fed9e7e35f1e7"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 130,
+            "_id": "6ad20bc7d03fed9e7e35f712"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 160,
+            "_id": "6ad20bc7d03fed9e7e35f713"
+          }
+        ]
+      },
+      {
+        "id": "6ad1ee7fd03fed9e7e354d7a",
+        "name": "chicken Devilled",
+        "description": "Tender chicken stir-fried with onions, bell peppers, and spicy sauces, delivering a perfect balance of heat, sweetness, and bold flavors.",
+        "price": 1100,
+        "imageUrl": "/uploads/images/menu-item-1792142975118-397192858.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20e66d03fed9e7e35fb54",
+        "name": "7Up",
+        "price": 250,
+        "imageUrl": "/uploads/images/menu-item-1792151142472-942791604.jpg",
+        "category": {
+          "_id": "6ad20736d03fed9e7e35f24a",
+          "name": "Soft Drinks",
+          "id": "6ad20736d03fed9e7e35f24a"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf5fc663b8f53a730bd717",
+        "name": "Beef Biriyani",
+        "description": "Fragrant basmati rice cooked with aromatic spices and herbs, combined with tender, flavorful beef for a rich, hearty, and authentic Indian dining experience.",
+        "price": 1350,
+        "imageUrl": "/uploads/images/menu-item-1791975366778-140773442.jpg",
+        "category": {
+          "_id": "6acf5dcd63b8f53a730bd5d0",
+          "name": "Biriyani",
+          "id": "6acf5dcd63b8f53a730bd5d0"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1350,
+            "_id": "6acf5fc663b8f53a730bd718"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1790,
+            "_id": "6acf5fc663b8f53a730bd719"
+          }
+        ]
+      },
+      {
+        "id": "6ad1eeccd03fed9e7e354dae",
+        "name": "Beef Devilled",
+        "description": "Tender beef tossed with onions, bell peppers, and spicy sauces, delivering a bold, savory flavor with the perfect balance of heat and sweetness.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1792143052059-653987230.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cbf6d03fed9e7e32cd58",
+        "name": "Beef Kebab",
+        "description": "Premium beef marinated in aromatic spices and expertly grilled to perfection, delivering a rich, smoky flavor with a tender, juicy texture in every bite.",
+        "price": 1450,
+        "imageUrl": "/uploads/images/menu-item-1792134134794-413585801.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ed3ed03fed9e7e354cb1",
+        "name": "Beef Noodles",
+        "description": "Stir-fried noodles tossed with tender beef, fresh vegetables, and savory sauces for a rich, flavorful, and satisfying meal.",
+        "price": 1090,
+        "imageUrl": "/uploads/images/menu-item-1792142654244-696790433.jpg",
+        "category": {
+          "_id": "6ad1d14dd03fed9e7e32deb0",
+          "name": "Noodles",
+          "id": "6ad1d14dd03fed9e7e32deb0"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad2045ed03fed9e7e35f093",
+        "name": "Beef Shawarma",
+        "description": "Tender, marinated beef wrapped in soft flatbread with fresh vegetables, creamy garlic sauce, and aromatic spices for a rich and authentic Middle Eastern flavor.",
+        "price": 1090,
+        "imageUrl": "/uploads/images/menu-item-1792148574556-260605366.jpg",
+        "category": {
+          "_id": "6ad1fba8d03fed9e7e35dfef",
+          "name": "Shawarma Wrap",
+          "id": "6ad1fba8d03fed9e7e35dfef"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1a3019362eb6b6a60d0a2",
+        "name": "Beef String Hoppers Kottu",
+        "description": "Tender beef, soft string hoppers, fresh vegetables, and aromatic Sri Lankan spices stir-fried to perfection for a rich, savoury, and satisfying meal.",
+        "price": 1200,
+        "imageUrl": "/uploads/images/menu-item-1793183879136-768223176.jpg",
+        "category": {
+          "_id": "6ae15c351f7222946d3034c1",
+          "name": "String Hoppers Kottu",
+          "id": "6ae15c351f7222946d3034c1"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "name": "Medium",
+            "price": 1200,
+            "image": "",
+            "_id": "6ae1d0879362eb6b6a617457"
+          },
+          {
+            "name": "Large",
+            "price": 1600,
+            "image": "",
+            "_id": "6ae1d0879362eb6b6a617458"
+          }
+        ]
+      },
+      {
+        "id": "6ae19a8a9362eb6b6a60baa3",
+        "name": "Beef kottu",
+        "description": "Ceylon Rotti made with white clour cut into small pieces mix with gravy severed with beef",
+        "price": 1200,
+        "imageUrl": "/uploads/images/menu-item-1793170057968-600073526.jpg",
+        "category": {
+          "_id": "6ae15bcc1f7222946d303493",
+          "name": "Kottu",
+          "id": "6ae15bcc1f7222946d303493"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "name": "Medium",
+            "price": 1200,
+            "image": "",
+            "_id": "6ae1a1ae9362eb6b6a60c807"
+          },
+          {
+            "name": "Large",
+            "price": 1600,
+            "image": "",
+            "_id": "6ae1a1ae9362eb6b6a60c808"
+          }
+        ]
+      },
+      {
+        "id": "6acf5bcc63b8f53a730bcdb5",
+        "name": "Chicken Cheese Pasta",
+        "description": "A creamy and delicious pasta dish prepared with tender chicken, perfectly cooked pasta, rich cheese sauce, and aromatic herbs, delivering a smooth, cheesy flavour in every bite.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1791974348329-335183070.jpg",
+        "category": {
+          "_id": "6acf495263b8f53a730b45ec",
+          "name": "Pasta",
+          "id": "6acf495263b8f53a730b45ec"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf5bcc63b8f53a730bcdb6"
+          },
+          {
+            "name": "Extra Chicken",
+            "price": 200,
+            "icon": "🍗",
+            "_id": "6acf5bcc63b8f53a730bcdb7"
+          }
+        ],
+        "portions": []
+      },
+      {
+        "id": "6ad1e736d03fed9e7e34a889",
+        "name": "Chicken Kabsa",
+        "description": "Aromatic Arabian-style basmati rice cooked with traditional spices, served with tender, flavorful chicken for an authentic Middle Eastern taste.",
+        "price": 1090,
+        "imageUrl": "/uploads/images/menu-item-1792141110507-609498375.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1090,
+            "_id": "6ad1e736d03fed9e7e34a88a"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1490,
+            "_id": "6ad1e736d03fed9e7e34a88b"
+          }
+        ]
+      },
+      {
+        "id": "6ad1fedbd03fed9e7e35ece2",
+        "name": "Chicken Kapsa",
+        "description": "Aromatic Arabian-style rice cooked with fragrant spices and served with tender, flavorful chicken for a rich and authentic Middle Eastern dining experience.",
+        "price": 550,
+        "imageUrl": "/uploads/images/menu-item-1792147163901-146866252.jpg",
+        "category": {
+          "_id": "6ad1fb24d03fed9e7e35df98",
+          "name": "Chicken",
+          "id": "6ad1fb24d03fed9e7e35df98"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf638863b8f53a730bdbb8",
+        "name": "Chicken Kurma",
+        "description": "Tender chicken simmered in a creamy, aromatic gravy with a rich blend of spices and herbs.",
+        "price": 1190,
+        "imageUrl": "/uploads/images/menu-item-1791976328792-333269053.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf54d463b8f53a730bc836",
+        "name": "Chicken Pizza",
+        "description": "A delicious pizza topped with tender chicken, rich tomato sauce, melted mozzarella cheese, and a blend of fresh vegetables and aromatic herbs, baked to perfection on a golden, crispy crust.",
+        "price": 1200,
+        "imageUrl": "/uploads/images/menu-item-1791972563913-985105676.jpg",
+        "category": {
+          "_id": "6acf491d63b8f53a730b45cf",
+          "name": "Pizza",
+          "id": "6acf491d63b8f53a730b45cf"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Chicken",
+            "price": 200,
+            "icon": "🍗",
+            "_id": "6acf562f63b8f53a730bc95b"
+          },
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf562f63b8f53a730bc95c"
+          }
+        ],
+        "portions": [
+          {
+            "image": "",
+            "name": "Small",
+            "price": 1200,
+            "_id": "6acf562f63b8f53a730bc958"
+          },
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 2000,
+            "_id": "6acf562f63b8f53a730bc959"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 3090,
+            "_id": "6acf562f63b8f53a730bc95a"
+          }
+        ]
+      },
+      {
+        "id": "6ae195dd9362eb6b6a60b302",
+        "name": "Chicken kidu rice full",
+        "description": "White rice, kaliya, mango curry dhal curry banana flower achchar and meat soup served with chicken fried chil and",
+        "price": 500,
+        "imageUrl": "/uploads/images/menu-item-1793168861538-24344362.jpg",
+        "category": {
+          "_id": "6ae15be11f7222946d3034a3",
+          "name": "Kandiri Kidu",
+          "id": "6ae15be11f7222946d3034a3"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1d62c9362eb6b6a61860d",
+        "name": "Chicken pastries 2 pieces",
+        "description": "Chicken pastry made with white flour and chicken",
+        "price": 350,
+        "imageUrl": "/uploads/images/menu-item-1793185324249-719663529.jpg",
+        "category": {
+          "_id": "6ae1d49c9362eb6b6a618501",
+          "name": "Flavored Shisha",
+          "id": "6ae1d49c9362eb6b6a618501"
+        },
+        "menuId": "6ae1d3e69362eb6b6a618091",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20840d03fed9e7e35f2ad",
+        "name": "Chocolate Shake",
+        "description": "A rich and creamy chocolate milkshake blended with chilled milk and delicious chocolate flavor for a smooth, indulgent treat.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1792149568273-694625021.jpg",
+        "category": {
+          "_id": "6ad20594d03fed9e7e35f1a6",
+          "name": "Milk Shake",
+          "id": "6ad20594d03fed9e7e35f1a6"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf4bb063b8f53a730b46aa",
+        "name": "Corn Salad",
+        "description": "A refreshing blend of sweet corn, fresh vegetables, and a delicious dressing, offering a perfect balance of sweetness, crunch, and freshness in every bite.",
+        "price": 600,
+        "imageUrl": "/uploads/images/menu-item-1791970222792-113546619.jpg",
+        "category": {
+          "_id": "6acf489063b8f53a730b4586",
+          "name": "Salad",
+          "id": "6acf489063b8f53a730b4586"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad2027ed03fed9e7e35ef1f",
+        "name": "Crispy Chicken Sub",
+        "description": "Golden, crispy chicken layered with fresh vegetables, melted cheese, and signature sauces in freshly baked submarine bread for a crunchy and satisfying bite.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1792148094847-898154341.jpg",
+        "category": {
+          "_id": "6ad1fb75d03fed9e7e35dfd7",
+          "name": "Submarines",
+          "id": "6ad1fb75d03fed9e7e35dfd7"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20113d03fed9e7e35ee4c",
+        "name": "Nashville Hot Chicken Burger",
+        "description": "A crispy chicken fillet coated in spicy Nashville-style seasoning, layered with fresh lettuce and signature sauce in a toasted bun for a bold, fiery flavor.",
+        "price": 1090,
+        "imageUrl": "/uploads/images/menu-item-1792147731576-255220052.jpg",
+        "category": {
+          "_id": "6ad1fb49d03fed9e7e35dfc5",
+          "name": "Burgers",
+          "id": "6ad1fb49d03fed9e7e35dfc5"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1c847d03fed9e7e32c840",
+        "name": "Plain Naan",
+        "description": "A soft, freshly baked Indian flatbread with a light, fluffy texture and a delicate golden finish, perfect for pairing with rich curries and flavorful gravies.",
+        "price": 220,
+        "imageUrl": "/uploads/images/menu-item-1792133191317-945361808.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20ddfd03fed9e7e35fade",
+        "name": "Salt Lassi",
+        "description": "A refreshing salted lassi made with creamy yogurt and a hint of salt, delivering a smooth, savory taste with a cooling finish.",
+        "price": 490,
+        "imageUrl": "/uploads/images/menu-item-1792151007775-505607648.jpg",
+        "category": {
+          "_id": "6ad20725d03fed9e7e35f230",
+          "name": "Lassi",
+          "id": "6ad20725d03fed9e7e35f230"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20c6ad03fed9e7e35f7a9",
+        "name": "Strawberry Mojito",
+        "description": "A refreshing strawberry mojito blended with sweet strawberries, fresh mint, zesty lime, and sparkling soda for a perfectly balanced fruity taste.",
+        "price": 500,
+        "imageUrl": "/uploads/images/menu-item-1792150634371-86427959.jpg",
+        "category": {
+          "_id": "6ad20626d03fed9e7e35f200",
+          "name": "Mojito",
+          "id": "6ad20626d03fed9e7e35f200"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1d006d03fed9e7e32d693",
+        "name": "Tandoori Chicken",
+        "description": "Juicy chicken marinated in yogurt and authentic Indian spices, traditionally roasted in a clay oven to achieve a smoky aroma, vibrant color, and irresistibly tender flavor.",
+        "price": 1100,
+        "imageUrl": "/uploads/images/menu-item-1792135173887-936542050.jpg",
+        "category": {
+          "_id": "6ad1c714d03fed9e7e32c73b",
+          "name": "Roasted",
+          "id": "6ad1c714d03fed9e7e32c73b"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Quarter",
+            "price": 1100,
+            "_id": "6ad1d006d03fed9e7e32d694"
+          },
+          {
+            "image": "",
+            "name": "Half",
+            "price": 1750,
+            "_id": "6ad1d006d03fed9e7e32d695"
+          },
+          {
+            "image": "",
+            "name": "Full",
+            "price": 3350,
+            "_id": "6ad1d006d03fed9e7e32d696"
+          }
+        ]
+      },
+      {
+        "id": "6ad1d2f5d03fed9e7e32f369",
+        "name": "Vegetable soup",
+        "description": "A wholesome and comforting soup prepared with fresh vegetables, aromatic herbs, and delicate seasonings, offering a light, nourishing, and flavorful experience in every spoonful.",
+        "price": 400,
+        "imageUrl": "/uploads/images/menu-item-1792135925698-460143147.jpg",
+        "category": {
+          "_id": "6ad1d0ebd03fed9e7e32de64",
+          "name": "Soup",
+          "id": "6ad1d0ebd03fed9e7e32de64"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad85d53ae1e5ae111641542",
+        "name": "Warm Brownies",
+        "description": "Warm, rich chocolate brownies with a soft, fudgy center and a delicate, slightly crisp crust, served freshly heated for the perfect indulgent treat.",
+        "price": 700,
+        "imageUrl": "/uploads/images/menu-item-1792564562818-103453624.jpg",
+        "category": {
+          "_id": "6ad85befae1e5ae1116414c6",
+          "name": "Desserts",
+          "id": "6ad85befae1e5ae1116414c6"
+        },
+        "menuId": "6ad85bcbae1e5ae111641438",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad2097fd03fed9e7e35f4df",
+        "name": "Watermelon Juice",
+        "description": "Fresh watermelon juice made from ripe, juicy watermelon, served chilled for a naturally sweet, hydrating, and refreshing taste.",
+        "price": 490,
+        "imageUrl": "/uploads/images/menu-item-1792149887026-218814868.jpg",
+        "category": {
+          "_id": "6ad205c2d03fed9e7e35f1d4",
+          "name": "Fresh & Juice",
+          "id": "6ad205c2d03fed9e7e35f1d4"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1e798d03fed9e7e34a8db",
+        "name": "Beef Fried Rice",
+        "description": "Fragrant rice stir-fried with tender beef, fresh vegetables, eggs, and savory seasonings for a rich and satisfying meal.",
+        "price": 1150,
+        "imageUrl": "/uploads/images/menu-item-1792141208195-94845470.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1150,
+            "_id": "6ad1e798d03fed9e7e34a8dc"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1590,
+            "_id": "6ad1e798d03fed9e7e34a8dd"
+          }
+        ]
+      },
+      {
+        "id": "6acf5c5363b8f53a730bce1c",
+        "name": "Beef Pasta",
+        "description": "A delicious pasta dish featuring tender, flavourful beef tossed with perfectly cooked pasta, a rich savoury sauce, and aromatic herbs for a hearty and satisfying dining experience.",
+        "price": 1090,
+        "imageUrl": "/uploads/images/menu-item-1791974482791-608546460.jpg",
+        "category": {
+          "_id": "6acf495263b8f53a730b45ec",
+          "name": "Pasta",
+          "id": "6acf495263b8f53a730b45ec"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Beef",
+            "price": 400,
+            "icon": "",
+            "_id": "6acf5c5363b8f53a730bce1d"
+          }
+        ],
+        "portions": []
+      },
+      {
+        "id": "6ad1cc54d03fed9e7e32cda0",
+        "name": "Beef seekh Kebab",
+        "description": "Succulent minced beef blended with aromatic spices and fresh herbs, skewered and grilled to perfection for a smoky aroma, rich flavor, and tender texture.",
+        "price": 1950,
+        "imageUrl": "/uploads/images/menu-item-1792134228672-622246168.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ff22d03fed9e7e35ed13",
+        "name": "Boiled egg",
+        "description": "A perfectly boiled egg with a tender white and a delicious, protein-rich yolk, served fresh and simple.",
+        "price": 150,
+        "imageUrl": "/uploads/images/menu-item-1792147234568-425343567.jpg",
+        "category": {
+          "_id": "6ad1fb24d03fed9e7e35df98",
+          "name": "Chicken",
+          "id": "6ad1fb24d03fed9e7e35df98"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1d338d03fed9e7e32fa5f",
+        "name": "Chicken Sweet Corn soup",
+        "description": "A creamy, comforting soup combining tender chicken and sweet corn in a rich, flavorful broth, delivering a perfect balance of sweetness and savory goodness.",
+        "price": 650,
+        "imageUrl": "/uploads/images/menu-item-1792135992064-627919342.jpg",
+        "category": {
+          "_id": "6ad1d0ebd03fed9e7e32de64",
+          "name": "Soup",
+          "id": "6ad1d0ebd03fed9e7e32de64"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20195d03fed9e7e35ee82",
+        "name": "Double Beef Burger",
+        "description": "Two juicy beef patties layered with melted cheese, fresh lettuce, and signature sauces, served in a soft toasted bun for a rich and satisfying bite.",
+        "price": 2100,
+        "imageUrl": "/uploads/images/menu-item-1792147861224-8949115.jpg",
+        "category": {
+          "_id": "6ad1fb49d03fed9e7e35dfc5",
+          "name": "Burgers",
+          "id": "6ad1fb49d03fed9e7e35dfc5"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae197149362eb6b6a60b5be",
+        "name": "Fried fish kidu rice Full",
+        "description": "White rice, kaliya, mango curry dhal curry banana flower achchar and meat soup served with fried fish fried chil and papadam",
+        "price": 600,
+        "imageUrl": "/uploads/images/menu-item-1793169172476-560368117.jpg",
+        "category": {
+          "_id": "6ae15be11f7222946d3034a3",
+          "name": "Kandiri Kidu",
+          "id": "6ae15be11f7222946d3034a3"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1d052d03fed9e7e32d6d8",
+        "name": "Fry Fish",
+        "description": "Fresh fish seasoned with aromatic spices and fried to golden perfection, delivering a crispy exterior, tender flesh, and a deliciously savory flavor.",
+        "price": 1520,
+        "imageUrl": "/uploads/images/menu-item-1792135250058-235986441.jpg",
+        "category": {
+          "_id": "6ad1c714d03fed9e7e32c73b",
+          "name": "Roasted",
+          "id": "6ad1c714d03fed9e7e32c73b"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1c8ebd03fed9e7e32c8a8",
+        "name": "Garlic Naan",
+        "description": "A soft, freshly baked Indian flatbread infused with aromatic garlic and butter, delivering a rich, savory flavor that perfectly complements curries and grilled dishes.",
+        "price": 250,
+        "imageUrl": "/uploads/images/menu-item-1792133354343-293549983.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf608063b8f53a730bd794",
+        "name": "Hyderabad Beef Dum Biriyani",
+        "description": "Aromatic basmati rice layered with tender, marinated beef and traditional Hyderabadi spices, slow-cooked using the dum method to lock in rich flavours and irresistible aromas for an authentic and satisfying experience.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1791975552773-317542823.jpg",
+        "category": {
+          "_id": "6acf5dcd63b8f53a730bd5d0",
+          "name": "Biriyani",
+          "id": "6acf5dcd63b8f53a730bd5d0"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1900,
+            "_id": "6acf608063b8f53a730bd795"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2600,
+            "_id": "6acf608063b8f53a730bd796"
+          }
+        ]
+      },
+      {
+        "id": "6ad85db0ae1e5ae11164156e",
+        "name": "Lava Cake",
+        "description": "Warm chocolate lava cake with a soft, rich exterior and a luscious molten chocolate center, served for an indulgent dessert experience.",
+        "price": 490,
+        "imageUrl": "/uploads/images/menu-item-1792564656564-27500394.jpg",
+        "category": {
+          "_id": "6ad85befae1e5ae1116414c6",
+          "name": "Desserts",
+          "id": "6ad85befae1e5ae1116414c6"
+        },
+        "menuId": "6ad85bcbae1e5ae111641438",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20cc7d03fed9e7e35f7da",
+        "name": "Lime Mint Mojito",
+        "description": "A refreshing lime mint mojito blended with zesty lime, fresh mint, and sparkling soda, delivering a crisp, cooling, and invigorating taste.",
+        "price": 500,
+        "imageUrl": "/uploads/images/menu-item-1792150727406-534793217.jpg",
+        "category": {
+          "_id": "6ad20626d03fed9e7e35f200",
+          "name": "Mojito",
+          "id": "6ad20626d03fed9e7e35f200"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20a12d03fed9e7e35f517",
+        "name": "Mango Juice",
+        "description": "Fresh mango juice made from ripe, juicy mangoes, offering a naturally sweet, refreshing taste with a smooth and tropical flavor.",
+        "price": 550,
+        "imageUrl": "/uploads/images/menu-item-1792150034811-950109232.jpg",
+        "category": {
+          "_id": "6ad205c2d03fed9e7e35f1d4",
+          "name": "Fresh & Juice",
+          "id": "6ad205c2d03fed9e7e35f1d4"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1edb7d03fed9e7e354cf2",
+        "name": "Mix Noodles",
+        "description": "Stir-fried noodles tossed with a delicious mix of chicken, beef, seafood, fresh vegetables, and savory sauces for a rich and flavorful meal.",
+        "price": 1590,
+        "imageUrl": "/uploads/images/menu-item-1792142775014-65281720.jpg",
+        "category": {
+          "_id": "6ad1d14dd03fed9e7e32deb0",
+          "name": "Noodles",
+          "id": "6ad1d14dd03fed9e7e32deb0"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf55eb63b8f53a730bc8f3",
+        "name": "Mushroom Pizza",
+        "description": "A delicious pizza topped with fresh mushrooms, rich tomato sauce, melted mozzarella cheese, and aromatic herbs, baked to perfection on a golden crust for a savoury and satisfying taste.",
+        "price": 1300,
+        "imageUrl": "/uploads/images/menu-item-1791972843167-841689193.jpg",
+        "category": {
+          "_id": "6acf491d63b8f53a730b45cf",
+          "name": "Pizza",
+          "id": "6acf491d63b8f53a730b45cf"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf55eb63b8f53a730bc8f4"
+          }
+        ],
+        "portions": [
+          {
+            "image": "",
+            "name": "Small",
+            "price": 1300,
+            "_id": "6acf55eb63b8f53a730bc8f5"
+          },
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1900,
+            "_id": "6acf55eb63b8f53a730bc8f6"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2600,
+            "_id": "6acf55eb63b8f53a730bc8f7"
+          }
+        ]
+      },
+      {
+        "id": "6acf4ca663b8f53a730b4712",
+        "name": "Potato Salad",
+        "description": "A delicious blend of tender potatoes, fresh herbs, and creamy dressing, seasoned to perfection for a rich, smooth, and satisfying flavour.",
+        "price": 600,
+        "imageUrl": "/uploads/images/menu-item-1791970469802-401612162.jpg",
+        "category": {
+          "_id": "6acf489063b8f53a730b4586",
+          "name": "Salad",
+          "id": "6acf489063b8f53a730b4586"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ef16d03fed9e7e35687a",
+        "name": "Prawns Devilled",
+        "description": "Juicy prawns stir-fried with onions, bell peppers, and spicy sauces, creating a delicious blend of bold flavors, heat, and sweetness.",
+        "price": 1550,
+        "imageUrl": "/uploads/images/menu-item-1792143126801-525841985.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad202c8d03fed9e7e35ef50",
+        "name": "Spicy Chicken Sub",
+        "description": "Tender chicken tossed in spicy seasoning, layered with fresh vegetables, melted cheese, and zesty sauces in freshly baked submarine bread for a bold and flavorful bite.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1792148168177-549137478.jpg",
+        "category": {
+          "_id": "6ad1fb75d03fed9e7e35dfd7",
+          "name": "Submarines",
+          "id": "6ad1fb75d03fed9e7e35dfd7"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad204bdd03fed9e7e35f0cd",
+        "name": "Spicy Shawarma",
+        "description": "Tender, spicy marinated meat wrapped in soft flatbread with fresh vegetables, creamy garlic sauce, and a fiery kick for a bold and flavorful bite.",
+        "price": 1150,
+        "imageUrl": "/uploads/images/menu-item-1792148669328-671411871.jpg",
+        "category": {
+          "_id": "6ad1fba8d03fed9e7e35dfef",
+          "name": "Shawarma Wrap",
+          "id": "6ad1fba8d03fed9e7e35dfef"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad208b3d03fed9e7e35f2e8",
+        "name": "Strawberry Shake",
+        "description": "A smooth and creamy strawberry milkshake blended with chilled milk and sweet strawberry flavor for a refreshing, fruity treat.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1792149683423-36924327.jpg",
+        "category": {
+          "_id": "6ad20594d03fed9e7e35f1a6",
+          "name": "Milk Shake",
+          "id": "6ad20594d03fed9e7e35f1a6"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf63ead43f25732cff03d8",
+        "name": "Vegetable Kurma",
+        "description": "Fresh vegetables simmered in a creamy, aromatic gravy with a rich blend of spices and herbs.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1791976426456-524108285.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cc9ad03fed9e7e32cde2",
+        "name": "Beef Kebab Roll",
+        "description": "Juicy, spice-marinated beef kebab wrapped in soft flatbread with fresh vegetables and flavorful sauces, delivering a delicious blend of smoky flavors and satisfying textures.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1792134297981-333536435.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6453d43f25732cff042d",
+        "name": "Beef Kurma",
+        "description": "Tender beef cooked in a rich, creamy gravy infused with aromatic spices and herbs.",
+        "price": 1300,
+        "imageUrl": "/uploads/images/menu-item-1791976531409-317192292.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20319d03fed9e7e35ef7b",
+        "name": "Beef Sub",
+        "description": "Tender, seasoned beef layered with fresh vegetables, melted cheese, and signature sauces in freshly baked submarine bread for a rich and satisfying meal.",
+        "price": 1300,
+        "imageUrl": "/uploads/images/menu-item-1792148249230-175103356.jpg",
+        "category": {
+          "_id": "6ad1fb75d03fed9e7e35dfd7",
+          "name": "Submarines",
+          "id": "6ad1fb75d03fed9e7e35dfd7"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20d3ad03fed9e7e35fa67",
+        "name": "Blue Berry Mojito",
+        "description": "A refreshing blueberry mojito blended with sweet blueberries, fresh mint, zesty lime, and sparkling soda for a vibrant, fruity, and refreshing taste.",
+        "price": 550,
+        "imageUrl": "/uploads/images/menu-item-1792150842451-802200949.jpg",
+        "category": {
+          "_id": "6ad20626d03fed9e7e35f200",
+          "name": "Mojito",
+          "id": "6ad20626d03fed9e7e35f200"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1c94cd03fed9e7e32c8ed",
+        "name": "Butter Naan",
+        "description": "A soft, freshly baked Indian flatbread generously brushed with melted butter, offering a rich, buttery flavor and a tender texture that pairs perfectly with curries and gravies.",
+        "price": 270,
+        "imageUrl": "/uploads/images/menu-item-1792133451891-594641964.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1d3cfd03fed9e7e330160",
+        "name": "Chicken Hot & Sour Soup",
+        "description": "A flavorful blend of tender chicken, fresh vegetables, and aromatic spices in a rich, tangy, and mildly spicy broth.",
+        "price": 650,
+        "imageUrl": "/uploads/images/menu-item-1792136143499-58950330.jpg",
+        "category": {
+          "_id": "6ad1d0ebd03fed9e7e32de64",
+          "name": "Soup",
+          "id": "6ad1d0ebd03fed9e7e32de64"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae19bd59362eb6b6a60bc1e",
+        "name": "Chicken kottu",
+        "description": "Ceylon Rotti made with white clour cut into small pieces mix with gravy severed with chicken",
+        "price": 1000,
+        "imageUrl": "/uploads/images/menu-item-1793170388968-239517535.jpg",
+        "category": {
+          "_id": "6ae15bcc1f7222946d303493",
+          "name": "Kottu",
+          "id": "6ae15bcc1f7222946d303493"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "name": "Medium",
+            "price": 1000,
+            "image": "",
+            "_id": "6ae1a1939362eb6b6a60c7a0"
+          },
+          {
+            "name": "Large",
+            "price": 1400,
+            "image": "",
+            "_id": "6ae1a1939362eb6b6a60c7a1"
+          }
+        ]
+      },
+      {
+        "id": "6ad1ef6bd03fed9e7e3568ad",
+        "name": "Chilly Chicken Devilled",
+        "description": "Tender chicken tossed in a spicy chili sauce with onions and bell peppers, delivering a bold, fiery flavor with a delicious sweet and savory finish.",
+        "price": 1150,
+        "imageUrl": "/uploads/images/menu-item-1792143211091-554568213.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf573563b8f53a730bca17",
+        "name": "Diavola Pizza",
+        "description": "A bold and spicy Italian-style pizza topped with zesty tomato sauce, melted mozzarella cheese, spicy salami, and aromatic herbs, baked to perfection on a crispy golden crust for a rich and fiery flavour.",
+        "price": 1700,
+        "imageUrl": "/uploads/images/menu-item-1791973204930-556171913.jpg",
+        "category": {
+          "_id": "6acf491d63b8f53a730b45cf",
+          "name": "Pizza",
+          "id": "6acf491d63b8f53a730b45cf"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf575563b8f53a730bca77"
+          },
+          {
+            "name": "Extra Pepperoni",
+            "price": 200,
+            "icon": "",
+            "_id": "6acf575563b8f53a730bca78"
+          }
+        ],
+        "portions": [
+          {
+            "image": "",
+            "name": "Small",
+            "price": 1700,
+            "_id": "6acf575563b8f53a730bca74"
+          },
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 2400,
+            "_id": "6acf575563b8f53a730bca75"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 3050,
+            "_id": "6acf575563b8f53a730bca76"
+          }
+        ]
+      },
+      {
+        "id": "6acf615b63b8f53a730bd8ba",
+        "name": "Hyderabad Mutton Dum Biriyani",
+        "description": "Fragrant basmati rice layered with tender, succulent mutton, marinated in traditional Hyderabadi spices and slow-cooked to perfection using the dum method, delivering rich aromas and authentic flavors in every bite.",
+        "price": 2400,
+        "imageUrl": "/uploads/images/menu-item-1791975771053-66914145.jpg",
+        "category": {
+          "_id": "6acf5dcd63b8f53a730bd5d0",
+          "name": "Biriyani",
+          "id": "6acf5dcd63b8f53a730bd5d0"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 2400,
+            "_id": "6acf615b63b8f53a730bd8bb"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 3300,
+            "_id": "6acf615b63b8f53a730bd8bc"
+          }
+        ]
+      },
+      {
+        "id": "6ae1a8259362eb6b6a60dc92",
+        "name": "Kandiri Kidu Beef Whole",
+        "description": "Tender, flavourful beef cooked with aromatic Sri Lankan spices for a rich, delicious, and satisfying meal.",
+        "price": 3000,
+        "imageUrl": "/uploads/images/menu-item-1793184572869-395559861.jpg",
+        "category": {
+          "_id": "6ae15be11f7222946d3034a3",
+          "name": "Kandiri Kidu",
+          "id": "6ae15be11f7222946d3034a3"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ff84d03fed9e7e35ed48",
+        "name": "Masala Omelette",
+        "description": "A fluffy omelette infused with aromatic spices, onions, green chilies, and fresh herbs for a deliciously savory and flavorful bite.",
+        "price": 800,
+        "imageUrl": "/uploads/images/menu-item-1792147332913-739846392.jpg",
+        "category": {
+          "_id": "6ad1fb24d03fed9e7e35df98",
+          "name": "Chicken",
+          "id": "6ad1fb24d03fed9e7e35df98"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "3 eggs",
+            "price": 800,
+            "_id": "6ad1ff84d03fed9e7e35ed49"
+          }
+        ]
+      },
+      {
+        "id": "6ad1e825d03fed9e7e34bd41",
+        "name": "Mix Fried Rice",
+        "description": "Fragrant rice stir-fried with a delicious mix of chicken, beef, seafood, fresh vegetables, eggs, and savory seasonings.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1792141348988-173323132.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1250,
+            "_id": "6ad1e825d03fed9e7e34bd42"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1790,
+            "_id": "6ad1e825d03fed9e7e34bd43"
+          }
+        ]
+      },
+      {
+        "id": "6acf5d0f63b8f53a730bd4fb",
+        "name": "Mix Pasta",
+        "description": "A delicious combination of perfectly cooked pasta, tender chicken, flavourful beef, fresh vegetables, and a rich, savoury sauce, enhanced with aromatic herbs for a delightful and satisfying dining experience.",
+        "price": 1590,
+        "imageUrl": "/uploads/images/menu-item-1791974666935-368635668.jpg",
+        "category": {
+          "_id": "6acf495263b8f53a730b45ec",
+          "name": "Pasta",
+          "id": "6acf495263b8f53a730b45ec"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Beef",
+            "price": 400,
+            "icon": "",
+            "_id": "6acf5d0f63b8f53a730bd4fc"
+          },
+          {
+            "name": "Extra Chicken",
+            "price": 200,
+            "icon": "🍗",
+            "_id": "6acf5d0f63b8f53a730bd4fd"
+          },
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf5d0f63b8f53a730bd4fe"
+          },
+          {
+            "name": "Extra Vegetable",
+            "price": 150,
+            "icon": "🥗",
+            "_id": "6acf5d0f63b8f53a730bd4ff"
+          }
+        ],
+        "portions": []
+      },
+      {
+        "id": "6ae1d8329362eb6b6a618c19",
+        "name": "Mojito juice strawberry",
+        "description": "Mojito juice strawberry made with fresh",
+        "price": 500,
+        "imageUrl": "/uploads/images/menu-item-1793185842859-849195293.jpg",
+        "category": {
+          "_id": "6ae1d49c9362eb6b6a618501",
+          "name": "Flavored Shisha",
+          "id": "6ae1d49c9362eb6b6a618501"
+        },
+        "menuId": "6ae1d3e69362eb6b6a618091",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ee0fd03fed9e7e354d2a",
+        "name": "Nasi Mix Noodle",
+        "description": "Indonesian-style stir-fried noodles combined with a delicious mix of chicken, beef, seafood, fresh vegetables, and aromatic spices for a bold, savory flavor.",
+        "price": 1750,
+        "imageUrl": "/uploads/images/menu-item-1792142862980-625214469.jpg",
+        "category": {
+          "_id": "6ad1d14dd03fed9e7e32deb0",
+          "name": "Noodles",
+          "id": "6ad1d14dd03fed9e7e32deb0"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20a63d03fed9e7e35f544",
+        "name": "Papaya Juice",
+        "description": "Fresh papaya juice made from ripe papayas, offering a naturally sweet, smooth, and refreshing tropical flavor.",
+        "price": 490,
+        "imageUrl": "/uploads/images/menu-item-1792150115731-318722046.jpg",
+        "category": {
+          "_id": "6ad205c2d03fed9e7e35f1d4",
+          "name": "Fresh & Juice",
+          "id": "6ad205c2d03fed9e7e35f1d4"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad201e1d03fed9e7e35eeb1",
+        "name": "Smokie Burger",
+        "description": "A delicious burger featuring a smoky sausage, fresh lettuce, melted cheese, and signature sauces, served in a soft toasted bun for a bold, savory flavor.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1792147937086-719395967.jpg",
+        "category": {
+          "_id": "6ad1fb49d03fed9e7e35dfc5",
+          "name": "Burgers",
+          "id": "6ad1fb49d03fed9e7e35dfc5"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf4db863b8f53a730b8f31",
+        "name": "Tomato Onion Chilly Salad",
+        "description": "A refreshing combination of juicy tomatoes, crisp onions, and fresh green chillies, lightly seasoned to deliver a perfect balance of freshness, crunch, and spicy flavour.",
+        "price": 450,
+        "imageUrl": "/uploads/images/menu-item-1791970743891-157994002.jpg",
+        "category": {
+          "_id": "6acf489063b8f53a730b4586",
+          "name": "Salad",
+          "id": "6acf489063b8f53a730b4586"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Tomato",
+            "price": 100,
+            "icon": "🍅",
+            "_id": "6acf4db863b8f53a730b8f32"
+          },
+          {
+            "name": "Extra Onion",
+            "price": 100,
+            "icon": "🧅",
+            "_id": "6acf4db863b8f53a730b8f33"
+          }
+        ],
+        "portions": []
+      },
+      {
+        "id": "6ad85e4bae1e5ae1116415a5",
+        "name": "Vanilla Cheesecake Slice",
+        "description": "Creamy vanilla cheesecake with a smooth, rich texture and a buttery biscuit base, offering a perfectly balanced and indulgent dessert experience.",
+        "price": 790,
+        "imageUrl": "/uploads/images/menu-item-1792564811191-822319098.jpg",
+        "category": {
+          "_id": "6ad85befae1e5ae1116414c6",
+          "name": "Desserts",
+          "id": "6ad85befae1e5ae1116414c6"
+        },
+        "menuId": "6ad85bcbae1e5ae111641438",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1d9139362eb6b6a618f80",
+        "name": "Barbican malt beverage Halal",
+        "description": "Barbican malt beverage fully halal",
+        "price": 900,
+        "imageUrl": "/uploads/images/menu-item-1793186066920-920099499.jpg",
+        "category": {
+          "_id": "6ae1d49c9362eb6b6a618501",
+          "name": "Flavored Shisha",
+          "id": "6ae1d49c9362eb6b6a618501"
+        },
+        "menuId": "6ae1d3e69362eb6b6a618091",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf582863b8f53a730bcb24",
+        "name": "Beef Pizza",
+        "description": "A delicious pizza topped with tender, flavourful beef, rich tomato sauce, melted mozzarella cheese, and aromatic herbs, baked to perfection on a golden crust for a rich and satisfying taste.",
+        "price": 1800,
+        "imageUrl": "/uploads/images/menu-item-1791973416616-909869176.jpg",
+        "category": {
+          "_id": "6acf491d63b8f53a730b45cf",
+          "name": "Pizza",
+          "id": "6acf491d63b8f53a730b45cf"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [
+          {
+            "name": "Extra Cheese",
+            "price": 100,
+            "icon": "🧀",
+            "_id": "6acf582863b8f53a730bcb25"
+          },
+          {
+            "name": "Extra Beef",
+            "price": 300,
+            "icon": "",
+            "_id": "6acf582863b8f53a730bcb26"
+          }
+        ],
+        "portions": [
+          {
+            "image": "",
+            "name": "Small",
+            "price": 1800,
+            "_id": "6acf582863b8f53a730bcb27"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2500,
+            "_id": "6acf582863b8f53a730bcb28"
+          },
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 3200,
+            "_id": "6acf582863b8f53a730bcb29"
+          }
+        ]
+      },
+      {
+        "id": "6ad1c9bad03fed9e7e32c940",
+        "name": "Chapathi",
+        "description": "A traditional Indian whole-wheat flatbread, freshly prepared to deliver a soft texture and wholesome flavor, perfect for pairing with curries, dhal, and savory dishes.",
+        "price": 200,
+        "imageUrl": "/uploads/images/menu-item-1792133562408-453119898.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cce7d03fed9e7e32ce2e",
+        "name": "Chicken Kebab Roll",
+        "description": "Tender, spice-marinated chicken kebab wrapped in soft flatbread with fresh vegetables and savory sauces, offering a perfect blend of smoky flavors and delicious textures.",
+        "price": 1600,
+        "imageUrl": "/uploads/images/menu-item-1792134374926-768019995.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1fffad03fed9e7e35ed84",
+        "name": "Chicken with Cheese",
+        "description": "Tender, juicy chicken topped with melted cheese and seasoned to perfection, delivering a rich, creamy flavor in every bite.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1792147450125-290143574.jpg",
+        "category": {
+          "_id": "6ad1fb24d03fed9e7e35df98",
+          "name": "Chicken",
+          "id": "6ad1fb24d03fed9e7e35df98"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1a0c29362eb6b6a60c2d3",
+        "name": "Egg Kottu",
+        "description": "A delicious Sri Lankan street-food favorite made with chopped godamba roti, fresh eggs, vegetables, and aromatic spices, stir-fried to perfection for a rich and satisfying taste.",
+        "price": 950,
+        "imageUrl": "/uploads/images/menu-item-1793184042177-544079616.jpg",
+        "category": {
+          "_id": "6ae15bcc1f7222946d303493",
+          "name": "Kottu",
+          "id": "6ae15bcc1f7222946d303493"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "name": "Medium",
+            "price": 950,
+            "image": "",
+            "_id": "6ae1d12a9362eb6b6a6176d4"
+          },
+          {
+            "name": "Large",
+            "price": 1160,
+            "image": "",
+            "_id": "6ae1d12a9362eb6b6a6176d5"
+          }
+        ]
+      },
+      {
+        "id": "6ad1f009d03fed9e7e35692a",
+        "name": "Garlic Chicken Devilled",
+        "description": "Tender chicken stir-fried with aromatic garlic, onions, bell peppers, and savory sauces for a rich, flavorful dish with a delicious garlic kick.",
+        "price": 1200,
+        "imageUrl": "/uploads/images/menu-item-1792143369234-914606768.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ae1a8c99362eb6b6a60dcdb",
+        "name": "Kandiri Kidu Chicken Whole",
+        "description": "Tender chicken cooked with aromatic Sri Lankan spices, delivering a rich, flavourful, and satisfying taste in every bite.",
+        "price": 2500,
+        "imageUrl": "/uploads/images/menu-item-1793184133553-157499607.jpg",
+        "category": {
+          "_id": "6ae15be11f7222946d3034a3",
+          "name": "Kandiri Kidu",
+          "id": "6ae15be11f7222946d3034a3"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf64afd43f25732cff048a",
+        "name": "Mutton Kurma",
+        "description": "Tender mutton simmered in a rich, creamy gravy infused with aromatic spices and herbs.",
+        "price": 1700,
+        "imageUrl": "/uploads/images/menu-item-1791976622910-302301848.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20aabd03fed9e7e35f575",
+        "name": "Orange Juice",
+        "description": "Fresh orange juice with a vibrant citrus flavor, offering a naturally sweet and tangy taste for a refreshing experience.",
+        "price": 650,
+        "imageUrl": "/uploads/images/menu-item-1792150187401-987088361.jpg",
+        "category": {
+          "_id": "6ad205c2d03fed9e7e35f1d4",
+          "name": "Fresh & Juice",
+          "id": "6ad205c2d03fed9e7e35f1d4"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf61f563b8f53a730bd92c",
+        "name": "Tandoori Chicken Biriyani",
+        "description": "Aromatic basmati rice layered with juicy tandoori chicken, marinated in traditional Indian spices and cooked to perfection, combining smoky flavours, fragrant herbs, and rich spices for an unforgettable dining experience.",
+        "price": 1600,
+        "imageUrl": "/uploads/images/menu-item-1791975925559-670852669.jpg",
+        "category": {
+          "_id": "6acf5dcd63b8f53a730bd5d0",
+          "name": "Biriyani",
+          "id": "6acf5dcd63b8f53a730bd5d0"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1600,
+            "_id": "6acf61f563b8f53a730bd92d"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2300,
+            "_id": "6acf61f563b8f53a730bd92e"
+          }
+        ]
+      },
+      {
+        "id": "6ad1e889d03fed9e7e34bd91",
+        "name": "Veg Fried Rice",
+        "description": "Fragrant rice stir-fried with fresh vegetables, eggs, and savory seasonings for a delicious and satisfying vegetarian meal.",
+        "price": 890,
+        "imageUrl": "/uploads/images/menu-item-1792141449238-460176765.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 890,
+            "_id": "6ad1e889d03fed9e7e34bd92"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1390,
+            "_id": "6ad1e889d03fed9e7e34bd93"
+          }
+        ]
+      },
+      {
+        "id": "6ad20361d03fed9e7e35efa6",
+        "name": "Vegetable Sub",
+        "description": "Freshly baked submarine bread filled with crisp, fresh vegetables, melted cheese, and signature sauces for a delicious and satisfying vegetarian meal.",
+        "price": 990,
+        "imageUrl": "/uploads/images/menu-item-1792148321387-592256460.jpg",
+        "category": {
+          "_id": "6ad1fb75d03fed9e7e35dfd7",
+          "name": "Submarines",
+          "id": "6ad1fb75d03fed9e7e35dfd7"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad85ebbae1e5ae1116415d6",
+        "name": "Warm Cookie Dough",
+        "description": "Warm, freshly baked cookie dough with a soft, gooey center and rich chocolate chips, served warm for the ultimate sweet indulgence.",
+        "price": 700,
+        "imageUrl": "/uploads/images/menu-item-1792564923706-31542306.jpg",
+        "category": {
+          "_id": "6ad85befae1e5ae1116414c6",
+          "name": "Desserts",
+          "id": "6ad85befae1e5ae1116414c6"
+        },
+        "menuId": "6ad85bcbae1e5ae111641438",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1f053d03fed9e7e356958",
+        "name": "Chicken 65",
+        "description": "Crispy, spicy fried chicken marinated with aromatic Indian spices, curry leaves, and herbs for a bold, flavorful bite.",
+        "price": 1350,
+        "imageUrl": "/uploads/images/menu-item-1792143443879-366567680.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6531d43f25732cff0b67",
+        "name": "Chicken Do - Piazza",
+        "description": "Tender chicken cooked with sautéed onions, aromatic spices, and a rich, flavorful masala gravy.",
+        "price": 1190,
+        "imageUrl": "/uploads/images/menu-item-1791976752985-992815673.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cd3bd03fed9e7e32ce79",
+        "name": "Chicken Seekh kebab",
+        "description": "Juicy minced chicken blended with aromatic spices and fresh herbs, skewered and grilled to perfection for a smoky aroma, tender texture, and authentic flavor.",
+        "price": 1850,
+        "imageUrl": "/uploads/images/menu-item-1792134459681-806909623.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad203bed03fed9e7e35f016",
+        "name": "Club Sanwich",
+        "description": "A classic triple-layered sandwich filled with tender chicken, egg, fresh vegetables, and creamy mayonnaise, served with perfectly toasted bread for a satisfying bite.",
+        "price": 1400,
+        "imageUrl": "/uploads/images/menu-item-1792148414847-645661314.jpg",
+        "category": {
+          "_id": "6ad1fb75d03fed9e7e35dfd7",
+          "name": "Submarines",
+          "id": "6ad1fb75d03fed9e7e35dfd7"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad85f26ae1e5ae111641606",
+        "name": "Fruit Salad",
+        "description": "A refreshing mix of fresh, juicy seasonal fruits, offering a naturally sweet and vibrant treat.",
+        "price": 490,
+        "imageUrl": "/uploads/images/menu-item-1792565030017-190475247.jpg",
+        "category": {
+          "_id": "6ad85befae1e5ae1116414c6",
+          "name": "Desserts",
+          "id": "6ad85befae1e5ae1116414c6"
+        },
+        "menuId": "6ad85bcbae1e5ae111641438",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf62c763b8f53a730bd9c3",
+        "name": "Fry Biriyani",
+        "description": "Aromatic basmati rice tossed with flavorful spices, rich masala, and perfectly fried meat for a delicious and satisfying taste.",
+        "price": 1800,
+        "imageUrl": "/uploads/images/menu-item-1791976135680-46624797.jpg",
+        "category": {
+          "_id": "6acf5dcd63b8f53a730bd5d0",
+          "name": "Biriyani",
+          "id": "6acf5dcd63b8f53a730bd5d0"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1800,
+            "_id": "6acf62c763b8f53a730bd9c4"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2500,
+            "_id": "6acf62c763b8f53a730bd9c5"
+          }
+        ]
+      },
+      {
+        "id": "6ae1a9329362eb6b6a60deb2",
+        "name": "Kandiri Kidu Fish Whole",
+        "description": "Fresh fish cooked with aromatic Sri Lankan spices, delivering a delicious blend of rich flavours and authentic local taste.",
+        "price": 2500,
+        "imageUrl": "/uploads/images/menu-item-1793184539753-144992198.jpg",
+        "category": {
+          "_id": "6ae15be11f7222946d3034a3",
+          "name": "Kandiri Kidu",
+          "id": "6ae15be11f7222946d3034a3"
+        },
+        "menuId": "6ae15b441f7222946d30302b",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1e902d03fed9e7e34bde4",
+        "name": "Nasi Goreng Chicken",
+        "description": "Indonesian-style fried rice tossed with tender chicken, fresh vegetables, eggs, and aromatic spices for a bold, savory flavor.",
+        "price": 1090,
+        "imageUrl": "/uploads/images/menu-item-1792141569978-794143124.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1090,
+            "_id": "6ad1e902d03fed9e7e34bde5"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1650,
+            "_id": "6ad1e902d03fed9e7e34bde6"
+          }
+        ]
+      },
+      {
+        "id": "6ad1ca0bd03fed9e7e32c97e",
+        "name": "Paratha",
+        "description": "A freshly prepared, golden-brown flatbread with a crispy exterior and soft, flaky layers, offering a rich, satisfying taste that pairs perfectly with curries and savory dishes.",
+        "price": 100,
+        "imageUrl": "/uploads/images/menu-item-1792133643163-27062070.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20b03d03fed9e7e35f64c",
+        "name": "Pineapple Juice",
+        "description": "Fresh pineapple juice with a naturally sweet and tangy tropical flavor, delivering a refreshing and revitalizing taste.",
+        "price": 550,
+        "imageUrl": "/uploads/images/menu-item-1792150275036-153676659.jpg",
+        "category": {
+          "_id": "6ad205c2d03fed9e7e35f1d4",
+          "name": "Fresh & Juice",
+          "id": "6ad205c2d03fed9e7e35f1d4"
+        },
+        "menuId": "6ad2055bd03fed9e7e35f119",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad20079d03fed9e7e35eddf",
+        "name": "Prawns With Cheese",
+        "description": "Juicy prawns topped with melted cheese and seasoned to perfection, offering a rich, creamy texture and delicious seafood flavor.",
+        "price": 2400,
+        "imageUrl": "/uploads/images/menu-item-1792147577415-380995375.jpg",
+        "category": {
+          "_id": "6ad1fb24d03fed9e7e35df98",
+          "name": "Chicken",
+          "id": "6ad1fb24d03fed9e7e35df98"
+        },
+        "menuId": "6ad1fb10d03fed9e7e35df16",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ca86d03fed9e7e32cc03",
+        "name": "Butter Roti",
+        "description": "Freshly prepared flatbread enriched with butter, offering a soft texture, a golden finish, and a rich, buttery flavor that perfectly complements curries and savory dishes.",
+        "price": 350,
+        "imageUrl": "/uploads/images/menu-item-1792133766227-284554824.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6591d43f25732cff0bbb",
+        "name": "Chicken Tikka",
+        "description": "Juicy chicken marinated in aromatic spices and yogurt, grilled to perfection for a smoky, flavorful taste.",
+        "price": 1290,
+        "imageUrl": "/uploads/images/menu-item-1791976848796-315487314.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1f0d2d03fed9e7e356997",
+        "name": "Cuttle Fish Devilled",
+        "description": "Tender cuttlefish stir-fried with onions, bell peppers, and spicy sauces, delivering a delicious blend of bold flavors, heat, and sweetness.",
+        "price": 1450,
+        "imageUrl": "/uploads/images/menu-item-1792143570269-622996890.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf4f6d63b8f53a730bc445",
+        "name": "Greek Salad",
+        "description": "A refreshing Mediterranean salad featuring crisp lettuce, juicy tomatoes, cucumber, red onions, olives, and creamy feta cheese, tossed with a light olive oil dressing and aromatic herbs for a fresh and vibrant flavour.",
+        "price": 800,
+        "imageUrl": "/uploads/images/menu-item-1791971181108-588214710.jpg",
+        "category": {
+          "_id": "6acf489063b8f53a730b4586",
+          "name": "Salad",
+          "id": "6acf489063b8f53a730b4586"
+        },
+        "menuId": "6acf484163b8f53a730b4542",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cd84d03fed9e7e32d54e",
+        "name": "Mutton Seekh kebab",
+        "description": "Succulent minced mutton blended with aromatic spices and fresh herbs, skewered and grilled to perfection for a rich, smoky flavor and irresistibly tender texture.",
+        "price": 3100,
+        "imageUrl": "/uploads/images/menu-item-1792134532322-595177304.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1e963d03fed9e7e34be85",
+        "name": "Nasi Goreng Beef",
+        "description": "Indonesian-style fried rice tossed with tender beef, fresh vegetables, eggs, and aromatic spices for a rich, savory flavor.",
+        "price": 1190,
+        "imageUrl": "/uploads/images/menu-item-1792141667407-414506683.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1190,
+            "_id": "6ad1e963d03fed9e7e34be86"
+          },
+          {
+            "image": "",
+            "name": "large",
+            "price": 1690,
+            "_id": "6ad1e963d03fed9e7e34be87"
+          }
+        ]
+      },
+      {
+        "id": "6ad1cad6d03fed9e7e32cc4a",
+        "name": "Butter Kulcha",
+        "description": "A soft, fluffy Indian flatbread freshly baked to perfection and brushed with melted butter, delivering a rich, buttery flavor that pairs beautifully with curries and flavorful gravies.",
+        "price": 350,
+        "imageUrl": "/uploads/images/menu-item-1792133846205-348661176.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf65ebd43f25732cff0c08",
+        "name": "Chicken Chukka",
+        "description": "Tender chicken dry-roasted with aromatic spices, fresh herbs, and sautéed onions for a bold, flavorful taste.",
+        "price": 1150,
+        "imageUrl": "/uploads/images/menu-item-1791976939195-631041701.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1f130d03fed9e7e3569ce",
+        "name": "Chicken Sweet & Sour",
+        "description": "Tender chicken tossed with crisp vegetables in a delicious sweet and tangy sauce, creating the perfect balance of flavors in every bite.",
+        "price": 1800,
+        "imageUrl": "/uploads/images/menu-item-1792143663985-775901926.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ea10d03fed9e7e34c4b4",
+        "name": "Nasi Goreng Mix",
+        "description": "Indonesian-style fried rice tossed with a delicious mix of chicken, beef, seafood, fresh vegetables, eggs, and aromatic spices for a bold, savory taste.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1792141840288-567450067.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1250,
+            "_id": "6ad1ea10d03fed9e7e34c4b5"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 1790,
+            "_id": "6ad1ea10d03fed9e7e34c4b6"
+          }
+        ]
+      },
+      {
+        "id": "6ad1cddad03fed9e7e32d590",
+        "name": "Tandoori Chicken Masala Kebab",
+        "description": "Tender chicken marinated in a rich blend of traditional Indian spices and yogurt, expertly grilled to perfection for a smoky aroma, vibrant flavor, and juicy texture.",
+        "price": 2100,
+        "imageUrl": "/uploads/images/menu-item-1792134618594-44754374.jpg",
+        "category": {
+          "_id": "6ad1c6e6d03fed9e7e32c717",
+          "name": "Kebabs",
+          "id": "6ad1c6e6d03fed9e7e32c717"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ea77d03fed9e7e34cbc5",
+        "name": "Arabic Seafood Rice",
+        "description": "Aromatic Arabic-style rice infused with traditional spices, topped with a delicious selection of fresh seafood for a rich and flavorful dining experience.",
+        "price": 2700,
+        "imageUrl": "/uploads/images/menu-item-1792141942950-218507822.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf663ad43f25732cff0c54",
+        "name": "Butter Chicken Masala",
+        "description": "ender chicken cooked in a rich, creamy tomato gravy with butter and aromatic spices for a smooth, flavorful taste.",
+        "price": 1300,
+        "imageUrl": "/uploads/images/menu-item-1791977018366-388412182.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1cb47d03fed9e7e32cca7",
+        "name": "Coriander Naan",
+        "description": "A soft, freshly baked Indian flatbread infused with aromatic coriander, delivering a refreshing herbal flavor and a deliciously savory taste, perfect for pairing with curries and gravies.",
+        "price": 450,
+        "imageUrl": "/uploads/images/menu-item-1792133959596-757070989.jpg",
+        "category": {
+          "_id": "6ad1c6afd03fed9e7e32c6e2",
+          "name": "Roti's",
+          "id": "6ad1c6afd03fed9e7e32c6e2"
+        },
+        "menuId": "6ad1c655d03fed9e7e32c640",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1f19ed03fed9e7e356a07",
+        "name": "Lemon Chicken",
+        "description": "Crispy, tender chicken coated in a zesty lemon sauce, delivering a refreshing citrus flavor with the perfect balance of sweetness and tanginess.",
+        "price": 1300,
+        "imageUrl": "/uploads/images/menu-item-1792143774609-958033101.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6681d43f25732cff0c97",
+        "name": "Beef Masala",
+        "description": "Tender beef cooked in a rich, spicy masala gravy infused with aromatic spices for a bold, flavorful taste.",
+        "price": 1290,
+        "imageUrl": "/uploads/images/menu-item-1791977089408-394428593.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1eac3d03fed9e7e34e6a5",
+        "name": "Copsey Rice Chicken",
+        "description": "Fragrant, perfectly seasoned rice served with tender chicken, aromatic spices, and rich flavors for a satisfying and delicious meal.",
+        "price": 2200,
+        "imageUrl": "/uploads/images/menu-item-1792142019904-367085501.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1f1efd03fed9e7e356a3f",
+        "name": "Hot Butter Cuttlefish",
+        "description": "Crispy cuttlefish tossed in rich, buttery sauce with aromatic spices and a hint of heat for a deliciously creamy and flavorful dish.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1792143854952-714409982.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf66edd43f25732cff0cf1",
+        "name": "Beef Chukka",
+        "description": "Tender beef dry-roasted with aromatic spices, sautéed onions, and fresh herbs for a rich, bold flavor.",
+        "price": 1350,
+        "imageUrl": "/uploads/images/menu-item-1791977197134-168708221.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1f254d03fed9e7e356a75",
+        "name": "Butter Prawns",
+        "description": "Juicy prawns sautéed in rich butter with aromatic garlic and seasonings, delivering a deliciously creamy texture and irresistible flavor.",
+        "price": 2100,
+        "imageUrl": "/uploads/images/menu-item-1792143956136-7114925.jpg",
+        "category": {
+          "_id": "6ad1d16ed03fed9e7e32dec7",
+          "name": "Devilled",
+          "id": "6ad1d16ed03fed9e7e32dec7"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1eb21d03fed9e7e3515af",
+        "name": "Copsey Rice Mix",
+        "description": "Fragrant, perfectly seasoned rice served with a delicious mix of chicken, beef, and seafood, infused with aromatic spices for a rich and satisfying meal.",
+        "price": 3200,
+        "imageUrl": "/uploads/images/menu-item-1792142113910-257351275.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6776d43f25732cff0d4c",
+        "name": "Chana Masala",
+        "description": "Tender chickpeas cooked in a rich, spicy masala gravy with aromatic spices and fresh herbs.",
+        "price": 870,
+        "imageUrl": "/uploads/images/menu-item-1791977334480-194058592.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1eb96d03fed9e7e351605",
+        "name": "Hong Kong Fried Rice",
+        "description": "Classic Hong Kong-style fried rice tossed with fragrant rice, eggs, fresh vegetables, and savory seasonings for a delicious, flavorful meal.",
+        "price": 1600,
+        "imageUrl": "/uploads/images/menu-item-1792142230646-516610141.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1600,
+            "_id": "6ad1eb96d03fed9e7e351606"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2100,
+            "_id": "6ad1eb96d03fed9e7e351607"
+          }
+        ]
+      },
+      {
+        "id": "6acf67e0d43f25732cff0dba",
+        "name": "Mushroom Masala",
+        "description": "Fresh mushrooms cooked in a rich, flavorful masala gravy with aromatic spices and herbs.",
+        "price": 1250,
+        "imageUrl": "/uploads/images/menu-item-1791977439833-235751294.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ec19d03fed9e7e35165f",
+        "name": "Singapore Fried Rice",
+        "description": "Singapore-style fried rice tossed with aromatic spices, eggs, fresh vegetables, and savory seasonings for a vibrant and flavorful meal.",
+        "price": 1700,
+        "imageUrl": "/uploads/images/menu-item-1792142361676-174541541.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1700,
+            "_id": "6ad1ec19d03fed9e7e351660"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2400,
+            "_id": "6ad1ec19d03fed9e7e351661"
+          }
+        ]
+      },
+      {
+        "id": "6acf6859d43f25732cff119e",
+        "name": "Chicken Kadai",
+        "description": "Tender chicken cooked with bell peppers, onions, and aromatic spices in a rich, flavorful masala gravy.",
+        "price": 1950,
+        "imageUrl": "/uploads/images/menu-item-1791977560958-580684235.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6ad1ec74d03fed9e7e3516b1",
+        "name": "Mongolian Fried Rice",
+        "description": "Mongolian-style fried rice tossed with fresh vegetables, eggs, and savory sauces, delivering a rich, smoky flavor with a hint of spice.",
+        "price": 1800,
+        "imageUrl": "/uploads/images/menu-item-1792142451952-722191982.jpg",
+        "category": {
+          "_id": "6ad1d128d03fed9e7e32de97",
+          "name": "Rice",
+          "id": "6ad1d128d03fed9e7e32de97"
+        },
+        "menuId": "6ad1d0aed03fed9e7e32d71c",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": [
+          {
+            "image": "",
+            "name": "Medium",
+            "price": 1800,
+            "_id": "6ad1ec74d03fed9e7e3516b2"
+          },
+          {
+            "image": "",
+            "name": "Large",
+            "price": 2500,
+            "_id": "6ad1ec74d03fed9e7e3516b3"
+          }
+        ]
+      },
+      {
+        "id": "6acf68bed43f25732cff187d",
+        "name": "Chettinad Beef",
+        "description": "Tender beef cooked in authentic Chettinad spices with aromatic herbs for a rich, bold, and spicy flavor.",
+        "price": 1800,
+        "imageUrl": "/uploads/images/menu-item-1791977662686-732177103.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6918d43f25732cff1d6c",
+        "name": "Chettinad Chicken",
+        "description": "Tender chicken cooked with traditional Chettinad spices and aromatic herbs for a rich, bold, and spicy flavor.",
+        "price": 1700,
+        "imageUrl": "/uploads/images/menu-item-1791977752317-263718592.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf69c7d43f25732cff284e",
+        "name": "Chettinad Crab Masala",
+        "description": "Fresh crab cooked in authentic Chettinad spices with a rich, aromatic masala gravy for a bold, spicy flavor.",
+        "price": 2300,
+        "imageUrl": "/uploads/images/menu-item-1791977927178-441144395.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6a37d43f25732cff28a8",
+        "name": "Chettinad Mutton",
+        "description": "Tender mutton cooked with authentic Chettinad spices and aromatic herbs for a rich, bold, and flavorful taste.",
+        "price": 2600,
+        "imageUrl": "/uploads/images/menu-item-1791978039448-704434064.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6ab3d43f25732cff2903",
+        "name": "Chettinad Prawn",
+        "description": "Juicy prawns cooked in authentic Chettinad spices with a rich, aromatic masala gravy for a bold, spicy flavor.",
+        "price": 2300,
+        "imageUrl": "/uploads/images/menu-item-1791978163569-244053621.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6b3bd43f25732cff2ffb",
+        "name": "Cuttlefish Kadai",
+        "description": "Tender cuttlefish cooked with bell peppers, onions, and aromatic spices in a rich, flavorful masala gravy.",
+        "price": 2100,
+        "imageUrl": "/uploads/images/menu-item-1791978299246-751746521.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6b95d43f25732cff36d6",
+        "name": "Dal Tadka",
+        "description": "Yellow lentils tempered with aromatic spices, garlic, and herbs for a comforting and flavorful taste.",
+        "price": 1400,
+        "imageUrl": "/uploads/images/menu-item-1791978389839-785985108.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6bfbd43f25732cff781a",
+        "name": "Egg Bhurji",
+        "description": "Scrambled eggs sautéed with onions, tomatoes, green chilies, and aromatic spices for a delicious, flavorful taste.",
+        "price": 750,
+        "imageUrl": "/uploads/images/menu-item-1791978491540-834271190.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6c68d43f25732cff786d",
+        "name": "Egg Do-Pyaza",
+        "description": "Boiled eggs simmered in a rich masala gravy with sautéed onions and aromatic spices for a flavorful taste.",
+        "price": 1650,
+        "imageUrl": "/uploads/images/menu-item-1791978600117-435224593.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6cc9d43f25732cff78b4",
+        "name": "Mushroom Pepper Fry",
+        "description": "Fresh mushrooms stir-fried with crushed black pepper, aromatic spices, and sautéed onions for a bold, spicy flavor.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1791978697415-7585950.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6d19d43f25732cff78ff",
+        "name": "Muttai Kalakki",
+        "description": "A soft, fluffy egg preparation blended with aromatic spices, fresh herbs, and a touch of pepper for a rich, flavorful taste.",
+        "price": 550,
+        "imageUrl": "/uploads/images/menu-item-1791978777452-194460627.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6d68d43f25732cff829e",
+        "name": "Paneer Kadai",
+        "description": "Soft paneer cooked with bell peppers, onions, and aromatic spices in a rich, flavorful masala gravy.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1791978856228-507980479.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6de2d43f25732cff91a5",
+        "name": "Paneer Tikka Malai",
+        "description": "Soft paneer marinated in a creamy blend of yogurt, fresh cream, and aromatic spices, grilled to perfection for a rich, smoky flavor.",
+        "price": 2100,
+        "imageUrl": "/uploads/images/menu-item-1791978978058-398128908.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6e56d43f25732cff91f9",
+        "name": "Chicken Malavani Curry",
+        "description": "Tender chicken simmered in a rich, coastal-style Malvani gravy with aromatic spices and coconut for a bold, flavorful taste.",
+        "price": 2000,
+        "imageUrl": "/uploads/images/menu-item-1791979094237-898390486.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6ee2d43f25732cff92f8",
+        "name": "Arabic Chicken Curry",
+        "description": "Tender chicken simmered in a rich, aromatic curry infused with Middle Eastern spices for a distinctive and flavorful taste.",
+        "price": 2000,
+        "imageUrl": "/uploads/images/menu-item-1791979234753-290598858.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6f5fd43f25732cff94b8",
+        "name": "Paneer Butter Masala",
+        "description": "Soft paneer cubes simmered in a rich, creamy tomato gravy with butter and aromatic spices for a smooth, flavorful taste.",
+        "price": 1900,
+        "imageUrl": "/uploads/images/menu-item-1791979359040-569883479.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6fb0d43f25732cff9513",
+        "name": "Fish Kulambu",
+        "description": "Fresh fish simmered in a tangy, spicy tamarind gravy with traditional South Indian spices for an authentic, flavorful taste.",
+        "price": 1600,
+        "imageUrl": "/uploads/images/menu-item-1791979440466-421778617.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      },
+      {
+        "id": "6acf6fffd43f25732cff9567",
+        "name": "Prawn Tawa",
+        "description": "Juicy prawns pan-fried on a hot tawa with aromatic spices, herbs, and a flavorful masala coating.",
+        "price": 2300,
+        "imageUrl": "/uploads/images/menu-item-1791979519470-39195154.jpg",
+        "category": {
+          "_id": "6acf5e1163b8f53a730bd606",
+          "name": "Curries",
+          "id": "6acf5e1163b8f53a730bd606"
+        },
+        "menuId": "6acf5d8963b8f53a730bd544",
+        "isAvailable": true,
+        "isOrderable": true,
+        "rating": 0,
+        "labels": [],
+        "customLabels": [],
+        "customAddons": [],
+        "portions": []
+      }
+    ]
+  }
+}

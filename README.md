@@ -1,6 +1,6 @@
 # Burgo Food Chain — Website
 
-Static website for **Burgo Food Chain PVT LTD** — 380/1 Galle Road, Hettimulla, Beruwala · +94 71 174 6051.
+Static website for **Burgo Food Chain PVT LTD** — 380/1 Galle Road, Hettimulla, Beruwala · +94 70 743 1098.
 
 HTML5, CSS3 and vanilla JavaScript only. No build step, no backend, no database — it runs on any static host (GitHub Pages, FastHosts, Netlify…). Online ordering is handled by **MenuPilot**; the site only links to it.
 
@@ -92,7 +92,7 @@ Buttons get their link from a `data-link` attribute (`order`, `whatsapp`, `whats
 ## Before going live
 
 1. Fill in the `TODO` values in `js/config.js` (MenuPilot URL, Google Maps/Reviews links, GA4 ID, social profiles, opening hours).
-2. Confirm WhatsApp is active on +94 71 174 6051.
+2. Confirm WhatsApp is active on +94 70 743 1098.
 3. Replace placeholder photos and `PLACEHOLDER` copy.
 4. Replace sample dishes in `data/menu-data.js` and set `isSample: false`.
 5. If the domain is not `burgofc.com`, update canonical/OG URLs in each page `<head>`, `sitemap.xml` and `robots.txt`.

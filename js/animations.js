@@ -36,7 +36,8 @@
             }
           });
         },
-        { rootMargin: '0px 0px -8% 0px', threshold: 0.12 }
+        // threshold 0: tall blocks (e.g. full menu) still reveal when any edge enters view
+        { rootMargin: '0px 0px -4% 0px', threshold: 0 }
       );
     }
 

@@ -358,7 +358,17 @@
   gap: var(--stack-gap);
 }
 
+.menu-showcase__groups,
 .menu-showcase__tabs {
+  margin-bottom: 0;
+}
+
+.menu-showcase .tabs-rail {
+  margin-bottom: var(--space-4);
+}
+
+.menu-showcase .tabs-rail:last-of-type,
+[data-menu] > .tabs-rail:last-of-type {
   margin-bottom: var(--space-6);
 }
 
@@ -391,7 +401,7 @@
   }
 }
 
-/* ---------- Order card (MenuPilot) ---------- */
+/* ---------- Order card ---------- */
 .order-card {
   position: relative;
   display: grid;

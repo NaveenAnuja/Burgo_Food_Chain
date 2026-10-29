@@ -46,7 +46,7 @@ Send your developer:
 Verify these details are correct:
 - ✓ Business name: Burgo Food Chain PVT LTD
 - ✓ Address: 380/1 Galle Road, Hettimulla, Beruwala
-- ✓ Phone: +94 71 174 6051
+- ✓ Phone: +94 70 743 1098
 - ✓ Opening hours: 7:00 AM - 11:00 PM (daily)
 
 ### 4. **Provide Social Media Links**
@@ -256,7 +256,7 @@ Before announcing your new website:
 **Questions?** Contact your developer anytime.
 
 **Website:** burgofc.com  
-**Phone:** +94 71 174 6051  
+**Phone:** +94 70 743 1098  
 **Business:** Burgo Food Chain PVT LTD
 
 ---

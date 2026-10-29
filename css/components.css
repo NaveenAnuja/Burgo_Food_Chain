@@ -274,10 +274,15 @@
 .tabs-rail {
   --tabs-fade: color-mix(in srgb, var(--bg) 92%, transparent);
   position: relative;
+  z-index: 2;
+  isolation: isolate;
   margin-bottom: var(--space-4);
+  pointer-events: auto;
 }
 
 .tabs-rail__track {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -288,28 +293,42 @@
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-padding-inline: 2.75rem;
   padding: 0.35rem 2.75rem;
   margin: 0;
+  pointer-events: auto;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
-  --fade-left-size: 0px;
-  --fade-right-size: 0px;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 0,
-    #000 var(--fade-left-size),
-    #000 calc(100% - var(--fade-right-size)),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    90deg,
-    transparent 0,
-    #000 var(--fade-left-size),
-    #000 calc(100% - var(--fade-right-size)),
-    transparent 100%
-  );
+  /* Soft edge fade via overlays (masks can break click hit-testing in some engines) */
+}
+
+.tabs-rail::before,
+.tabs-rail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2.5rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.tabs-rail::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg) 10%, transparent);
+}
+
+.tabs-rail::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg) 10%, transparent);
+}
+
+.tabs-rail.is-scrollable[data-fade-left='1']::before,
+.tabs-rail.is-scrollable[data-fade-right='1']::after {
+  opacity: 1;
 }
 
 .tabs-rail__track::-webkit-scrollbar,
@@ -324,7 +343,7 @@
 .tabs-rail__btn {
   position: absolute;
   top: 50%;
-  z-index: 2;
+  z-index: 3;
   display: grid;
   place-items: center;
   width: 2.25rem;
@@ -423,6 +442,8 @@
 }
 
 .tab {
+  position: relative;
+  z-index: 1;
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
@@ -435,6 +456,8 @@
   font-weight: 700;
   color: var(--fg-muted);
   white-space: nowrap;
+  pointer-events: auto;
+  cursor: pointer;
   scroll-snap-align: start;
   transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease, border-color var(--dur-fast) ease;
 }

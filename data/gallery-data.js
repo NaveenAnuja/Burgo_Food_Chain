@@ -1,8 +1,7 @@
-/**
+﻿/**
  * Burgo Food Chain — Gallery data (gallery.html)
  *
- * All images are PLACEHOLDERS. Replace `src` with official Burgo photos
- * (WebP, ~1600px on the long edge) and update `alt` to describe each photo.
+ * Photos live under assets/images/photos/.
  *   layout: 'tall' (spans two rows), 'wide' (spans two columns) or '' (single tile)
  */
 
@@ -16,15 +15,15 @@ const BURGO_GALLERY = {
   ],
 
   items: [
-    { src: 'assets/images/placeholders/gallery-01.svg', width: 800, height: 1000, layout: 'tall', category: 'food', caption: 'Signature plates', alt: 'Placeholder for a photo of signature plates' },
-    { src: 'assets/images/placeholders/gallery-02.svg', width: 800, height: 800, layout: '', category: 'interior', caption: 'The dining room', alt: 'Placeholder for a photo of the dining room' },
-    { src: 'assets/images/placeholders/gallery-03.svg', width: 800, height: 800, layout: '', category: 'bakery', caption: 'Fresh from the bakery', alt: 'Placeholder for a photo of bakery items' },
-    { src: 'assets/images/placeholders/gallery-04.svg', width: 800, height: 1000, layout: 'tall', category: 'lounge', caption: 'Iceburg Shisha Lounge', alt: 'Placeholder for a photo of Iceburg Shisha Lounge' },
-    { src: 'assets/images/placeholders/gallery-05.svg', width: 800, height: 800, layout: '', category: 'food', caption: 'From the kitchen', alt: 'Placeholder for a food photo' },
-    { src: 'assets/images/placeholders/gallery-06.svg', width: 800, height: 800, layout: 'wide', category: 'interior', caption: 'Tables at Saivar Restaurant', alt: 'Placeholder for a photo of Saivar Restaurant tables' },
-    { src: 'assets/images/placeholders/gallery-07.svg', width: 800, height: 1000, layout: 'tall', category: 'bakery', caption: 'Coffee and bakes', alt: 'Placeholder for a photo of coffee and bakery items' },
-    { src: 'assets/images/placeholders/gallery-08.svg', width: 800, height: 800, layout: '', category: 'food', caption: 'Saivar favourites', alt: 'Placeholder for a photo of Saivar Restaurant dishes' },
-    { src: 'assets/images/placeholders/gallery-09.svg', width: 800, height: 800, layout: '', category: 'lounge', caption: 'Evenings at the lounge', alt: 'Placeholder for a photo of the lounge in the evening' },
-    { src: 'assets/images/placeholders/gallery-10.svg', width: 800, height: 1000, layout: 'tall', category: 'events', caption: 'Celebrations at Burgo', alt: 'Placeholder for a photo of an event at Burgo' }
+    { src: 'assets/images/photos/gallery-01.jpg', width: 800, height: 1000, layout: 'tall', category: 'food', caption: 'Signature plates', alt: 'Signature Burgo plates with rice, curry and fresh garnish' },
+    { src: 'assets/images/photos/gallery-02.jpg', width: 800, height: 800, layout: '', category: 'interior', caption: 'The dining room', alt: 'Warm dining room tables at Burgo Food Chain' },
+    { src: 'assets/images/photos/gallery-03.jpg', width: 800, height: 800, layout: '', category: 'bakery', caption: 'Fresh from the bakery', alt: 'Fresh croissants and pastries from the Burgo bakery' },
+    { src: 'assets/images/photos/gallery-04.jpg', width: 800, height: 1000, layout: 'tall', category: 'lounge', caption: 'Iceburg Shisha Lounge', alt: 'Evening atmosphere inside Iceburg Shisha Lounge' },
+    { src: 'assets/images/photos/gallery-05.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'From the kitchen', alt: 'A hot dish plated fresh from the Burgo kitchen' },
+    { src: 'assets/images/photos/gallery-06.jpg', width: 1280, height: 720, layout: 'wide', category: 'interior', caption: 'Tables at Saivar Restaurant', alt: 'Dining tables set for guests at Saivar Restaurant' },
+    { src: 'assets/images/photos/gallery-07.jpg', width: 800, height: 1000, layout: 'tall', category: 'bakery', caption: 'Coffee and bakes', alt: 'Coffee with fresh bakery treats at Burgo' },
+    { src: 'assets/images/photos/gallery-08.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Saivar favourites', alt: 'Colourful Saivar Restaurant favourites on a shared platter' },
+    { src: 'assets/images/photos/gallery-09.jpg', width: 800, height: 800, layout: '', category: 'lounge', caption: 'Evenings at the lounge', alt: 'Soft evening lighting in the Iceburg lounge' },
+    { src: 'assets/images/photos/gallery-10.jpg', width: 800, height: 1000, layout: 'tall', category: 'events', caption: 'Celebrations at Burgo', alt: 'A celebration table set for an event at Burgo' }
   ]
 };

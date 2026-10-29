@@ -84,12 +84,8 @@
       rail.classList.toggle('is-scrollable', scrollable);
       prev.classList.toggle('is-active', scrollable && !atStart);
       next.classList.toggle('is-active', scrollable && !atEnd);
-
-      rail.style.setProperty('--fade-left-size', scrollable && !atStart ? '2.5rem' : '0px');
-      rail.style.setProperty('--fade-right-size', scrollable && !atEnd ? '2.5rem' : '0px');
-      // Track inherits fade vars for the mask
-      track.style.setProperty('--fade-left-size', scrollable && !atStart ? '2.5rem' : '0px');
-      track.style.setProperty('--fade-right-size', scrollable && !atEnd ? '2.5rem' : '0px');
+      rail.dataset.fadeLeft = scrollable && !atStart ? '1' : '0';
+      rail.dataset.fadeRight = scrollable && !atEnd ? '1' : '0';
     }
 
     function scrollByPage(direction) {
@@ -104,14 +100,18 @@
     }, { passive: true });
     window.addEventListener('resize', sync);
 
-    // Drag / swipe feel on pointer devices
+    // Touch/pen drag only — mouse drag was eating category clicks on desktop
+    // (tiny pointer jitter set `moved` and blocked the click in capture phase).
     let dragging = false;
     let startX = 0;
     let startScroll = 0;
     let moved = false;
 
     track.addEventListener('pointerdown', (event) => {
-      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      if (event.pointerType === 'mouse') return;
+      if (event.target.closest('.tab, .tabs-rail__btn')) {
+        // Let taps on chips / arrows behave normally
+      }
       dragging = true;
       moved = false;
       startX = event.clientX;
@@ -120,10 +120,10 @@
     });
 
     track.addEventListener('pointermove', (event) => {
-      if (!dragging) return;
+      if (!dragging || event.pointerType === 'mouse') return;
       const dx = event.clientX - startX;
-      if (Math.abs(dx) > 4) moved = true;
-      track.scrollLeft = startScroll - dx;
+      if (Math.abs(dx) > 12) moved = true;
+      if (moved) track.scrollLeft = startScroll - dx;
     });
 
     const endDrag = () => {
@@ -132,7 +132,7 @@
     track.addEventListener('pointerup', endDrag);
     track.addEventListener('pointercancel', endDrag);
 
-    // Avoid accidental tab clicks after a drag
+    // Only suppress click after a real touch drag, not a tap
     track.addEventListener('click', (event) => {
       if (moved) {
         event.preventDefault();

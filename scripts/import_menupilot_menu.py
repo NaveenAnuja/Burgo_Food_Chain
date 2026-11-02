@@ -10,13 +10,34 @@ from pathlib import Path
 
 API = "https://prod-api.menupilot.lk/api/public/shop/burgo-food-chain-pvt-ltd"
 IMAGE_BASE = "https://prod-api.menupilot.lk"
+LOCAL = "assets/images/photos/menu"
 OUT = Path(__file__).resolve().parents[1] / "data" / "menu-data.js"
 RAW_OUT = Path(__file__).resolve().parents[1] / "data" / "menupilot-raw.json"
+
+# Prefer studio photos for key lounge / newly synced dishes
+LOCAL_IMAGE_RULES = [
+    (r"shisha|hookah", f"{LOCAL}/shisha-flavored.jpg"),
+    (r"pastr", f"{LOCAL}/pastry-chicken.jpg"),
+    (r"barbican|malt", f"{LOCAL}/drink-malt.jpg"),
+    (r"semiya", f"{LOCAL}/semiya-chicken.jpg"),
+    (r"tea|chai|coffie|coffee|shaiwala|chaiwala", f"{LOCAL}/tea-chai.jpg"),
+    (r"mojito juice|strawberry mojito|passion mojito", f"{LOCAL}/mojito-passion.jpg"),
+]
 
 
 def slug(text: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
     return s or "item"
+
+
+def clean_category_name(name: str) -> str:
+    name = (name or "").strip()
+    fixes = {
+        "Tea &' Coffie": "Tea & Coffee",
+        "Tea &’ Coffie": "Tea & Coffee",
+        "Tea & Coffie": "Tea & Coffee",
+    }
+    return fixes.get(name, name)
 
 
 def money(value) -> str | None:
@@ -29,15 +50,25 @@ def money(value) -> str | None:
     return f"LKR {int(round(n)):,}"
 
 
-def absolute_image(url: str | None, fallback_name: str) -> str:
+def pick_local_image(name: str) -> str | None:
+    n = (name or "").lower()
+    for pattern, path in LOCAL_IMAGE_RULES:
+        if re.search(pattern, n):
+            return path
+    return None
+
+
+def absolute_image(url: str | None, item_name: str) -> str:
+    local = pick_local_image(item_name)
+    if local:
+        return local
     if url:
         if url.startswith("http"):
             return url
         if url.startswith("/"):
             return IMAGE_BASE + url
         return f"{IMAGE_BASE}/{url.lstrip('/')}"
-    # local fallbacks if remote missing
-    return "assets/images/photos/menu/salad-green.jpg"
+    return f"{LOCAL}/salad-green.jpg"
 
 
 def fetch():
@@ -80,11 +111,11 @@ def build(payload: dict):
     # Keep MenuPilot category order
     for cat in categories:
         cat_id = str(cat["id"])
-        raw_name = (cat.get("name") or "Category").strip()
+        raw_name = clean_category_name((cat.get("name") or "Category").strip())
         menu = menus.get(cat.get("menuId"))
         parent = (menu or {}).get("name")
         display = raw_name
-        if name_counts[raw_name] > 1 and parent:
+        if name_counts.get((cat.get("name") or "").strip(), 0) > 1 and parent:
             display = f"{raw_name} ({parent.title() if parent.isupper() else parent})"
 
         cat_items = []

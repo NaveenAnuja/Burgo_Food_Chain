@@ -9,8 +9,8 @@ const BURGO_MENU = {
   "isSample": false,
   "source": "live-menu",
   "stats": {
-    "categories": 29,
-    "items": 164
+    "categories": 31,
+    "items": 171
   },
   "categories": [
     {
@@ -25,6 +25,15 @@ const BURGO_MENU = {
           "price": "LKR 1,350",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1791975366778-140773442.jpg",
+          "available": true
+        },
+        {
+          "id": "chicken-biriyani",
+          "name": "Chicken Biriyani",
+          "description": "Fragrant basmati rice cooked with aromatic spices and herbs, layered with tender, flavourful chicken, delivering a rich and authentic Indian taste in every bite.",
+          "price": "LKR 1,150",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1791975172054-671586810.jpg",
           "available": true
         },
         {
@@ -61,6 +70,15 @@ const BURGO_MENU = {
           "price": "LKR 1,800",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1791976135680-46624797.jpg",
+          "available": true
+        },
+        {
+          "id": "chicken-biriyani-2",
+          "name": "Chicken Biriyani",
+          "description": "",
+          "price": "LKR 1,150",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793531218133-416947099.jpg",
           "available": true
         }
       ]
@@ -122,6 +140,15 @@ const BURGO_MENU = {
           "price": "LKR 2,400",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792147577415-380995375.jpg",
+          "available": true
+        },
+        {
+          "id": "french-fries",
+          "name": "French Fries",
+          "description": "Crispy, golden-fried potato strips with a soft, fluffy interior, seasoned to perfection and served hot.",
+          "price": "LKR 750",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793516042127-122881170.jpg",
           "available": true
         }
       ]
@@ -198,7 +225,7 @@ const BURGO_MENU = {
           "description": "Shisha flavours no tobacco",
           "price": "LKR 4,000",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793185069447-884338101.jpg",
+          "image": "assets/images/photos/menu/shisha-flavored.jpg",
           "available": true
         },
         {
@@ -207,7 +234,7 @@ const BURGO_MENU = {
           "description": "Chicken pastry made with white flour and chicken",
           "price": "LKR 350",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793185324249-719663529.jpg",
+          "image": "assets/images/photos/menu/pastry-chicken.jpg",
           "available": true
         },
         {
@@ -216,7 +243,7 @@ const BURGO_MENU = {
           "description": "Mojito juice strawberry made with fresh",
           "price": "LKR 500",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793185842859-849195293.jpg",
+          "image": "assets/images/photos/menu/mojito-passion.jpg",
           "available": true
         },
         {
@@ -225,7 +252,7 @@ const BURGO_MENU = {
           "description": "Barbican malt beverage fully halal",
           "price": "LKR 900",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793186066920-920099499.jpg",
+          "image": "assets/images/photos/menu/drink-malt.jpg",
           "available": true
         }
       ]
@@ -287,40 +314,6 @@ const BURGO_MENU = {
           "price": "LKR 2,500",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793184539753-144992198.jpg",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": "drinks-milk-shake-35f1a6",
-      "name": "Milk Shake",
-      "group": "Drinks",
-      "items": [
-        {
-          "id": "vanilla-shake",
-          "name": "Vanilla shake",
-          "description": "A smooth and creamy vanilla milkshake blended with rich vanilla ice cream and chilled milk for a classic, refreshing treat.",
-          "price": "LKR 750",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149465158-69171276.jpg",
-          "available": true
-        },
-        {
-          "id": "chocolate-shake",
-          "name": "Chocolate Shake",
-          "description": "A rich and creamy chocolate milkshake blended with chilled milk and delicious chocolate flavor for a smooth, indulgent treat.",
-          "price": "LKR 750",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149568273-694625021.jpg",
-          "available": true
-        },
-        {
-          "id": "strawberry-shake",
-          "name": "Strawberry Shake",
-          "description": "A smooth and creamy strawberry milkshake blended with chilled milk and sweet strawberry flavor for a refreshing, fruity treat.",
-          "price": "LKR 750",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149683423-36924327.jpg",
           "available": true
         }
       ]
@@ -509,6 +502,31 @@ const BURGO_MENU = {
       ]
     },
     {
+      "id": "drinks-tea-coffee-d94535",
+      "name": "Tea & Coffee",
+      "group": "Drinks",
+      "items": [
+        {
+          "id": "cardamom-tea-shaiwala",
+          "name": "Cardamom Tea Shaiwala",
+          "description": "Water milk sugar cardamom",
+          "price": "LKR 200",
+          "dietary": [],
+          "image": "assets/images/photos/menu/tea-chai.jpg",
+          "available": true
+        },
+        {
+          "id": "masala-tean-chaiwala",
+          "name": "Masala Tean Chaiwala",
+          "description": "Water milk with masala– Indian Spiced Tea",
+          "price": "LKR 200",
+          "dietary": [],
+          "image": "assets/images/photos/menu/tea-chai.jpg",
+          "available": true
+        }
+      ]
+    },
+    {
       "id": "bun-crispy-burgers-35dfc5",
       "name": "Burgers",
       "group": "Bun & Crispy",
@@ -611,8 +629,8 @@ const BURGO_MENU = {
           "available": true
         },
         {
-          "id": "chicken-tikka",
-          "name": "Chicken Tikka",
+          "id": "chicken-tikka-masala",
+          "name": "Chicken Tikka Masala",
           "description": "Juicy chicken marinated in aromatic spices and yogurt, grilled to perfection for a smoky, flavorful taste.",
           "price": "LKR 1,290",
           "dietary": [],
@@ -629,8 +647,8 @@ const BURGO_MENU = {
           "available": true
         },
         {
-          "id": "butter-chicken-masala",
-          "name": "Butter Chicken Masala",
+          "id": "butter-chicken",
+          "name": "Butter Chicken",
           "description": "ender chicken cooked in a rich, creamy tomato gravy with butter and aromatic spices for a smooth, flavorful taste.",
           "price": "LKR 1,300",
           "dietary": [],
@@ -800,15 +818,6 @@ const BURGO_MENU = {
           "available": true
         },
         {
-          "id": "chicken-malavani-curry",
-          "name": "Chicken Malavani Curry",
-          "description": "Tender chicken simmered in a rich, coastal-style Malvani gravy with aromatic spices and coconut for a bold, flavorful taste.",
-          "price": "LKR 2,000",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1791979094237-898390486.jpg",
-          "available": true
-        },
-        {
           "id": "arabic-chicken-curry",
           "name": "Arabic Chicken Curry",
           "description": "Tender chicken simmered in a rich, aromatic curry infused with Middle Eastern spices for a distinctive and flavorful taste.",
@@ -847,74 +856,13 @@ const BURGO_MENU = {
       ]
     },
     {
-      "id": "drinks-fresh-juice-35f1d4",
-      "name": "Fresh & Juice",
-      "group": "Drinks",
-      "items": [
-        {
-          "id": "lime-juice",
-          "name": "Lime Juice",
-          "description": "Freshly squeezed lime juice with a perfect balance of citrus tanginess and sweetness, served chilled for a refreshing burst of flavor.",
-          "price": "LKR 390",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149767730-207509922.jpg",
-          "available": true
-        },
-        {
-          "id": "watermelon-juice",
-          "name": "Watermelon Juice",
-          "description": "Fresh watermelon juice made from ripe, juicy watermelon, served chilled for a naturally sweet, hydrating, and refreshing taste.",
-          "price": "LKR 490",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149887026-218814868.jpg",
-          "available": true
-        },
-        {
-          "id": "mango-juice",
-          "name": "Mango Juice",
-          "description": "Fresh mango juice made from ripe, juicy mangoes, offering a naturally sweet, refreshing taste with a smooth and tropical flavor.",
-          "price": "LKR 550",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150034811-950109232.jpg",
-          "available": true
-        },
-        {
-          "id": "papaya-juice",
-          "name": "Papaya Juice",
-          "description": "Fresh papaya juice made from ripe papayas, offering a naturally sweet, smooth, and refreshing tropical flavor.",
-          "price": "LKR 490",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150115731-318722046.jpg",
-          "available": true
-        },
-        {
-          "id": "orange-juice",
-          "name": "Orange Juice",
-          "description": "Fresh orange juice with a vibrant citrus flavor, offering a naturally sweet and tangy taste for a refreshing experience.",
-          "price": "LKR 650",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150187401-987088361.jpg",
-          "available": true
-        },
-        {
-          "id": "pineapple-juice",
-          "name": "Pineapple Juice",
-          "description": "Fresh pineapple juice with a naturally sweet and tangy tropical flavor, delivering a refreshing and revitalizing taste.",
-          "price": "LKR 550",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150275036-153676659.jpg",
-          "available": true
-        }
-      ]
-    },
-    {
       "id": "tandoori-kebabs-32c717",
       "name": "Kebabs",
       "group": "Tandoori",
       "items": [
         {
-          "id": "chicken-kebab",
-          "name": "Chicken Kebab",
+          "id": "chicken-tikka-kebab",
+          "name": "Chicken Tikka Kebab",
           "description": "ender chicken marinated in aromatic spices and expertly grilled to perfection, delivering a smoky aroma, juicy texture, and rich, flavorful taste in every bite.",
           "price": "LKR 1,350",
           "dietary": [],
@@ -976,12 +924,46 @@ const BURGO_MENU = {
           "available": true
         },
         {
-          "id": "tandoori-chicken-masala-kebab",
-          "name": "Tandoori Chicken Masala Kebab",
+          "id": "tandoori-chicken-kebab",
+          "name": "Tandoori Chicken  Kebab",
           "description": "Tender chicken marinated in a rich blend of traditional Indian spices and yogurt, expertly grilled to perfection for a smoky aroma, vibrant flavor, and juicy texture.",
           "price": "LKR 2,100",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792134618594-44754374.jpg",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "drinks-milk-shake-35f1a6",
+      "name": "Milk Shake",
+      "group": "Drinks",
+      "items": [
+        {
+          "id": "vanilla-shake",
+          "name": "Vanilla shake",
+          "description": "A smooth and creamy vanilla milkshake blended with rich vanilla ice cream and chilled milk for a classic, refreshing treat.",
+          "price": "LKR 750",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149465158-69171276.jpg",
+          "available": true
+        },
+        {
+          "id": "chocolate-shake",
+          "name": "Chocolate Shake",
+          "description": "A rich and creamy chocolate milkshake blended with chilled milk and delicious chocolate flavor for a smooth, indulgent treat.",
+          "price": "LKR 750",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149568273-694625021.jpg",
+          "available": true
+        },
+        {
+          "id": "strawberry-shake",
+          "name": "Strawberry Shake",
+          "description": "A smooth and creamy strawberry milkshake blended with chilled milk and sweet strawberry flavor for a refreshing, fruity treat.",
+          "price": "LKR 750",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149683423-36924327.jpg",
           "available": true
         }
       ]
@@ -1136,6 +1118,76 @@ const BURGO_MENU = {
       ]
     },
     {
+      "id": "drinks-fresh-juice-35f1d4",
+      "name": "Fresh & Juice",
+      "group": "Drinks",
+      "items": [
+        {
+          "id": "lime-juice",
+          "name": "Lime Juice",
+          "description": "Freshly squeezed lime juice with a perfect balance of citrus tanginess and sweetness, served chilled for a refreshing burst of flavor.",
+          "price": "LKR 390",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149767730-207509922.jpg",
+          "available": true
+        },
+        {
+          "id": "watermelon-juice",
+          "name": "Watermelon Juice",
+          "description": "Fresh watermelon juice made from ripe, juicy watermelon, served chilled for a naturally sweet, hydrating, and refreshing taste.",
+          "price": "LKR 490",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792149887026-218814868.jpg",
+          "available": true
+        },
+        {
+          "id": "mango-juice",
+          "name": "Mango Juice",
+          "description": "Fresh mango juice made from ripe, juicy mangoes, offering a naturally sweet, refreshing taste with a smooth and tropical flavor.",
+          "price": "LKR 550",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150034811-950109232.jpg",
+          "available": true
+        },
+        {
+          "id": "papaya-juice",
+          "name": "Papaya Juice",
+          "description": "Fresh papaya juice made from ripe papayas, offering a naturally sweet, smooth, and refreshing tropical flavor.",
+          "price": "LKR 490",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150115731-318722046.jpg",
+          "available": true
+        },
+        {
+          "id": "orange-juice",
+          "name": "Orange Juice",
+          "description": "Fresh orange juice with a vibrant citrus flavor, offering a naturally sweet and tangy taste for a refreshing experience.",
+          "price": "LKR 650",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150187401-987088361.jpg",
+          "available": true
+        },
+        {
+          "id": "pineapple-juice",
+          "name": "Pineapple Juice",
+          "description": "Fresh pineapple juice with a naturally sweet and tangy tropical flavor, delivering a refreshing and revitalizing taste.",
+          "price": "LKR 550",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150275036-153676659.jpg",
+          "available": true
+        },
+        {
+          "id": "peach",
+          "name": "Peach",
+          "description": "",
+          "price": "LKR 250",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793611566554-75588189.jpg",
+          "available": true
+        }
+      ]
+    },
+    {
       "id": "sri-lankan-kottu-303493",
       "name": "Kottu",
       "group": "SRI LANKAN",
@@ -1165,6 +1217,15 @@ const BURGO_MENU = {
           "price": "LKR 950",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793184042177-544079616.jpg",
+          "available": true
+        },
+        {
+          "id": "chicken-cheese-kottu",
+          "name": "Chicken Cheese Kottu",
+          "description": "",
+          "price": "LKR 1,490",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793611492109-80340297.jpg",
           "available": true
         }
       ]
@@ -1299,6 +1360,22 @@ const BURGO_MENU = {
       ]
     },
     {
+      "id": "indian-semiya-d94657",
+      "name": "Semiya",
+      "group": "INDIAN",
+      "items": [
+        {
+          "id": "chicken-semiya",
+          "name": "Chicken Semiya",
+          "description": "Pakistan North Indian Semiya cooked with chicken",
+          "price": "LKR 790",
+          "dietary": [],
+          "image": "assets/images/photos/menu/semiya-chicken.jpg",
+          "available": true
+        }
+      ]
+    },
+    {
       "id": "bun-crispy-submarines-35dfd7",
       "name": "Submarines",
       "group": "Bun & Crispy",
@@ -1355,22 +1432,6 @@ const BURGO_MENU = {
           "price": "LKR 1,400",
           "dietary": [],
           "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792148414847-645661314.jpg",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": "drinks-water-bottle-35f1e7",
-      "name": "Water Bottle",
-      "group": "Drinks",
-      "items": [
-        {
-          "id": "water-bottle",
-          "name": "Water Bottle",
-          "description": "",
-          "price": "LKR 130",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150471253-732962129.jpg",
           "available": true
         }
       ]
@@ -1482,49 +1543,6 @@ const BURGO_MENU = {
       ]
     },
     {
-      "id": "drinks-mojito-35f200",
-      "name": "Mojito",
-      "group": "Drinks",
-      "items": [
-        {
-          "id": "passion-mojito",
-          "name": "Passion mojito",
-          "description": "A refreshing passion fruit mojito blended with zesty lime, fresh mint, and sparkling soda, delivering a perfect balance of sweet and tangy flavors.",
-          "price": "LKR 500",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150550952-965337122.jpg",
-          "available": true
-        },
-        {
-          "id": "strawberry-mojito",
-          "name": "Strawberry Mojito",
-          "description": "A refreshing strawberry mojito blended with sweet strawberries, fresh mint, zesty lime, and sparkling soda for a perfectly balanced fruity taste.",
-          "price": "LKR 500",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150634371-86427959.jpg",
-          "available": true
-        },
-        {
-          "id": "lime-mint-mojito",
-          "name": "Lime Mint Mojito",
-          "description": "A refreshing lime mint mojito blended with zesty lime, fresh mint, and sparkling soda, delivering a crisp, cooling, and invigorating taste.",
-          "price": "LKR 500",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150727406-534793217.jpg",
-          "available": true
-        },
-        {
-          "id": "blue-berry-mojito",
-          "name": "Blue Berry Mojito",
-          "description": "A refreshing blueberry mojito blended with sweet blueberries, fresh mint, zesty lime, and sparkling soda for a vibrant, fruity, and refreshing taste.",
-          "price": "LKR 550",
-          "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150842451-802200949.jpg",
-          "available": true
-        }
-      ]
-    },
-    {
       "id": "continental-pasta-0b45ec",
       "name": "Pasta",
       "group": "CONTINENTAL",
@@ -1627,26 +1645,60 @@ const BURGO_MENU = {
       ]
     },
     {
-      "id": "drinks-lassi-35f230",
-      "name": "Lassi",
+      "id": "drinks-water-bottle-35f1e7",
+      "name": "Water Bottle",
       "group": "Drinks",
       "items": [
         {
-          "id": "sweet-lassi",
-          "name": "Sweet Lassi",
-          "description": "A creamy and refreshing sweet lassi made with smooth yogurt and a touch of sweetness, offering a deliciously rich and satisfying taste.",
-          "price": "LKR 490",
+          "id": "water-bottle",
+          "name": "Water Bottle",
+          "description": "",
+          "price": "LKR 130",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150936322-733517734.jpg",
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150471253-732962129.jpg",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "drinks-mojito-35f200",
+      "name": "Mojito",
+      "group": "Drinks",
+      "items": [
+        {
+          "id": "passion-mojito",
+          "name": "Passion mojito",
+          "description": "A refreshing passion fruit mojito blended with zesty lime, fresh mint, and sparkling soda, delivering a perfect balance of sweet and tangy flavors.",
+          "price": "LKR 500",
+          "dietary": [],
+          "image": "assets/images/photos/menu/mojito-passion.jpg",
           "available": true
         },
         {
-          "id": "salt-lassi",
-          "name": "Salt Lassi",
-          "description": "A refreshing salted lassi made with creamy yogurt and a hint of salt, delivering a smooth, savory taste with a cooling finish.",
-          "price": "LKR 490",
+          "id": "strawberry-mojito",
+          "name": "Strawberry Mojito",
+          "description": "A refreshing strawberry mojito blended with sweet strawberries, fresh mint, zesty lime, and sparkling soda for a perfectly balanced fruity taste.",
+          "price": "LKR 500",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792151007775-505607648.jpg",
+          "image": "assets/images/photos/menu/mojito-passion.jpg",
+          "available": true
+        },
+        {
+          "id": "lime-mint-mojito",
+          "name": "Lime Mint Mojito",
+          "description": "A refreshing lime mint mojito blended with zesty lime, fresh mint, and sparkling soda, delivering a crisp, cooling, and invigorating taste.",
+          "price": "LKR 500",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150727406-534793217.jpg",
+          "available": true
+        },
+        {
+          "id": "blue-berry-mojito",
+          "name": "Blue Berry Mojito",
+          "description": "A refreshing blueberry mojito blended with sweet blueberries, fresh mint, zesty lime, and sparkling soda for a vibrant, fruity, and refreshing taste.",
+          "price": "LKR 550",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150842451-802200949.jpg",
           "available": true
         }
       ]
@@ -1687,7 +1739,32 @@ const BURGO_MENU = {
           "description": "A comforting cup of freshly brewed tea infused with aromatic spices and milk, offering a rich flavour and a soothing finish.",
           "price": "LKR 200",
           "dietary": [],
-          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1793174249361-559848665.jpg",
+          "image": "assets/images/photos/menu/tea-chai.jpg",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "drinks-lassi-35f230",
+      "name": "Lassi",
+      "group": "Drinks",
+      "items": [
+        {
+          "id": "sweet-lassi",
+          "name": "Sweet Lassi",
+          "description": "A creamy and refreshing sweet lassi made with smooth yogurt and a touch of sweetness, offering a deliciously rich and satisfying taste.",
+          "price": "LKR 490",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792150936322-733517734.jpg",
+          "available": true
+        },
+        {
+          "id": "salt-lassi",
+          "name": "Salt Lassi",
+          "description": "A refreshing salted lassi made with creamy yogurt and a hint of salt, delivering a smooth, savory taste with a cooling finish.",
+          "price": "LKR 490",
+          "dietary": [],
+          "image": "https://prod-api.menupilot.lk/uploads/images/menu-item-1792151007775-505607648.jpg",
           "available": true
         }
       ]

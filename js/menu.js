@@ -4,7 +4,8 @@
  *
  *   data-limit="3"       max dishes per category (home teaser)
  *   data-include-all     adds an "All" category tab
- *   data-menu-groups     shows cuisine/group filter chips (INDIAN, Chinese, …)
+ *   data-menu-groups     shows cuisine/group filter chips (INDIAN, Chinese, SHISHA, …)
+ *   [data-menu-search]   optional search field for dish names / descriptions
  */
 
 (() => {
@@ -13,6 +14,17 @@
 
   const CHEVRON_LEFT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
   const CHEVRON_RIGHT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+  const GROUP_ORDER = [
+    'INDIAN',
+    'SRI LANKAN',
+    'CONTINENTAL',
+    'Tandoori',
+    'Chinese',
+    'Bun & Crispy',
+    'Drinks',
+    'Original Desserts',
+    'SHISHA'
+  ];
 
   const allCategories = BURGO_MENU.categories
     .map((cat) => ({ ...cat, items: cat.items.filter((item) => item.available !== false) }))
@@ -41,14 +53,32 @@
 
   function uniqueGroups(cats) {
     const seen = new Set();
-    const groups = [];
+    const found = [];
     cats.forEach((cat) => {
       const g = cat.group;
       if (!g || seen.has(g)) return;
       seen.add(g);
-      groups.push(g);
+      found.push(g);
     });
-    return groups;
+    const ordered = GROUP_ORDER.filter((g) => seen.has(g));
+    found.forEach((g) => {
+      if (!ordered.includes(g)) ordered.push(g);
+    });
+    return ordered;
+  }
+
+  function normalize(value) {
+    return String(value || '')
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim();
+  }
+
+  function itemMatches(item, query) {
+    if (!query) return true;
+    const haystack = normalize(`${item.name} ${item.description || ''} ${(item.dietary || []).join(' ')}`);
+    return query.split(/\s+/).filter(Boolean).every((token) => haystack.includes(token));
   }
 
   /** Wrap a tab strip in a smooth scroller with fade + arrow controls. */
@@ -100,8 +130,6 @@
     }, { passive: true });
     window.addEventListener('resize', sync);
 
-    // Touch/pen drag only — mouse drag was eating category clicks on desktop
-    // (tiny pointer jitter set `moved` and blocked the click in capture phase).
     let dragging = false;
     let startX = 0;
     let startScroll = 0;
@@ -109,9 +137,6 @@
 
     track.addEventListener('pointerdown', (event) => {
       if (event.pointerType === 'mouse') return;
-      if (event.target.closest('.tab, .tabs-rail__btn')) {
-        // Let taps on chips / arrows behave normally
-      }
       dragging = true;
       moved = false;
       startX = event.clientX;
@@ -132,7 +157,6 @@
     track.addEventListener('pointerup', endDrag);
     track.addEventListener('pointercancel', endDrag);
 
-    // Only suppress click after a real touch drag, not a tap
     track.addEventListener('click', (event) => {
       if (moved) {
         event.preventDefault();
@@ -157,10 +181,16 @@
     const useGroups = root.hasAttribute('data-menu-groups');
     const includeAll = root.hasAttribute('data-include-all');
     const groups = useGroups ? uniqueGroups(allCategories) : [];
+    const searchForm = root.querySelector('[data-menu-search]');
+    const searchInput = root.querySelector('[data-menu-search-input]');
+    const searchClear = root.querySelector('[data-menu-search-clear]');
+    const searchMeta = root.querySelector('[data-menu-search-meta]');
 
     let activeGroup = 'all';
+    let searchQuery = '';
     let categoryTabs = [];
     let tabButtons = [];
+    let activeTabId = null;
 
     panel.id = panel.id || `${prefix}-panel`;
     panel.setAttribute('role', 'tabpanel');
@@ -176,46 +206,103 @@
         grouplist.setAttribute('data-menu-group-tabs', '');
         grouplist.setAttribute('role', 'tablist');
         grouplist.setAttribute('aria-label', 'Menu sections');
-        root.insertBefore(grouplist, tablist);
+        const insertBefore = searchForm?.nextSibling || tablist;
+        root.insertBefore(grouplist, insertBefore);
       }
-      grouplist.innerHTML = [
-        `<button class="tab" type="button" role="tab" data-group="all" aria-selected="true">All Menus<span class="tab__count">${allCategories.reduce((n, c) => n + c.items.length, 0)}</span></button>`,
-        ...groups.map((g) => {
-          const count = allCategories.filter((c) => c.group === g).reduce((n, c) => n + c.items.length, 0);
-          return `<button class="tab" type="button" role="tab" data-group="${H.escapeHTML(g)}" aria-selected="false">${H.escapeHTML(g)}<span class="tab__count">${count}</span></button>`;
-        })
-      ].join('');
-      enhanceTabScroller(grouplist);
     }
 
     enhanceTabScroller(tablist);
 
-    function categoriesForGroup(group) {
-      if (group === 'all') return allCategories;
-      return allCategories.filter((c) => c.group === group);
+    function filteredCategories(group = activeGroup) {
+      const base = group === 'all' ? allCategories : allCategories.filter((c) => c.group === group);
+      if (!searchQuery) return base;
+      return base
+        .map((cat) => ({
+          ...cat,
+          items: cat.items.filter((item) => itemMatches(item, searchQuery))
+        }))
+        .filter((cat) => cat.items.length);
     }
 
-    function buildCategoryTabs() {
-      const cats = categoriesForGroup(activeGroup);
-      categoryTabs = includeAll
-        ? [...cats, { id: `${prefix}-all-items`, name: 'All', items: cats.flatMap((c) => c.items) }]
+    function totalItems(cats) {
+      return cats.reduce((n, c) => n + c.items.length, 0);
+    }
+
+    function refreshGroupTabs() {
+      if (!grouplist) return;
+      const fullCounts = Object.fromEntries(
+        groups.map((g) => [g, totalItems(filteredCategories(g))])
+      );
+      const allCount = totalItems(filteredCategories('all'));
+
+      grouplist.innerHTML = [
+        `<button class="tab" type="button" role="tab" data-group="all" aria-selected="${activeGroup === 'all'}">All Menus<span class="tab__count">${allCount}</span></button>`,
+        ...groups.map((g) => {
+          const count = fullCounts[g] || 0;
+          const disabled = searchQuery && count === 0;
+          return `<button class="tab" type="button" role="tab" data-group="${H.escapeHTML(g)}" aria-selected="${activeGroup === g}" ${disabled ? 'disabled' : ''}>${H.escapeHTML(g)}<span class="tab__count">${count}</span></button>`;
+        })
+      ].join('');
+
+      if (!grouplist.closest('.tabs-rail')) enhanceTabScroller(grouplist);
+      else grouplist._tabsRailSync?.();
+    }
+
+    function updateSearchMeta(count) {
+      if (!searchMeta) return;
+      if (!searchQuery) {
+        searchMeta.textContent = '';
+        return;
+      }
+      if (!count) {
+        searchMeta.innerHTML = `No dishes match <strong>${H.escapeHTML(searchQuery)}</strong>`;
+        return;
+      }
+      searchMeta.innerHTML = `<strong>${count}</strong> dish${count === 1 ? '' : 'es'} matching <strong>${H.escapeHTML(searchQuery)}</strong>`;
+    }
+
+    function buildCategoryTabs({ keepSelection = false } = {}) {
+      const cats = filteredCategories(activeGroup);
+      categoryTabs = includeAll && cats.length
+        ? [...cats, { id: `${prefix}-all-items`, name: searchQuery ? 'Search results' : 'All', items: cats.flatMap((c) => c.items) }]
         : cats;
 
+      if (!categoryTabs.length) {
+        tablist.innerHTML = '';
+        tabButtons = [];
+        panel.innerHTML = searchQuery
+          ? `<p class="notice">No dishes found for “${H.escapeHTML(searchQuery)}”. Try another name or clear the search.</p>`
+          : '<p class="notice">No dishes in this section yet.</p>';
+        updateSearchMeta(0);
+        tablist._tabsRailSync?.();
+        return;
+      }
+
+      let selectedId = keepSelection && categoryTabs.some((t) => t.id === activeTabId)
+        ? activeTabId
+        : categoryTabs[0].id;
+      // Prefer "All / Search results" when searching so matches show together
+      if (searchQuery && includeAll) {
+        selectedId = `${prefix}-all-items`;
+      }
+      activeTabId = selectedId;
+
       tablist.innerHTML = categoryTabs
-        .map(
-          (tab, i) => `
+        .map((tab, i) => {
+          const selected = tab.id === selectedId;
+          return `
         <button class="tab" type="button" role="tab" id="${prefix}-tab-${tab.id}" data-id="${tab.id}"
-          aria-controls="${panel.id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">
+          aria-controls="${panel.id}" aria-selected="${selected}" tabindex="${selected ? 0 : -1}">
           ${H.escapeHTML(tab.name)}<span class="tab__count">${Math.min(tab.items.length, limit)}</span>
-        </button>`
-        )
+        </button>`;
+        })
         .join('');
 
       tabButtons = Array.from(tablist.querySelectorAll('[role="tab"]'));
-      if (tabButtons[0]) render(categoryTabs[0]);
-      else panel.innerHTML = '<p class="notice">No dishes in this section yet.</p>';
-
-      tablist.scrollTo({ left: 0, behavior: 'smooth' });
+      const selectedTab = categoryTabs.find((t) => t.id === selectedId) || categoryTabs[0];
+      render(selectedTab);
+      updateSearchMeta(totalItems(cats));
+      tablist.scrollTo({ left: 0, behavior: searchQuery ? 'auto' : 'smooth' });
       tablist._tabsRailSync?.();
     }
 
@@ -232,6 +319,7 @@
         return;
       }
 
+      activeTabId = tab.id;
       tabButtons.forEach((b) => {
         const active = b === button;
         b.setAttribute('aria-selected', String(active));
@@ -245,6 +333,17 @@
         render(tab);
         panel.classList.remove('is-switching');
       }, 180);
+    }
+
+    function applySearch(value) {
+      searchQuery = normalize(value);
+      if (searchClear) searchClear.hidden = !value.trim();
+      // If current group has no matches, jump to All Menus
+      if (searchQuery && activeGroup !== 'all' && totalItems(filteredCategories(activeGroup)) === 0) {
+        activeGroup = 'all';
+      }
+      refreshGroupTabs();
+      buildCategoryTabs();
     }
 
     tablist.addEventListener('click', (event) => {
@@ -270,7 +369,7 @@
     if (grouplist) {
       grouplist.addEventListener('click', (event) => {
         const button = event.target.closest('[role="tab"]');
-        if (!button) return;
+        if (!button || button.disabled) return;
         activeGroup = button.dataset.group || 'all';
         grouplist.querySelectorAll('[role="tab"]').forEach((b) => {
           b.setAttribute('aria-selected', String(b === button));
@@ -280,6 +379,27 @@
       });
     }
 
+    if (searchForm && searchInput) {
+      searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        applySearch(searchInput.value);
+      });
+
+      let debounce;
+      searchInput.addEventListener('input', () => {
+        window.clearTimeout(debounce);
+        debounce = window.setTimeout(() => applySearch(searchInput.value), 160);
+      });
+
+      searchClear?.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.focus();
+        applySearch('');
+      });
+    }
+
+    refreshGroupTabs();
+    if (grouplist && !grouplist.closest('.tabs-rail')) enhanceTabScroller(grouplist);
     buildCategoryTabs();
   }
 

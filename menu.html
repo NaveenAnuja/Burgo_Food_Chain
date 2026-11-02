@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body id="top">
@@ -171,11 +171,30 @@
           <p class="eyebrow" data-reveal><span class="eyebrow__num">02</span>Our menu</p>
           <h2 class="section-head__title" id="browse-title" data-reveal>Browse the <em>menu</em>.</h2>
           <div class="section-head__aside" data-reveal>
-            <p class="section-head__text">164 dishes across 29 categories — filter by cuisine, then by category. For the latest availability and to place an order, use Order Online.</p>
+            <p class="section-head__text">171 dishes across 31 categories — including Shisha. Search, filter by cuisine, then by category. For the latest availability and to place an order, use Order Online.</p>
           </div>
         </div>
 
         <div data-menu data-include-all data-menu-groups>
+          <form class="menu-search" data-menu-search role="search" autocomplete="off">
+            <label class="menu-search__label" for="menu-search-input">Search the menu</label>
+            <div class="menu-search__field">
+              <svg class="menu-search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input
+                id="menu-search-input"
+                class="menu-search__input"
+                type="search"
+                name="q"
+                placeholder="Search dishes, curries, shisha…"
+                enterkeyhint="search"
+                data-menu-search-input
+              >
+              <button class="menu-search__clear" type="button" data-menu-search-clear hidden aria-label="Clear search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+            </div>
+            <p class="menu-search__meta" data-menu-search-meta aria-live="polite"></p>
+          </form>
           <div class="tabs menu-showcase__tabs" data-menu-tabs aria-label="Menu categories"></div>
           <div class="dish-grid dish-grid--3" data-menu-panel></div>
           <noscript><p class="notice">Turn on JavaScript to browse the menu preview, or call us on +94 70 743 1098.</p></noscript>
@@ -288,11 +307,11 @@
   </footer>
 
   <script src="js/config.js"></script>
-  <script src="data/menu-data.js?v=3"></script>
+  <script src="data/menu-data.js?v=7"></script>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
-  <script src="js/menu.js?v=6"></script>
-  <script src="js/animations.js?v=6"></script>
+  <script src="js/menu.js?v=7"></script>
+  <script src="js/animations.js?v=7"></script>
 </body>
 </html>

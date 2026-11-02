@@ -11,7 +11,8 @@ const BURGO_GALLERY = {
     { id: 'bakery', label: 'Bakery' },
     { id: 'lounge', label: 'Lounge' },
     { id: 'interior', label: 'Interiors' },
-    { id: 'events', label: 'Events' }
+    { id: 'events', label: 'Events' },
+    { id: 'staff', label: 'Staff' }
   ],
 
   items: [
@@ -24,6 +25,20 @@ const BURGO_GALLERY = {
     { src: 'assets/images/photos/gallery-07.jpg', width: 800, height: 1000, layout: 'tall', category: 'bakery', caption: 'Coffee and bakes', alt: 'Coffee with fresh bakery treats at Burgo' },
     { src: 'assets/images/photos/gallery-08.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Saivar favourites', alt: 'Colourful Saivar Restaurant favourites on a shared platter' },
     { src: 'assets/images/photos/gallery-09.jpg', width: 800, height: 800, layout: '', category: 'lounge', caption: 'Evenings at the lounge', alt: 'Soft evening lighting in the Iceburg lounge' },
-    { src: 'assets/images/photos/gallery-10.jpg', width: 800, height: 1000, layout: 'tall', category: 'events', caption: 'Celebrations at Burgo', alt: 'A celebration table set for an event at Burgo' }
+    { src: 'assets/images/photos/gallery-10.jpg', width: 800, height: 1000, layout: 'tall', category: 'events', caption: 'Celebrations at Burgo', alt: 'A celebration table set for an event at Burgo' },
+
+    { src: 'assets/images/photos/gallery-11.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Kebab platter', alt: 'Sizzling kebab platter with herbs and lemon at Burgo' },
+    { src: 'assets/images/photos/gallery-12.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Pizza and pasta', alt: 'Fresh pizza and creamy pasta ready to serve at Burgo' },
+    { src: 'assets/images/photos/gallery-13.jpg', width: 800, height: 1000, layout: 'tall', category: 'bakery', caption: 'Bakery counter', alt: 'Fresh bread and cakes on the Burgo bakery counter' },
+    { src: 'assets/images/photos/gallery-14.jpg', width: 800, height: 800, layout: '', category: 'lounge', caption: 'Lounge details', alt: 'Hookah coals and soft lounge lighting at Iceburg' },
+    { src: 'assets/images/photos/gallery-15.jpg', width: 800, height: 1000, layout: 'tall', category: 'interior', caption: 'Warm interiors', alt: 'Wooden feature wall and yellow booth seating inside Burgo' },
+    { src: 'assets/images/photos/gallery-16.jpg', width: 800, height: 800, layout: '', category: 'events', caption: 'Gatherings', alt: 'Friends and family sharing a celebration meal at Burgo' },
+
+    { src: 'assets/images/photos/staff/staff-team-chefs.jpg', width: 800, height: 1000, layout: 'tall', category: 'staff', caption: 'Our kitchen team', alt: 'Burgo chefs standing together in uniform' },
+    { src: 'assets/images/photos/staff/staff-managers.jpg', width: 1280, height: 720, layout: 'wide', category: 'staff', caption: 'Managers and Director', alt: 'Restaurant managers and director of Burgo Food Chain' },
+    { src: 'assets/images/photos/staff/staff-chef-portrait-01.jpg', width: 800, height: 1000, layout: 'tall', category: 'staff', caption: 'Meet the chef', alt: 'Burgo chef seated for a portrait in the dining room' },
+    { src: 'assets/images/photos/staff/staff-chef-outdoor-01.jpg', width: 800, height: 1000, layout: 'tall', category: 'staff', caption: 'Chef portrait', alt: 'Burgo chef standing outdoors by the red door' },
+    { src: 'assets/images/photos/staff/staff-chef-portrait-02.jpg', width: 800, height: 1000, layout: 'tall', category: 'staff', caption: 'Kitchen leadership', alt: 'Burgo chef in white jacket seated at a table' },
+    { src: 'assets/images/photos/staff/staff-chef-outdoor-02.jpg', width: 800, height: 1000, layout: 'tall', category: 'staff', caption: 'On the floor', alt: 'Burgo chef posing outdoors beside the green scooter' }
   ]
 };

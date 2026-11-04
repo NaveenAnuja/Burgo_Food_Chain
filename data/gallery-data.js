@@ -17,18 +17,18 @@ const BURGO_GALLERY = {
 
   items: [
     { src: 'assets/images/photos/gallery-01.jpg', width: 800, height: 1000, layout: 'tall', category: 'food', caption: 'Signature plates', alt: 'Signature Burgo plates with rice, curry and fresh garnish' },
-    { src: 'assets/images/photos/gallery-02.jpg?v=9', width: 1024, height: 756, layout: 'wide', category: 'interior', caption: 'The dining room', alt: 'Yellow booth seating and warm lighting in the Burgo dining room' },
+    { src: 'assets/images/photos/gallery-02.jpg?v=15', width: 1200, height: 886, layout: 'wide', category: 'interior', caption: 'The dining room', alt: 'Yellow booth seating and warm lighting in the Burgo dining room' },
     { src: 'assets/images/photos/gallery-03.jpg', width: 800, height: 800, layout: '', category: 'bakery', caption: 'Fresh from the bakery', alt: 'Fresh croissants and pastries from the Burgo bakery' },
-    { src: 'assets/images/photos/gallery-04.jpg', width: 800, height: 1000, layout: 'tall', category: 'lounge', caption: 'Iceburg Shisha Lounge', alt: 'Evening atmosphere inside Iceburg Shisha Lounge' },
+    { src: 'assets/images/photos/gallery-04.jpg?v=14', width: 800, height: 1000, layout: 'tall', category: 'lounge', caption: 'Iceburg evenings', alt: 'Wide view of yellow booths and gold leaf murals in Iceburg Shisha Lounge' },
     { src: 'assets/images/photos/gallery-05.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'From the kitchen', alt: 'A hot dish plated fresh from the Burgo kitchen' },
-    { src: 'assets/images/photos/gallery-06.jpg', width: 1280, height: 720, layout: 'wide', category: 'interior', caption: 'Tables at Saivar Restaurant', alt: 'Dining tables set for guests at Saivar Restaurant' },
+    { src: 'assets/images/photos/gallery-06.jpg?v=15', width: 848, height: 1230, layout: 'tall', category: 'interior', caption: 'Seating area', alt: 'Black chairs and gold-trim tables fully visible in front of Burgo wooden wall' },
     { src: 'assets/images/photos/gallery-07.jpg', width: 800, height: 1000, layout: 'tall', category: 'bakery', caption: 'Coffee and bakes', alt: 'Coffee with fresh bakery treats at Burgo' },
     { src: 'assets/images/photos/gallery-08.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Saivar favourites', alt: 'Colourful Saivar Restaurant favourites on a shared platter' },
-    { src: 'assets/images/photos/gallery-09.jpg', width: 800, height: 800, layout: '', category: 'lounge', caption: 'Evenings at the lounge', alt: 'Soft evening lighting in the Iceburg lounge' },
+    { src: 'assets/images/photos/gallery-09.jpg?v=14', width: 800, height: 1000, layout: 'tall', category: 'lounge', caption: 'Lounge booths', alt: 'Facing yellow tufted booths and shisha table in Iceburg Lounge' },
     { src: 'assets/images/photos/gallery-11.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Kebab platter', alt: 'Sizzling kebab platter with herbs and lemon at Burgo' },
     { src: 'assets/images/photos/gallery-12.jpg', width: 800, height: 800, layout: '', category: 'food', caption: 'Pizza and pasta', alt: 'Fresh pizza and creamy pasta ready to serve at Burgo' },
     { src: 'assets/images/photos/gallery-13.jpg', width: 800, height: 1000, layout: 'tall', category: 'bakery', caption: 'Bakery counter', alt: 'Fresh bread and cakes on the Burgo bakery counter' },
-    { src: 'assets/images/photos/gallery-14.jpg', width: 800, height: 800, layout: '', category: 'lounge', caption: 'Lounge details', alt: 'Hookah coals and soft lounge lighting at Iceburg' },
+    { src: 'assets/images/photos/gallery-14.jpg?v=14', width: 900, height: 900, layout: '', category: 'lounge', caption: 'Coals and glow', alt: 'Glowing shisha coals and warm lounge light at Iceburg' },
     { src: 'assets/images/photos/gallery-15.jpg', width: 800, height: 1000, layout: 'tall', category: 'interior', caption: 'Warm interiors', alt: 'Wooden feature wall and yellow booth seating inside Burgo' },
 
     { src: 'assets/images/photos/gallery-10.jpg?v=10', width: 1024, height: 768, layout: '', category: 'events', caption: 'Table talk at Burgo', alt: 'Guests sharing biryani and conversation in yellow booth seating at Burgo' },
